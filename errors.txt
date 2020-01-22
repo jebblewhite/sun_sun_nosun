@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 23: end of line expected.
+    show tree_proto.png
+                   ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Jan 20 17:11:36 2020
