@@ -33,7 +33,12 @@ label start:
 
     t "This is all I currently have"
 
+    money = 0
 
+    if money <1:
+        t "here, have some money"
+        money += 1
+        "money now: " + string(money)
     # This ends the game.
 
     return
