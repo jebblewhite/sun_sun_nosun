@@ -29,6 +29,9 @@ label start:
 
     show tree_1 at left
 
+    t "Now i am over here and bigger because Angus finished me."
+
+    t "This is all I currently have"
 
 
     # This ends the game.
