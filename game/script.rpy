@@ -27,9 +27,8 @@ label start:
 
     t "Please end my suffering."
 
-    show tree_1
-    move tree_1 left
-    
+    show tree_1 at left
+
 
 
     # This ends the game.
