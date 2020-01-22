@@ -5,7 +5,6 @@
 
 define t = Character("Tree")
 
-
 # The game starts here.
 
 label start:
@@ -27,6 +26,11 @@ label start:
     t "Hey, I'm a tree."
 
     t "Please end my suffering."
+
+    show tree_1
+    move tree_1 left
+    
+
 
     # This ends the game.
 
