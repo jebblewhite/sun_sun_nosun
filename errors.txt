@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 23: end of line expected.
-    show tree_proto.png
-                   ^
+File "game/script.rpy", line 411: end of line expected.
+    """"""
+        ^
+
+File "game/script.rpy", line 415: end of line expected.
+    """"""
+        ^
+
+File "game/script.rpy", line 584: expected statement.
+    woodsGather
+               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jan 20 17:11:36 2020
+Wed Mar  4 17:44:37 2020
