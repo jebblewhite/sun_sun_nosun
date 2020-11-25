@@ -55,28 +55,28 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/amt.ttf"
+define gui.text_font = "gui/OpenDyslexic-Regular.otf"
 
 ## The font used for character names.
-define gui.name_text_font = "gui/amt.ttf"
+define gui.name_text_font = "gui/OpenDyslexic-Regular.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "gui/amt.ttf"
+define gui.interface_text_font = "gui/OpenDyslexic-Regular.otf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 20
 
 ## The size of character names.
-define gui.name_text_size = 33
+define gui.name_text_size = 24
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 20
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 33
+define gui.label_text_size = 20
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 33
+define gui.notify_text_size = 20
 
 ## The size of the game's title.
 define gui.title_text_size = 66
@@ -95,7 +95,7 @@ define gui.game_menu_background = "images/bachnight.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 185
+define gui.textbox_height = 240
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
