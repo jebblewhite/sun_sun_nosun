@@ -96,7 +96,7 @@ class Game(object):
         self.children = []
 
         self.actions = 5
-        self.playerFuel, self.playerHerb, self.playerVeg, self.playerMeats, self.playerPelts, self.playerFish = 0,0,0,0,0,0
+        self.playerFuel, self.playerHerb, self.playerhuntedFood, self.playerPelts, self.playerfishedFood = 0,0,0,0,0
         
 
         for i in range(100):
@@ -121,23 +121,22 @@ class Game(object):
 
 
         self.popMorale = 50
-        self.popCohesion = 20
+        self.popCohesion = 30
 
-
-        self.worldherbs = 200
+        # starting values for resources
+        self.worldherbs = 2000
         self.herbs = 20
-        self.worldfuel = 1000
-        self.fuel = 100
+        self.worldfuel = 10000
+        self.fuel = 400
         self.worldpelts = 180
         self.pelts = 0
-        self.cereals = 70
-        self.worldmeats = 400
-        self.meats = 10
-        self.worldveg = 500
-        self.veg = 10
-        self.worldfish = 800
-        self.fish = 10
-
+        self.food = 300
+        self.worldfood = 10000
+       
+        self.foodchoice = 2
+        self.fuelchoice = 2
+        self.herbchoice = 2
+        self.peltchoice = 2
 
         self.day = 0
         self.adjectivePrecip = ['dry','raining','snowing']
@@ -203,23 +202,22 @@ class Game(object):
                 self.workers[i].occupation = "General Worker"
         self.initialiseWorkers()
 
+    def worldDecay(self):
+        def fromWorld(percentage,resource):
+            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)])
+            self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
+            return takeaway
+        fromWorld(1.5,'fuel')
+        fromWorld(1.5,'food')
+        fromWorld(1.5,'pelts')
+        fromWorld(1.5,'herbs')
 
 
 
 
 
 
-    def foodstuffs(self):
-        foodstuff = self.cereals+self.fish+self.meats+self.veg
-        return foodstuff
 
-    def playerfoodstuffs(self):
-        foodstuff = self.playerVeg+self.playerMeats+self.playerFish
-        return foodstuff
-
-    def foragedfoodstuffs(self):
-        foodstuff = self.foragedVeg+self.huntedMeats+self.fishedFish
-        return foodstuff
 
     def reschange(self,res,change):
         self.__dict__[res] += change
@@ -233,21 +231,25 @@ class Game(object):
         self.endDayMessage()
         self.genworkerRandomChange()
         self.genworkersMiniEvent()
-        self.gatheredFuel, self.foragedHerb, self.foragedVeg, self.huntedMeats, self.huntedPelts, self.fishedFish = self.workersBack()
+        self.gatheredFuel, self.foragedHerb, self.huntedFood, self.huntedPelts, self.fishedFood = self.workersBack()
         print("gathered " + str(self.gatheredFuel) + " Fuel.")
-        print("foraged " + str(self.foragedHerb)+ " Herb and " + str(self.foragedVeg) + " Veg.")
-        print("hunted " + str(self.huntedMeats)+ " Meat and " + str(self.huntedPelts) + " Pelts.")
-        print("fished " + str(self.fishedFish) + " Fish.")
-        self.updateRes(self.gatheredFuel, self.foragedHerb, self.foragedVeg, self.huntedMeats, self.huntedPelts, self.fishedFish)
-        self.updateRes(self.playerFuel, self.playerHerb, self.playerVeg, self.playerMeats, self.playerPelts, self.playerFish)
+        print("foraged " + str(self.foragedHerb)+ " Herb.")
+        print("hunted " + str(self.huntedFood)+ " Food and " + str(self.huntedPelts) + " Pelts.")
+        print("fished " + str(self.fishedFood) + " Food.")
+        self.updateRes(self.gatheredFuel, self.foragedHerb, self.huntedFood, self.huntedPelts, self.fishedFood)
+        self.updateRes(self.playerFuel, self.playerHerb, self.playerhuntedFood, self.playerPelts, self.playerfishedFood)
         self.morale_yields_main()
         return
 
 
     def advanceNight(self):
-        self.bigFeast()
-        self.bigBurn()
+        foodpp = 2**(self.foodchoice-2)
+        fuelpp = 2**(self.fuelchoice-2)
+
+        self.bigFeast(foodpp)
+        self.bigBurn(fuelpp)
         self.distributePelts()
+        
         self.recovered()
         self.sickDie()
         self.newSick()
@@ -256,11 +258,12 @@ class Game(object):
         self.day += 1
         self.startDayMessage()
         if self.day<30:
-            self.playerFuel, self.playerHerb, self.playerVeg, self.playerMeats, self.playerPelts, self.playerFish = 0,0,0,0,0,0
+            self.playerFuel, self.playerHerb, self.playerPelts, self.playerhuntedFood, self.playerfishedFood = 0,0,0,0,0
             self.actions = 5
         self.rollevent = random.randint(1,4)
         self.weatherMake()
         self.newWorkers()
+        self.worldDecay()
         return
 
     def startDayMessage(self):
@@ -298,40 +301,22 @@ class Game(object):
     def morale_yields_main(self): # gain if good yields, loss if casualties
         pass
 
-    def bigFeast(self):
+    def bigFeast(self,foodpp):
         def eatFood(peasant):
-            food = 0
-            if self.veg > 0:
-                self.veg-= 1
-                food += 2
-
-            if self.meats > 0:
-                self.meats -= 1
-                food += 3
-            elif self.fish > 0:
-                self.fish -= 1
-                food += 3
-            
-            if self.cereals > 0:
-                self.cereals -= 1
-                food += 4
-
-            if food == 0:
-                food = -5
-            
-            
-            peasant.currenthealth = self.addLim(peasant.currenthealth,food,peasant.maxhealth)
+            peasant.hasFood = 0
+        random.shuffle(self.peasants)
         for peasant in self.peasants:
             eatFood(peasant)
         
 
-    def bigBurn(self):
+    def bigBurn(self,fuelpp):
         def burnLog(peasant):
             peasant.hasFire = 0
             if self.fuel > 0:
-                self.fuel -= 1
-                peasant.hasFire = 1
+                self.fuel -= fuelpp
+                peasant.hasFire = fuelpp
 
+        random.shuffle(self.peasants)
         for peasant in self.peasants:
             burnLog(peasant)
 
@@ -377,7 +362,12 @@ class Game(object):
                 return m_yield/2
 
         def fromWorld(percentage,resource):
-            takeaway = round((percentage/100.0)*self.__dict__['world'+str(resource)])
+            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)])
+            self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
+            return takeaway
+
+        def fromWorldAbs(absol,resource):
+            takeaway = absol
             self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
             return takeaway
 
@@ -385,12 +375,11 @@ class Game(object):
         gatheredFuel = 0
         foragedsucc = 0
         foragedHerb = 0
-        foragedVeg = 0
         huntedsucc = 0
         huntedPelts = 0
-        huntedMeats = 0
+        huntedFood = 0
         fishedsucc = 0
-        fishedFish = 0
+        fishedFood = 0
         for i in range(len(self.gatherers)): # all workers roll for success, and can either fail or choose to half succeed with a consequence
             
             gatheredsucc += skillRoll(self.gatherers[i],'passionGathering',1)
@@ -407,18 +396,21 @@ class Game(object):
 
         gatheredFuel = fromWorld(gatheredsucc,'fuel')
         foragedHerb = fromWorld(foragedsucc,'herbs')
-        foragedVeg = fromWorld(foragedsucc,'veg')
-        huntedMeats = fromWorld(huntedsucc,'meats')
-        huntedPelts = fromWorld(huntedsucc,'pelts')
-        fishedFish = fromWorld(fishedsucc,'fish')
-        return gatheredFuel, foragedHerb, foragedVeg, huntedMeats, huntedPelts, fishedFish
+        huntedFood = fromWorld(huntedsucc,'food')
+        ## change this VV
+        huntedpeltssucc = 0
+        for i in range(int(huntedFood)):
+            if random.randint(1,100) >= 99:
+                huntedpeltssucc+=1
+        huntedPelts = fromWorldAbs(huntedpeltssucc,'pelts')
+        fishedFood = fromWorld(fishedsucc,'food')
+        return gatheredFuel, foragedHerb, huntedFood, huntedPelts, fishedFood
 
-    def updateRes(self, gatheredFuel, foragedHerb, foragedVeg, huntedMeats, huntedPelts, fishedFish):
-        self.fish += fishedFish
+    def updateRes(self, gatheredFuel, foragedHerb, huntedFood, huntedPelts, fishedFood):
+        self.food += fishedFood
         self.fuel += gatheredFuel
-        self.veg += foragedVeg
         self.herbs += foragedHerb
-        self.meats += huntedMeats
+        self.food += huntedFood
         self.pelts += huntedPelts
         return
 

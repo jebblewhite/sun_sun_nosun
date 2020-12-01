@@ -18,9 +18,15 @@ def decaytime(foodinworld):
     decay = 0.015*foodinworld
     return decay
 
+def choose_random_peasant():
+    bigollist = [1,2,3,4,5,6,7]
+    print(random.shuffle(bigollist))
+    
+
 
 
 def main():
+    """
     foodinworld = 10000
     foodstocks = 100
     people = 100
@@ -36,5 +42,10 @@ def main():
         print('new foodinworld ' + str(foodinworld))
         print('new foodstocks ' + str(foodstocks))
         print('')
+
+    """
+    choose_random_peasant()
+
+
 
 main()

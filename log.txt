@@ -1,320 +1,347 @@
-Wed Nov  4 20:43:09 2020
+Tue Dec  1 17:19:35 2020
 Darwin-19.5.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.06s
 Loading error handling took 0.02s
-Loading script took 0.25s
-Loading save slot metadata. took 0.01s
+Loading script took 0.16s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-[<game.Charac object at 0x10d3fbe90>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>, <game.Charac object at 0x10d2f8090>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>, <game.Charac object at 0x10d2f8090>, <game.Charac object at 0x10d2f80d0>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>, <game.Charac object at 0x10d2f8090>, <game.Charac object at 0x10d2f80d0>, <game.Charac object at 0x10d2f8110>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>, <game.Charac object at 0x10d2f8090>, <game.Charac object at 0x10d2f80d0>, <game.Charac object at 0x10d2f8110>, <game.Charac object at 0x10d2f8150>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2f8050>, <game.Charac object at 0x10d2f8090>, <game.Charac object at 0x10d2f80d0>, <game.Charac object at 0x10d2f8110>, <game.Charac object at 0x10d2f8150>, <game.Charac object at 0x10d2f8190>]
+[<game.Charac object at 0x110bdec10>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>, <game.Charac object at 0x110bdedd0>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>, <game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdee10>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>, <game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdee10>, <game.Charac object at 0x110bdee50>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>, <game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdee10>, <game.Charac object at 0x110bdee50>, <game.Charac object at 0x110bdee90>]
+[<game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>, <game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdee10>, <game.Charac object at 0x110bdee50>, <game.Charac object at 0x110bdee90>, <game.Charac object at 0x110bdeed0>]
  __ __ __ Hunter __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 70.0, 'passionFishing': 7, 'passionGathering': 9, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 60, 'maxhealth': 60, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 45.0, 'passionFishing': 2, 'passionGathering': 3, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 51.0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 49.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 99', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 7', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 2, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 60.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 62', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 56.0, 'passionFishing': 9, 'passionGathering': 4, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 1, 'currenthealth': 50.0, 'passionFishing': 2, 'passionGathering': 7, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 21', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 72.0, 'passionFishing': 3, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 58.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 12', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 56.0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 41', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 7, 'currenthealth': 49.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 48.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 8, 'currenthealth': 74.0, 'passionFishing': 5, 'passionGathering': 7, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 18', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 6, 'currenthealth': 72.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 55', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 55.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 58.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Hunter'}
  __ __ __ Forager __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 79', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 10, 'currenthealth': 69.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 9, 'currenthealth': 62.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 19', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 9, 'currenthealth': 53.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 74.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 9, 'currenthealth': 60.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 45', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 9, 'currenthealth': 73.0, 'passionFishing': 7, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 73.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 60.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 8', 'age': 48, 'maxhealth': 72, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 7, 'currenthealth': 54.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 47.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 67', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 10, 'currenthealth': 60.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 92', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 10, 'currenthealth': 61.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 9, 'currenthealth': 58.0, 'passionFishing': 2, 'passionGathering': 4, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 66.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 9, 'currenthealth': 66.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 60.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 65', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 72.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 94', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 55.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 1', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 3, 'passionGathering': 1, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 73.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'Forager'}
  __ __ __ Gatherer __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 25', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 2, 'currenthealth': 64.0, 'passionFishing': 7, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 62.0, 'passionFishing': 8, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 2, 'passionGathering': 9, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 55, 'maxhealth': 65, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 48.0, 'passionFishing': 1, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 3', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 51.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 55.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 51.0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 86', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 54.0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 50.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 29', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 66.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 51', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 47.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 0', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 52.0, 'passionFishing': 3, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 17', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 70.0, 'passionFishing': 4, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 46.0, 'passionFishing': 9, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 8, 'currenthealth': 71.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 61.0, 'passionFishing': 5, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 81', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 52.0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 85', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 65.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 63', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 52.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
  __ __ __ Fisherman __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 38', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 48.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 56', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 72.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 59', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 73.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 51.0, 'passionFishing': 10, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 67.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 54.0, 'passionFishing': 9, 'passionGathering': 2, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 48.0, 'passionFishing': 9, 'passionGathering': 7, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 54.0, 'passionFishing': 9, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 2, 'currenthealth': 53.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 60', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 66.0, 'passionFishing': 10, 'passionGathering': 8, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 68', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 59.0, 'passionFishing': 10, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 49.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 35, 'maxhealth': 85, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 63.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 62.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 95', 'age': 32, 'maxhealth': 88, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 3, 'currenthealth': 66.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 2, 'currenthealth': 64.0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 36', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 3, 'currenthealth': 60.0, 'passionFishing': 8, 'passionGathering': 4, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 9', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 67.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 11', 'age': 59, 'maxhealth': 61, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 45.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Fisherman'}
  __ __ __ General Worker __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 16', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 70.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 35', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 62.0, 'passionFishing': 2, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 73.0, 'passionFishing': 2, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 58.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 61', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 50.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 1, 'currenthealth': 64.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 66', 'age': 29, 'maxhealth': 91, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 68.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 74', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 1, 'currenthealth': 66.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 50.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 91', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 63.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 69.0, 'passionFishing': 3, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 97', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 2, 'currenthealth': 69.0, 'passionFishing': 6, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 72.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 51.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 6', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 60.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 26', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 64.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 27', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 34', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 55.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 37', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 67.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 59.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 49.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 46', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 52.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 2, 'currenthealth': 63.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 62.0, 'passionFishing': 4, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 46.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 70.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 63.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 54', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 52.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 69', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 67.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 70', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 51.0, 'passionFishing': 6, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 71', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 47.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 72.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 76', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 53.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 78', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 64.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 80', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 71.0, 'passionFishing': 1, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 3, 'currenthealth': 47.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 6, 'currenthealth': 65.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
  __ __ __ Workers __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 7', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 2, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 60.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 70.0, 'passionFishing': 7, 'passionGathering': 9, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 21', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 60, 'maxhealth': 60, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 45.0, 'passionFishing': 2, 'passionGathering': 3, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 51.0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 62', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 56.0, 'passionFishing': 9, 'passionGathering': 4, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 1, 'currenthealth': 50.0, 'passionFishing': 2, 'passionGathering': 7, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 49.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 99', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 16', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 70.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 35', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 62.0, 'passionFishing': 2, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 73.0, 'passionFishing': 2, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 58.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 61', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 50.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 1, 'currenthealth': 64.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 66', 'age': 29, 'maxhealth': 91, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 68.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 74', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 1, 'currenthealth': 66.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 50.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 91', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 63.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 69.0, 'passionFishing': 3, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 97', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 2, 'currenthealth': 69.0, 'passionFishing': 6, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 55, 'maxhealth': 65, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 48.0, 'passionFishing': 1, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 3', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 51.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 25', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 2, 'currenthealth': 64.0, 'passionFishing': 7, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 50.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 55.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 51.0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 86', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 54.0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 2, 'passionGathering': 9, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 62.0, 'passionFishing': 8, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 60.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 8', 'age': 48, 'maxhealth': 72, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 7, 'currenthealth': 54.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 9, 'currenthealth': 62.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 19', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 9, 'currenthealth': 53.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 74.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 47.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 9, 'currenthealth': 60.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 45', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 9, 'currenthealth': 73.0, 'passionFishing': 7, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 79', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 10, 'currenthealth': 69.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 73.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 38', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 48.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 54.0, 'passionFishing': 9, 'passionGathering': 2, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 48.0, 'passionFishing': 9, 'passionGathering': 7, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 54.0, 'passionFishing': 9, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 56', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 72.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 59', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 73.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 51.0, 'passionFishing': 10, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 67.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 2, 'currenthealth': 53.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 12', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 56.0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 58.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 18', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 6, 'currenthealth': 72.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 41', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 7, 'currenthealth': 49.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 72.0, 'passionFishing': 3, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 55', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 55.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 48.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 8, 'currenthealth': 74.0, 'passionFishing': 5, 'passionGathering': 7, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 58.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 72.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 51.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 6', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 60.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 26', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 64.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 27', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 63.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 34', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 55.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 37', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 67.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 59.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 49.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 46', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 52.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 2, 'currenthealth': 63.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 62.0, 'passionFishing': 4, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 46.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 70.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 63.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 54', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 52.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 69', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 67.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 70', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 51.0, 'passionFishing': 6, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 71', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 47.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 72.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 76', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 53.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 78', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 64.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 80', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 71.0, 'passionFishing': 1, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 71.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 3, 'currenthealth': 47.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 6, 'currenthealth': 65.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 0', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 52.0, 'passionFishing': 3, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 17', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 70.0, 'passionFishing': 4, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 29', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 66.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 8, 'currenthealth': 71.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 51', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 47.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 63', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 52.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 61.0, 'passionFishing': 5, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 46.0, 'passionFishing': 9, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 81', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 52.0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 85', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 65.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 1', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 3, 'passionGathering': 1, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 60.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 9, 'currenthealth': 58.0, 'passionFishing': 2, 'passionGathering': 4, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 73.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 66.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 65', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 72.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 67', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 10, 'currenthealth': 60.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 92', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 10, 'currenthealth': 61.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 94', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 55.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 9, 'currenthealth': 66.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 9', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 67.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 11', 'age': 59, 'maxhealth': 61, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 45.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 2, 'currenthealth': 64.0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 35, 'maxhealth': 85, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 63.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 62.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 36', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 3, 'currenthealth': 60.0, 'passionFishing': 8, 'passionGathering': 4, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 60', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 66.0, 'passionFishing': 10, 'passionGathering': 8, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 68', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 59.0, 'passionFishing': 10, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 49.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 95', 'age': 32, 'maxhealth': 88, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 3, 'currenthealth': 66.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
 
 Day 0 has ended
 End of day report:
-gathered 90.0 Fuel.
-foraged 16.0 Herb and 40.0 Veg.
-hunted 32.0 Meat and 14.0 Pelts.
-fished 72.0 Fish.
+gathered 80.0 Fuel.
+foraged 18.0 Herb.
+hunted 40.0 Food and 1 Pelts.
+fished 60.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 82.0 Fuel.
-foraged 15.0 Herb and 37.0 Veg.
-hunted 15.0 Meat and 7.0 Pelts.
-fished 66.0 Fish.
+gathered 79.0 Fuel.
+foraged 12.0 Herb.
+hunted 79.0 Food and 0 Pelts.
+fished 79.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 66.0 Fuel.
-foraged 10.0 Herb and 25.0 Veg.
-hunted 28.0 Meat and 13.0 Pelts.
-fished 66.0 Fish.
+gathered 89.0 Fuel.
+foraged 12.0 Herb.
+hunted 78.0 Food and 1 Pelts.
+fished 58.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 53.0 Fuel.
-foraged 10.0 Herb and 24.0 Veg.
-hunted 20.0 Meat and 9.0 Pelts.
-fished 42.0 Fish.
+gathered 68.0 Fuel.
+foraged 20.0 Herb.
+hunted 58.0 Food and 0 Pelts.
+fished 67.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 35.0 Fuel.
-foraged 13.0 Herb and 34.0 Veg.
-hunted 18.0 Meat and 8.0 Pelts.
-fished 44.0 Fish.
+gathered 77.0 Fuel.
+foraged 12.0 Herb.
+hunted 76.0 Food and 1 Pelts.
+fished 66.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 34.0 Fuel.
-foraged 10.0 Herb and 24.0 Veg.
-hunted 23.0 Meat and 10.0 Pelts.
-fished 31.0 Fish.
+gathered 67.0 Fuel.
+foraged 13.0 Herb.
+hunted 75.0 Food and 0 Pelts.
+fished 74.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 58.0 Fuel.
-foraged 10.0 Herb and 25.0 Veg.
-hunted 26.0 Meat and 12.0 Pelts.
-fished 38.0 Fish.
+gathered 57.0 Fuel.
+foraged 15.0 Herb.
+hunted 74.0 Food and 0 Pelts.
+fished 64.0 Food.
 
 Day 0 has ended
 End of day report:
-gathered 47.0 Fuel.
-foraged 10.0 Herb and 26.0 Veg.
-hunted 19.0 Meat and 9.0 Pelts.
-fished 35.0 Fish.
+gathered 76.0 Fuel.
+foraged 9.0 Herb.
+hunted 63.0 Food and 1 Pelts.
+fished 54.0 Food.
  __ __ __ Workers __ __ __
-{'status': 'Alive and Well', 'name': 'Tudor 7', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 50.0, 'passionFishing': 8, 'passionGathering': 2, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 39.0, 'passionFishing': 7, 'passionGathering': 9, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 21', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 23.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 60, 'maxhealth': 60, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 0, 'passionFishing': 2, 'passionGathering': 3, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 18.0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 62', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 19.0, 'passionFishing': 9, 'passionGathering': 4, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 1, 'currenthealth': 0, 'passionFishing': 2, 'passionGathering': 7, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 12.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 99', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 27.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
-{'status': 'Alive and Well', 'name': 'Tudor 16', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 61.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 35', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 66.0, 'passionFishing': 2, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 74.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 76.0, 'passionFishing': 2, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 61.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 61', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 51.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 1, 'currenthealth': 60.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 66', 'age': 29, 'maxhealth': 91, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 67.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 74', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 1, 'currenthealth': 70.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 54.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 91', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 60.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 64.0, 'passionFishing': 3, 'passionGathering': 2, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 97', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 2, 'currenthealth': 73.0, 'passionFishing': 6, 'passionGathering': 4, 'occupation': 'General Worker'}
-{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 55, 'maxhealth': 65, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 1.0, 'passionFishing': 1, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 3', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 9.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 1.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 25', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 2, 'currenthealth': 41.0, 'passionFishing': 7, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 53, 'maxhealth': 67, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 14.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 0, 'passionFishing': 2, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 86', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 23.0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 25.0, 'passionFishing': 2, 'passionGathering': 9, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 35.0, 'passionFishing': 8, 'passionGathering': 10, 'occupation': 'Gatherer'}
-{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 16.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 8', 'age': 48, 'maxhealth': 72, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 7, 'currenthealth': 7.0, 'passionFishing': 7, 'passionGathering': 4, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 9, 'currenthealth': 1.0, 'passionFishing': 6, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 19', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 9, 'currenthealth': 30.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 41.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 9, 'currenthealth': 24.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 45', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 9, 'currenthealth': 31.0, 'passionFishing': 7, 'passionGathering': 7, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 79', 'age': 27, 'maxhealth': 93, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 10, 'currenthealth': 40.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 43.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Forager'}
-{'status': 'Alive and Well', 'name': 'Tudor 38', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 20.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 0.0, 'passionFishing': 9, 'passionGathering': 2, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 13.0, 'passionFishing': 9, 'passionGathering': 7, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 47, 'maxhealth': 73, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 14.0, 'passionFishing': 9, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 38.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 56', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 48.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 59', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 23.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 18.0, 'passionFishing': 10, 'passionGathering': 6, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 41.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 2, 'currenthealth': 4.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
-{'status': 'Alive and Well', 'name': 'Tudor 0', 'age': 67, 'maxhealth': 53, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 39.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 1', 'age': 78, 'maxhealth': 42, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 31.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 9', 'age': 80, 'maxhealth': 40, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 30.0, 'passionFishing': 9, 'passionGathering': 8, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 12', 'age': 72, 'maxhealth': 48, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 36.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 14', 'age': 70, 'maxhealth': 50, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 3, 'currenthealth': 37.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 29', 'age': 79, 'maxhealth': 41, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 30.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 33', 'age': 62, 'maxhealth': 58, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 43.0, 'passionFishing': 8, 'passionGathering': 8, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 40', 'age': 68, 'maxhealth': 52, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 39.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 41', 'age': 69, 'maxhealth': 51, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 38.0, 'passionFishing': 1, 'passionGathering': 3, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 46', 'age': 79, 'maxhealth': 41, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 10, 'currenthealth': 30.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 51', 'age': 78, 'maxhealth': 42, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 4, 'currenthealth': 31.0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 63', 'age': 77, 'maxhealth': 43, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 32.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 68', 'age': 71, 'maxhealth': 49, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 36.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 69', 'age': 65, 'maxhealth': 55, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 8, 'currenthealth': 41.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 71', 'age': 73, 'maxhealth': 47, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 35.0, 'passionFishing': 2, 'passionGathering': 6, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 76', 'age': 63, 'maxhealth': 57, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 4, 'currenthealth': 42.0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 78', 'age': 69, 'maxhealth': 51, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 38.0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 80', 'age': 62, 'maxhealth': 58, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 43.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 82', 'age': 72, 'maxhealth': 48, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 7, 'currenthealth': 36.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 85', 'age': 76, 'maxhealth': 44, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 33.0, 'passionFishing': 3, 'passionGathering': 7, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 90', 'age': 68, 'maxhealth': 52, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 6, 'currenthealth': 39.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 92', 'age': 67, 'maxhealth': 53, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 4, 'currenthealth': 39.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Elder'}
-{'status': 'Alive and Well', 'name': 'Tudor 6', 'age': 4, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 3, 'currenthealth': 75.0, 'passionFishing': 9, 'passionGathering': 8, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 10', 'age': 14, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 1, 'passionGathering': 4, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 11', 'age': 3, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 17', 'age': 16, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 6, 'passionGathering': 3, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 18', 'age': 10, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 22', 'age': 18, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 1, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 24', 'age': 1, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 26', 'age': 16, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 1, 'currenthealth': 75.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 27', 'age': 5, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 8, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 31', 'age': 1, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 2, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 6, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 34', 'age': 1, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 10, 'passionGathering': 6, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 36', 'age': 5, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 37', 'age': 7, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 1, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 54', 'age': 6, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 9, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 55', 'age': 7, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 57', 'age': 1, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 1, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 58', 'age': 19, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 2, 'currenthealth': 75.0, 'passionFishing': 10, 'passionGathering': 5, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 60', 'age': 11, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 10, 'passionGathering': 4, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 65', 'age': 10, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 2, 'passionGathering': 1, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 67', 'age': 16, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 4, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 70', 'age': 11, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 2, 'currenthealth': 75.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 81', 'age': 3, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 94', 'age': 3, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 95', 'age': 5, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Child'}
-{'status': 'Alive and Well', 'name': 'Tudor 98', 'age': 13, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 8, 'currenthealth': 75.0, 'passionFishing': 3, 'passionGathering': 5, 'occupation': 'Child'}
-[<game.Charac object at 0x10d3fbe90>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>, <game.Charac object at 0x10d2fbb10>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>, <game.Charac object at 0x10d2fbb10>, <game.Charac object at 0x10d2fb1d0>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>, <game.Charac object at 0x10d2fbb10>, <game.Charac object at 0x10d2fb1d0>, <game.Charac object at 0x10d2fb450>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>, <game.Charac object at 0x10d2fbb10>, <game.Charac object at 0x10d2fb1d0>, <game.Charac object at 0x10d2fb450>, <game.Charac object at 0x10d2fb050>]
-[<game.Charac object at 0x10d3fbe90>, <game.Charac object at 0x10d3fbf50>, <game.Charac object at 0x10d2fb510>, <game.Charac object at 0x10d2fbb10>, <game.Charac object at 0x10d2fb1d0>, <game.Charac object at 0x10d2fb450>, <game.Charac object at 0x10d2fb050>, <game.Charac object at 0x10d2fb110>]
-Running init code took 0.06s
+{'status': 'Alive and Well', 'name': 'Tudor 12', 'age': 45, 'maxhealth': 75, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 15', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 0.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 18', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 6, 'currenthealth': 34.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 30', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 7, 'currenthealth': 26.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 41', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 7, 'currenthealth': 0.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 50', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 46.0, 'passionFishing': 3, 'passionGathering': 5, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 55', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 5.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 77', 'age': 56, 'maxhealth': 64, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 6, 'currenthealth': 5.0, 'passionFishing': 4, 'passionGathering': 2, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 84', 'age': 21, 'maxhealth': 99, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 8, 'currenthealth': 30.0, 'passionFishing': 5, 'passionGathering': 7, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 87', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 3, 'currenthealth': 21.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'Hunter'}
+{'status': 'Alive and Well', 'name': 'Tudor 4', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 69.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 5', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 43.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 6', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 64.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 26', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 3, 'currenthealth': 68.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 27', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 55.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 34', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 49.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 37', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 64.0, 'passionFishing': 2, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 39', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 62.0, 'passionFishing': 3, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 43', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 64.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 46', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 5, 'currenthealth': 47.0, 'passionFishing': 4, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 47', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 2, 'currenthealth': 71.0, 'passionFishing': 6, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 48', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 68.0, 'passionFishing': 4, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 49', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 47.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 52', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 70.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 53', 'age': 36, 'maxhealth': 84, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 66.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 54', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 44.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 69', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 7, 'currenthealth': 68.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 70', 'age': 52, 'maxhealth': 68, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 53.0, 'passionFishing': 6, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 71', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 38.0, 'passionFishing': 6, 'passionGathering': 7, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 72', 'age': 23, 'maxhealth': 97, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 4, 'currenthealth': 78.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 75', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 63.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 76', 'age': 49, 'maxhealth': 71, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 61.0, 'passionFishing': 5, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 78', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 6, 'currenthealth': 77.0, 'passionFishing': 5, 'passionGathering': 3, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 80', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 70.0, 'passionFishing': 1, 'passionGathering': 5, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 83', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 72.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 88', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 3, 'currenthealth': 49.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 93', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 6, 'currenthealth': 50.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'General Worker'}
+{'status': 'Alive and Well', 'name': 'Tudor 0', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 10.0, 'passionFishing': 3, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 17', 'age': 26, 'maxhealth': 94, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 38.0, 'passionFishing': 4, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 29', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 6, 'currenthealth': 33.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 42', 'age': 25, 'maxhealth': 95, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 8, 'currenthealth': 25.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 51', 'age': 57, 'maxhealth': 63, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 17.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 63', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 5, 'currenthealth': 9.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 64', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 4.0, 'passionFishing': 5, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 73', 'age': 58, 'maxhealth': 62, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 18.0, 'passionFishing': 9, 'passionGathering': 9, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 81', 'age': 50, 'maxhealth': 70, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 0, 'passionFishing': 6, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 85', 'age': 33, 'maxhealth': 87, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 6, 'currenthealth': 30.0, 'passionFishing': 4, 'passionGathering': 8, 'occupation': 'Gatherer'}
+{'status': 'Alive and Well', 'name': 'Tudor 1', 'age': 20, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 7, 'currenthealth': 25.0, 'passionFishing': 3, 'passionGathering': 1, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 2', 'age': 39, 'maxhealth': 81, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 8, 'currenthealth': 18.0, 'passionFishing': 5, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 13', 'age': 42, 'maxhealth': 78, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 9, 'currenthealth': 9.0, 'passionFishing': 2, 'passionGathering': 4, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 23', 'age': 22, 'maxhealth': 98, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 17.0, 'passionFishing': 6, 'passionGathering': 2, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 44', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 4.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 65', 'age': 24, 'maxhealth': 96, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 25.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 67', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 10, 'currenthealth': 25.0, 'passionFishing': 7, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 92', 'age': 38, 'maxhealth': 82, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 10, 'currenthealth': 39.0, 'passionFishing': 3, 'passionGathering': 3, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 94', 'age': 46, 'maxhealth': 74, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 8, 'currenthealth': 16.0, 'passionFishing': 3, 'passionGathering': 8, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 96', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 9, 'currenthealth': 30.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Forager'}
+{'status': 'Alive and Well', 'name': 'Tudor 9', 'age': 30, 'maxhealth': 90, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 14.0, 'passionFishing': 7, 'passionGathering': 2, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 11', 'age': 59, 'maxhealth': 61, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 1.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 20', 'age': 34, 'maxhealth': 86, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 2, 'currenthealth': 0, 'passionFishing': 8, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 28', 'age': 35, 'maxhealth': 85, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 3, 'currenthealth': 13.0, 'passionFishing': 9, 'passionGathering': 6, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 32', 'age': 37, 'maxhealth': 83, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 30.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 36', 'age': 40, 'maxhealth': 80, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 3, 'currenthealth': 0, 'passionFishing': 8, 'passionGathering': 4, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 60', 'age': 31, 'maxhealth': 89, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 5, 'currenthealth': 40.0, 'passionFishing': 10, 'passionGathering': 8, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 68', 'age': 41, 'maxhealth': 79, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 5, 'currenthealth': 19.0, 'passionFishing': 10, 'passionGathering': 7, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 89', 'age': 54, 'maxhealth': 66, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 2, 'currenthealth': 18.0, 'passionFishing': 10, 'passionGathering': 3, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 95', 'age': 32, 'maxhealth': 88, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 3, 'currenthealth': 37.0, 'passionFishing': 9, 'passionGathering': 5, 'occupation': 'Fisherman'}
+{'status': 'Alive and Well', 'name': 'Tudor 7', 'age': 80, 'maxhealth': 40, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 30.0, 'passionFishing': 8, 'passionGathering': 6, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 10', 'age': 70, 'maxhealth': 50, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 8, 'currenthealth': 37.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 16', 'age': 80, 'maxhealth': 40, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 30.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 19', 'age': 76, 'maxhealth': 44, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 6, 'currenthealth': 33.0, 'passionFishing': 5, 'passionGathering': 8, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 22', 'age': 80, 'maxhealth': 40, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 30.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 33', 'age': 65, 'maxhealth': 55, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 41.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 35', 'age': 74, 'maxhealth': 46, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 9, 'currenthealth': 34.0, 'passionFishing': 8, 'passionGathering': 4, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 38', 'age': 77, 'maxhealth': 43, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 10, 'currenthealth': 32.0, 'passionFishing': 8, 'passionGathering': 3, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 45', 'age': 67, 'maxhealth': 53, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 1, 'currenthealth': 39.0, 'passionFishing': 3, 'passionGathering': 5, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 58', 'age': 78, 'maxhealth': 42, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 31.0, 'passionFishing': 2, 'passionGathering': 6, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 61', 'age': 64, 'maxhealth': 56, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 6, 'currenthealth': 42.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 62', 'age': 66, 'maxhealth': 54, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 3, 'currenthealth': 40.0, 'passionFishing': 5, 'passionGathering': 10, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 66', 'age': 65, 'maxhealth': 55, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 10, 'currenthealth': 41.0, 'passionFishing': 6, 'passionGathering': 1, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 74', 'age': 63, 'maxhealth': 57, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 9, 'currenthealth': 42.0, 'passionFishing': 3, 'passionGathering': 4, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 79', 'age': 65, 'maxhealth': 55, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 1, 'passionForaging': 5, 'currenthealth': 41.0, 'passionFishing': 9, 'passionGathering': 3, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 82', 'age': 74, 'maxhealth': 46, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 10, 'currenthealth': 34.0, 'passionFishing': 5, 'passionGathering': 2, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 86', 'age': 64, 'maxhealth': 56, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 4, 'currenthealth': 42.0, 'passionFishing': 5, 'passionGathering': 1, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 90', 'age': 79, 'maxhealth': 41, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 30.0, 'passionFishing': 2, 'passionGathering': 7, 'occupation': 'Elder'}
+{'status': 'Alive and Well', 'name': 'Tudor 3', 'age': 10, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 10, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 6, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 8', 'age': 9, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 9, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 7, 'passionGathering': 6, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 14', 'age': 9, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 3, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 4, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 21', 'age': 19, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 3, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 24', 'age': 19, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 6, 'currenthealth': 75.0, 'passionFishing': 7, 'passionGathering': 5, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 25', 'age': 3, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 2, 'passionForaging': 2, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 5, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 31', 'age': 1, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 9, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 40', 'age': 7, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 1, 'passionGathering': 4, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 56', 'age': 14, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 8, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 7, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 57', 'age': 6, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 4, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 59', 'age': 19, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 4, 'passionForaging': 8, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 8, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 91', 'age': 19, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 5, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 7, 'passionGathering': 1, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 97', 'age': 10, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 7, 'passionForaging': 5, 'currenthealth': 75.0, 'passionFishing': 8, 'passionGathering': 3, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 98', 'age': 16, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 3, 'passionForaging': 4, 'currenthealth': 75.0, 'passionFishing': 4, 'passionGathering': 1, 'occupation': 'Child'}
+{'status': 'Alive and Well', 'name': 'Tudor 99', 'age': 18, 'maxhealth': 100, 'hasPelt': 0, 'hasFire': 0, 'passionHunting': 6, 'passionForaging': 7, 'currenthealth': 75.0, 'passionFishing': 5, 'passionGathering': 9, 'occupation': 'Child'}
+[<game.Charac object at 0x110bdedd0>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>, <game.Charac object at 0x110bdefd0>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>, <game.Charac object at 0x110bdefd0>, <game.Charac object at 0x110bdeed0>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>, <game.Charac object at 0x110bdefd0>, <game.Charac object at 0x110bdeed0>, <game.Charac object at 0x110bdec10>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>, <game.Charac object at 0x110bdefd0>, <game.Charac object at 0x110bdeed0>, <game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>]
+[<game.Charac object at 0x110bdedd0>, <game.Charac object at 0x110bdef50>, <game.Charac object at 0x110bdef90>, <game.Charac object at 0x110bdefd0>, <game.Charac object at 0x110bdeed0>, <game.Charac object at 0x110bdec10>, <game.Charac object at 0x110bdecd0>, <game.Charac object at 0x110bded90>]
+Running init code took 0.09s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to '/Users/jason/Library/RenPy/backups/sun_sun_nosun':
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.20s
+Creating interface object took 0.11s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.05s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.07s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -482,36 +509,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.23207092285s
+Total time until interface ready: 1.12614607811s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016984 seconds.
-- Frame drawn at 0.033005 seconds.
-- Frame drawn at 0.049681 seconds.
-- Frame drawn at 0.067584 seconds.
-- 0.067584 seconds to render 5 frames.
-
-Day 0 has ended
-End of day report:
-gathered 80.0 Fuel.
-foraged 14.0 Herb and 35.0 Veg.
-hunted 40.0 Meat and 18.0 Pelts.
-fished 24.0 Fish.
-Tudor 7 has taken ill
-Tudor 18 has taken ill
-Tudor 33 has taken ill
-Tudor 42 has taken ill
-Tudor 50 has taken ill
-Tudor 63 has taken ill
-Tudor 66 has taken ill
-Tudor 75 has taken ill
-Tudor 80 has taken ill
-Tudor 81 has taken ill
-Tudor 89 has taken ill
-Tudor 91 has taken ill
-Tudor 92 has taken ill
-Tudor 94 has taken ill
-Tudor 97 has taken ill
-Tudor 99 has taken ill
-
-Day 1 has begun
+- Frame drawn at 0.016792 seconds.
+- Frame drawn at 0.032614 seconds.
+- Frame drawn at 0.049398 seconds.
+- Frame drawn at 0.066824 seconds.
+- 0.066824 seconds to render 5 frames.

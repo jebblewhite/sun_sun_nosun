@@ -527,11 +527,11 @@ label wakeup:
 label sleep:
     scene home_intr
     "you go to sleep after a long day of toil"
-    $ food, fuel, herbs, pelts = game.foodstuffs(), game.fuel, game.herbs, game.pelts
+    $ food, fuel, herbs, pelts = game.food, game.fuel, game.herbs, game.pelts
     $ game.advanceDay()
-    show screen Mapscreen(str(food) + ' (+ ' + str(game.foragedfoodstuffs()) + ')', str(fuel) + ' (+ ' + str(game.gatheredFuel)+ ')', str(herbs) + ' (+ ' + str(game.foragedHerb)+ ')', str(pelts) + ' (+ ' + str(game.huntedPelts)+ ')')
+    show screen Mapscreen(str(food) + ' (+ ' + str(game.huntedFood+game.fishedFood) + ')', str(fuel) + ' (+ ' + str(game.gatheredFuel)+ ')', str(herbs) + ' (+ ' + str(game.foragedHerb)+ ')', str(pelts) + ' (+ ' + str(game.huntedPelts)+ ')')
     "Workers add resources to the stockpiles"
-    show screen Mapscreen(str(food) + ' (+ ' + str(game.foragedfoodstuffs()) + ' + ' + str(game.playerfoodstuffs())+')', str(fuel) + ' (+ ' + str(game.gatheredFuel)+ ' + ' + str(game.playerFuel)+')', str(herbs) + ' (+ ' + str(game.foragedHerb)+ ' + ' + str(game.playerHerb)+')', str(pelts) + ' (+ ' + str(game.huntedPelts)+ ' + ' + str(game.playerPelts)+')')
+    show screen Mapscreen(str(food) + ' (+ ' + str(game.huntedFood+game.fishedFood) + ' + ' + str(game.playerhuntedFood+game.playerfishedFood)+')', str(fuel) + ' (+ ' + str(game.gatheredFuel)+ ' + ' + str(game.playerFuel)+')', str(herbs) + ' (+ ' + str(game.foragedHerb)+ ' + ' + str(game.playerHerb)+')', str(pelts) + ' (+ ' + str(game.huntedPelts)+ ' + ' + str(game.playerPelts)+')')
     "You add your harvest to the pile"
     show screen Mapscreen
     "Morale/Cohesion change"
@@ -543,39 +543,51 @@ label sleep:
 label playerChoices:
     "Food choice"
     menu:
-        "food choice 1":
+        "food choice 0.5pp":
             "result 1"
-        "food choice 2":
+            $ game.foodchoice = 1
+        "food choice 1pp":
             "result 2"
-        "food choice 3":
+            $ game.foodchoice = 2
+        "food choice 2pp":
             "result 3"
+            $ game.foodchoice = 1
     "Fuel choice"
     menu:
-        "fuel choice 1":
+        "fuel choice 0.5pp":
             "result 1"
-        "fuel choice 2":
+            $ game.fuelchoice = 1
+        "fuel choice 1pp":
             "result 2"
-        "fuel choice 3":
+            $ game.fuelchoice = 2
+        "fuel choice 2pp":
             "result 3"
+            $ game.fuelchoice = 3
     "Herbs choice"
     menu:
         "herbs choice 1":
             "result 1"
+            $ game.herbchoice = 1
         "herbs choice 2":
             "result 2"
+            $ game.herbchoice = 2
         "herbs choice 3":
             "result 3"
+            $ game.herbchoice = 3
     "Pelts choice"
     menu:
         "pelts choice 1":
             "result 1"
+            $ game.peltchoice = 1
         "pelts choice 2":
             "result 2"
+            $ game.peltchoice = 2
         "pelts choice 3":
             "result 3"
+            $ game.peltchoice = 3
     return
 
-screen Mapscreen(food = game.foodstuffs(),fuel = game.fuel, herbs = game.herbs, pelts = game.pelts):
+screen Mapscreen(food = game.food,fuel = game.fuel, herbs = game.herbs, pelts = game.pelts):
     text "{color=#f00}Day [game.day] // Actions left: [game.actions]{/color}" xalign 0.01 yalign 0
     text "{color=#f00}Food: [food]{/color}" xalign 0.99 yalign 0
     text "{color=#f00}Fuel: [fuel]{/color}" xalign 0.99 yalign 0.05
@@ -738,7 +750,7 @@ label river:
                     $ rollevent = 0
             else:
                 "get fish"
-                $foodFish += 6 + random.randint(1,6)
+                
 
         "Investigate the light in the distance" if weatherCold > 2:
             "You begin walking."
