@@ -41,6 +41,8 @@ class Peasant(object):
             return age
         self.name = name
         self.age = getRandomAge()
+        self.warmth = 100
+        self.hunger = 0
         if self.age > 20:
             self.maxhealth = 120-self.age
         else:
@@ -499,22 +501,31 @@ class Game(object):
         # weather / 
         yeet = random.randint(1,40)
         yote = random.randint(1,40)
+        """
         self.weatherPrecip=0 # dry
         self.weatherWind=0 # calm
         self.weatherCold=0 # mild
-        precip = yeet+self.day # ranges from 0-70 day 0, to 30-100 day 30
+        """
+
+        self.precip = yeet+self.day # ranges from 0-70 day 0, to 30-100 day 30
+        """
         if precip > 60:
             self.weatherPrecip = 2 # snow
         elif precip > 30:
             self.weatherPrecip = 1 # rain
-        
-        wind = yote+self.day # ranges from 0-70 day 0, to 30-100 day 30
+        """
+        self.wind = yote+self.day # ranges from 0-70 day 0, to 30-100 day 30
+
+        """
         if wind > 60:
             self.weatherWind = 2 # gale
         elif wind > 30:
             self.weatherWind = 1 # breezy
+        """
 
-        cold = (precip + wind)*0.5 # ranges from 0-70 day 0, to 30-100 day 30
+        self.cold = (self.precip + self.wind)*0.5 # ranges from 0-70 day 0, to 30-100 day 30
+
+        """
         if cold > 80:
             self.weatherCold = 4 # deathly
         elif cold > 60:
@@ -523,8 +534,9 @@ class Game(object):
             self.weatherCold = 2 # brisk
         elif cold > 20:
             self.weatherCold = 1 # chilly
+        """
         
-        self.coldness = cold
+        
         
         return
         

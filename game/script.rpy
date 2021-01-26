@@ -192,14 +192,24 @@ define crier = Character(game.__dict__['crier'].name)
 label start:
     #play music "automato.ogg" fadein 1.0
     #$ renpy.block_rollback()
-    $ player_name = renpy.input("What is your name, Magical Boy?")
-    $ player_name = player_name.strip()
+    #call nameask
+    #call hintcheck
+    #call intro_sequence
+    #show bachnight with dissolve
+    jump prolog_run
+
+label nameask:
+    $ game.player_name = renpy.input("What is your name, Magical Boy?")
+    $ game.player_name = game.player_name.strip()
+    return
+label hintcheck:
     menu:
         "First time playing / I want an overview of the game's mechanics":
             $ hints = 1
         "I am a seasoned veteran / Skip overview and hints":
             $ hints = 0
-    
+    return
+label intro_sequence:
     show text "Winter is fast approaching." with dissolve
     with Pause(3)
     hide text with dissolve
@@ -219,8 +229,7 @@ label start:
     show ssnow zorder 2
     with Pause(1)
     $ flash = Fade(.25, 0, .75, color="#fff")
-    #show bachnight with dissolve
-    jump prolog_run
+    return
 
 label prolog_run:
     jump act1start # this skips
@@ -480,7 +489,7 @@ _________A______________ C______________ T______________        O______________ 
 """
 
 label act1start:
-    "t his is the bugening f the game lol"
+    "<ACT 1 START>"
     call gameloop
     jump end
 

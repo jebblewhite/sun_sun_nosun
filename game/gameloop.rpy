@@ -17,6 +17,11 @@ label wakeup:
     scene home_intr
      # place holder stuff VVV
     $ game.weatherMake()
+    #call wakemessage
+    return
+        #### DETERMINE HOW PEOPLE TAKE ILL
+        
+label wakemessage:
     $ day = game.day
     "you wake up! it is day [day]."
     $ precip = game.weatherPrecip
@@ -37,8 +42,6 @@ label wakeup:
     "New Recovered: [game.newRecovered]  New Ill:[game.newIll]  New Dead: [game.newDead]"
     "Healthy: [game.popHealthy]  Ill:[game.popIll]  Dead: [game.popDead]"
     return
-        #### DETERMINE HOW PEOPLE TAKE ILL
-        
 
 label sleep:
     scene home_intr

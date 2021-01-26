@@ -1,58 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 484, in script call
+  File "game/script.rpy", line 493, in script call
     call gameloop
-  File "game/script.rpy", line 495, in script call
-    call maploop
-  File "game/script.rpy", line 618, in script call
-    call maptown
-  File "game/script.rpy", line 639, in script call
-    call maploop
-  File "game/script.rpy", line 608, in script call
-    call herbs
-  File "game/script.rpy", line 711, in script call
-    call maploop
-  File "game/script.rpy", line 610, in script call
-    call river
-  File "game/script.rpy", line 719, in script
-    menu:
-  File "game/script.rpy", line 755, in <module>
-    "Investigate the light in the distance" if weatherCold > 2:
-NameError: name 'weatherCold' is not defined
+  File "game/gameloop.rpy", line 3, in script call
+    call wakeup
+  File "game/gameloop.rpy", line 19, in script
+    $ game.weatherMake()
+  File "game/gameloop.rpy", line 19, in <module>
+    $ game.weatherMake()
+NameError: global name 'precip' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 484, in script call
+  File "game/script.rpy", line 493, in script call
     call gameloop
-  File "game/script.rpy", line 495, in script call
-    call maploop
-  File "game/script.rpy", line 618, in script call
-    call maptown
-  File "game/script.rpy", line 639, in script call
-    call maploop
-  File "game/script.rpy", line 608, in script call
-    call herbs
-  File "game/script.rpy", line 711, in script call
-    call maploop
-  File "game/script.rpy", line 610, in script call
-    call river
-  File "game/script.rpy", line 719, in script
-    menu:
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1628, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "/Applications/renpy-7.3.5-sdk/renpy/exports.py", line 956, in menu
-    condition = renpy.python.py_eval(condition)
-  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 755, in <module>
-    "Investigate the light in the distance" if weatherCold > 2:
-NameError: name 'weatherCold' is not defined
+  File "game/gameloop.rpy", line 3, in script call
+    call wakeup
+  File "game/gameloop.rpy", line 19, in script
+    $ game.weatherMake()
+  File "renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/gameloop.rpy", line 19, in <module>
+    $ game.weatherMake()
+  File "game.py", line 524, in weatherMake
+NameError: global name 'precip' is not defined
 
-Darwin-19.5.0-x86_64-i386-64bit
-Ren'Py 7.3.5.606
+Windows-10-10.0.19041
+Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Wed Nov 25 16:48:57 2020
+Tue Jan 26 14:12:25 2021
