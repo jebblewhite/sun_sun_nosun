@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 597: choice menuitem expects a non-empty block.
-    "food choice 1":
-                    ^
-
-File "game/script.rpy", line 602: choice menuitem expects a non-empty block.
-    "fuel choice 1":
-                    ^
-
-File "game/script.rpy", line 607: choice menuitem expects a non-empty block.
-    "herbs choice 1":
-                     ^
-
-File "game/script.rpy", line 612: choice menuitem expects a non-empty block.
-    "pelts choice 1":
-                     ^
+The label gameloop is defined twice, at
+  File "game/gameloop.rpy", line 1 and
+  File "game/script2.rpyc", line 1.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Nov  4 12:32:35 2020
+Thu Jan  7 18:05:33 2021
