@@ -60,6 +60,7 @@ label sleep:
 
 
 label playerChoices:
+    show screen Mapscreen
     "Food choice"
     menu:
         "food choice 0.5pp":
@@ -70,7 +71,9 @@ label playerChoices:
             $ game.foodchoice = 2
         "food choice 2pp":
             "result 3"
-            $ game.foodchoice = 1
+            $ game.foodchoice = 3
+    $ game.updateFood()
+    show screen Mapscreen
     "Fuel choice"
     menu:
         "fuel choice 0.5pp":
@@ -82,26 +85,20 @@ label playerChoices:
         "fuel choice 2pp":
             "result 3"
             $ game.fuelchoice = 3
-    "Herbs choice"
+    $ game.updateFuel()
+    show screen Mapscreen
+    "Herbs -> Medicine or Alcohol?"
     menu:
-        "herbs choice 1":
+        "All Medicine (10\% bonus yield)":
             "result 1"
             $ game.herbchoice = 1
-        "herbs choice 2":
+        "All Alcohol (10\% bonus yield)":
             "result 2"
             $ game.herbchoice = 2
-        "herbs choice 3":
+        "Evenly split":
             "result 3"
             $ game.herbchoice = 3
-    "Pelts choice"
-    menu:
-        "pelts choice 1":
-            "result 1"
-            $ game.peltchoice = 1
-        "pelts choice 2":
-            "result 2"
-            $ game.peltchoice = 2
-        "pelts choice 3":
-            "result 3"
-            $ game.peltchoice = 3
+    $ game.updateHerb()
+    show screen Mapscreen
+    
     return

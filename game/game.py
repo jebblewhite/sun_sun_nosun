@@ -127,7 +127,9 @@ class Game(object):
 
         # starting values for resources
         self.worldherbs = 2000
-        self.herbs = 20
+        self.herbs = 0
+        self.medicine = 0
+        self.alcohol = 0
         self.worldfuel = 10000
         self.fuel = 400
         self.worldpelts = 180
@@ -137,7 +139,7 @@ class Game(object):
        
         self.foodchoice = 2
         self.fuelchoice = 2
-        self.herbchoice = 2
+        self.herbchoice = 3
         self.peltchoice = 2
 
         self.day = 0
@@ -243,20 +245,53 @@ class Game(object):
         self.morale_yields_main()
         return
 
+    def countAlive(self):
+        return(len([peasant.status!= "Dead" for peasant in self.peasants]))
+
+    def updateFood(self):
+        self.foodpp = 2**(self.foodchoice-2)
+        if self.countAlive()*self.foodpp <= self.food:
+            self.distfood = (self.countAlive()*self.foodpp)
+        else:
+            self.distfood = (self.food)
+        self.food -= self.distfood
+        
+    def updateFuel(self):
+        self.fuelpp = 2**(self.fuelchoice-2)
+        if self.countAlive()*self.fuelpp <= self.fuel:
+            self.distfuel = (self.countAlive()*self.fuelpp)
+        else:
+            self.distfuel = (self.fuel)
+        self.fuel -= self.distfuel
+ 
+
+    def updateHerb(self):
+        if self.herbchoice != 3:
+            product = round(1.1*self.herbs)
+            if self.herbchoice == 1:
+                self.medicine += product
+            else:
+                self.alcohol += product
+        else:
+            product =  round(0.5*self.herbs)
+            self.medicine += product
+            self.alcohol += product
+        self.herbs = 0
 
     def advanceNight(self):
-        foodpp = 2**(self.foodchoice-2)
-        fuelpp = 2**(self.fuelchoice-2)
+        self.bigFeast()
+        self.bigBurn()
 
-        self.bigFeast(foodpp)
-        self.bigBurn(fuelpp)
         self.distributePelts()
-        
+
+        self.giveMedicine()
+
         self.recovered()
         self.sickDie()
         self.newSick()
         self.morale_sick_dead()
         self.checkPop()
+
         self.day += 1
         self.startDayMessage()
         if self.day<30:
@@ -303,24 +338,40 @@ class Game(object):
     def morale_yields_main(self): # gain if good yields, loss if casualties
         pass
 
-    def bigFeast(self,foodpp):
+    def bigFeast(self):
         def eatFood(peasant):
             peasant.hasFood = 0
+            if self.distfood > 0:
+                self.distfood -= self.foodpp
+                peasant.hasFood = (self.foodpp)
+
         random.shuffle(self.peasants)
         for peasant in self.peasants:
             eatFood(peasant)
         
 
-    def bigBurn(self,fuelpp):
+    def bigBurn(self):
         def burnLog(peasant):
             peasant.hasFire = 0
-            if self.fuel > 0:
-                self.fuel -= fuelpp
-                peasant.hasFire = fuelpp
+            if self.distfuel > 0:
+                self.distfuel -= self.fuelpp
+                peasant.hasFire = (self.fuelpp)
 
         random.shuffle(self.peasants)
         for peasant in self.peasants:
             burnLog(peasant)
+
+    def giveMedicine(self):
+        def takeMeds(peasant):
+            if self.medicine > 0:
+                self.medicine -= 1
+                peasant.hasMeds = 1
+
+        random.shuffle(self.peasants)
+        for peasant in self.peasants:
+            peasant.hasMeds = 0
+            if peasant.status == "Sick":
+                takeMeds(peasant)
 
     def morale_sick_dead(self): 
         pass
@@ -612,5 +663,6 @@ def main():
     
 
     display(sorted(game.peasants, key=lambda x: x.occupation, reverse=True))
+    print(game.countAlive)
         
 main()

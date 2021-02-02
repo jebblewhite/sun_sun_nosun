@@ -3,33 +3,33 @@
 While running game code:
   File "game/script.rpy", line 493, in script call
     call gameloop
-  File "game/gameloop.rpy", line 3, in script call
-    call wakeup
-  File "game/gameloop.rpy", line 19, in script
-    $ game.weatherMake()
-  File "game/gameloop.rpy", line 19, in <module>
-    $ game.weatherMake()
-NameError: global name 'precip' is not defined
+  File "game/gameloop.rpy", line 7, in script call
+    call sleep
+  File "game/gameloop.rpy", line 58, in script
+    $ game.advanceNight()
+  File "game/gameloop.rpy", line 58, in <module>
+    $ game.advanceNight()
+AttributeError: 'Game' object has no attribute 'giveMedicine'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 493, in script call
     call gameloop
-  File "game/gameloop.rpy", line 3, in script call
-    call wakeup
-  File "game/gameloop.rpy", line 19, in script
-    $ game.weatherMake()
-  File "renpy/ast.py", line 922, in execute
+  File "game/gameloop.rpy", line 7, in script call
+    call sleep
+  File "game/gameloop.rpy", line 58, in script
+    $ game.advanceNight()
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2218, in py_exec_bytecode
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/gameloop.rpy", line 19, in <module>
-    $ game.weatherMake()
-  File "game.py", line 524, in weatherMake
-NameError: global name 'precip' is not defined
+  File "game/gameloop.rpy", line 58, in <module>
+    $ game.advanceNight()
+  File "game.py", line 287, in advanceNight
+AttributeError: 'Game' object has no attribute 'giveMedicine'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Tue Jan 26 14:12:25 2021
+Tue Feb  2 17:49:18 2021

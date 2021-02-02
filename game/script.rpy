@@ -508,6 +508,8 @@ screen Mapscreen(food = game.food,fuel = game.fuel, herbs = game.herbs, pelts = 
     text "{color=#f00}Dead: [game.popDead]{/color}" xalign 0.99 yalign 0.35
     text "{color=#f00}Morale: [game.popMorale]{/color}" xalign 0.99 yalign 0.4
     text "{color=#f00}Cohesion: [game.popCohesion]{/color}" xalign 0.99 yalign 0.45
+    text "{color=#f00}Medicine: [game.medicine]{/color}" xalign 0.99 yalign 0.5
+    text "{color=#f00}Alcohol: [game.alcohol]{/color}" xalign 0.99 yalign 0.55
 
 label maploop:
     scene main_map
