@@ -81,6 +81,7 @@ class Peasant(object):
         else:
             workers.append(self)
         peasants.append(self)
+        
 
 class Game(object):
     def __init__(self):
@@ -133,12 +134,12 @@ class Game(object):
         self.herbs = 0
         self.medicine = 0
         self.alcohol = 0
-        self.worldfuel = 10000
-        self.fuel = 400
+        self.worldfuel = 9000
+        self.fuel = 350
         self.worldpelts = 180
         self.pelts = 0
-        self.food = 300
-        self.worldfood = 5000
+        self.food = 250
+        self.worldfood = 4000
        
         self.fueleffect = 20
         self.foodeffect = 20
@@ -296,10 +297,11 @@ class Game(object):
             print(heat)
             print(self.cold)
             print(warmthchange)
-            self.addsubLim(peasant.warmth,warmthchange,peasant.maxwarmth) 
+            peasant.warmth = self.addsubLim(peasant.warmth,warmthchange,peasant.maxwarmth) 
 
             
-            self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth)/4,peasant.maxhealth)
+            a = self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth),0)
+            peasant.currenthealth = a
 
     def hungercheck(self):
         for peasant in self.peasants:
@@ -308,10 +310,12 @@ class Game(object):
                 hunger = (math.log(peasant.hasFood,2)+2)*self.foodeffect
             
             hungerchange = (hunger-self.cold)
-            self.addsubLim(peasant.hunger,hungerchange,peasant.maxhunger)
-
-
-            self.addLim(peasant.currenthealth,peasant.hunger/20,peasant.maxhealth)
+            peasant.hunger = self.addsubLim(peasant.hunger,hungerchange,peasant.maxhunger)
+            print(peasant.hunger)
+            print(peasant.currenthealth)
+            a = peasant.currenthealth = self.addsubLim(peasant.currenthealth,(peasant.hunger-50)/10,peasant.maxhealth)
+            peasant.currenthealth = a
+            print(peasant.currenthealth)
             print(" Name : {name} - Occupation : {occ} - Health : {health}/{maxhealth}".format(name=peasant.name,occ=peasant.occupation,health=peasant.currenthealth,maxhealth=peasant.maxhealth))
     
 
@@ -372,7 +376,7 @@ class Game(object):
         if b>=0:
             return self.addLim(a,b,uplim)
         else:
-            return self.subLim(a, (-b), downlim)
+            return self.subLim(a, b, downlim)
 
     def genworkersMiniEvent(self): # if too few townspeople for nonworkers and resource management, lose cohesion, morale or resources / else vice versa
         pass
@@ -478,16 +482,16 @@ class Game(object):
         for i in range(len(self.gatherers)): # all workers roll for success, and can either fail or choose to half succeed with a consequence
             
             gatheredsucc += skillRoll(self.gatherers[i],'passionGathering',1)
-            self.gatherers[i].currenthealth = self.subLim(self.gatherers[i].currenthealth,random.randint(1,5),0) 
+            self.gatherers[i].currenthealth = self.subLim(self.gatherers[i].currenthealth,2*random.randint(1,5),0) 
         for i in range(len(self.foragers)):
             foragedsucc += skillRoll(self.foragers[i],'passionForaging',1)
-            self.foragers[i].currenthealth = self.subLim(self.foragers[i].currenthealth, random.randint(1,5),0)
+            self.foragers[i].currenthealth = self.subLim(self.foragers[i].currenthealth, 2*random.randint(1,5),0)
         for i in range(len(self.hunters)):
             huntedsucc += skillRoll(self.hunters[i],'passionHunting',1)
-            self.hunters[i].currenthealth = self.subLim(self.hunters[i].currenthealth, random.randint(1,5),0)
+            self.hunters[i].currenthealth = self.subLim(self.hunters[i].currenthealth, 2*random.randint(1,5),0)
         for i in range(len(self.fishermen)):
             fishedsucc += skillRoll(self.fishermen[i],'passionFishing',1)
-            self.fishermen[i].currenthealth = self.subLim(self.fishermen[i].currenthealth, random.randint(1,5),0)
+            self.fishermen[i].currenthealth = self.subLim(self.fishermen[i].currenthealth, 2*random.randint(1,5),0)
 
         gatheredFuel = fromWorld(gatheredsucc,'fuel')
         foragedHerb = fromWorld(foragedsucc,'herbs')
@@ -512,7 +516,7 @@ class Game(object):
 
     def genworkerRandomChange(self):
         for i in range(len(self.genworkers)):
-            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-5,5),self.genworkers[i].maxhealth)
+            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-10,10),self.genworkers[i].maxhealth)
             
 
     def recovered(self):
@@ -521,6 +525,7 @@ class Game(object):
                 self.peasants[i].status = 'Alive and Well'
     
     def sickDie(self):
+        
         self.newRecovered = 0
         self.newDead = 0
         def tryTakeMeds(sicko):
@@ -538,11 +543,13 @@ class Game(object):
                     print(sicko.name + " is recovering from sickness despite the lack of medicine")
                     sicko.status = 'Recovering from Sickness'
                     self.newRecovered += 1
-                
+
         for i in range(len(self.peasants)):
             if self.peasants[i].currenthealth == 0:
                 self.peasants[i].status = 'Dead'
                 self.newDead += 1
+            if self.peasants[i].status == 'Dead':
+                self.peasants[i].currenthealth = 0
             if self.peasants[i].status == 'Sick':
                 tryTakeMeds(self.peasants[i])
 
@@ -616,7 +623,7 @@ class Game(object):
             self.weatherWind = 1 # breezy
         """
 
-        self.cold = (self.precip + self.wind)*0.6 # ranges from 0-70 day 0, to 30-100 day 30 // now 0-105 tending to 52
+        self.cold = (self.precip + self.wind)*0.75# ranges from 0-70 day 0, to 30-100 day 30 // now 0-105 tending to 52
 
         """
         if cold > 80:

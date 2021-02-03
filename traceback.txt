@@ -9,7 +9,7 @@ While running game code:
     $ game.advanceNight()
   File "game/gameloop.rpy", line 58, in <module>
     $ game.advanceNight()
-ValueError: math domain error
+TypeError: subLim() takes exactly 4 arguments (3 given)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,11 +26,11 @@ Full traceback:
     exec(bytecode, globals, locals)
   File "game/gameloop.rpy", line 58, in <module>
     $ game.advanceNight()
-  File "game.py", line 327, in advanceNight
-  File "game.py", line 304, in hungercheck
-ValueError: math domain error
+  File "game.py", line 334, in advanceNight
+  File "game.py", line 303, in warmcheck
+TypeError: subLim() takes exactly 4 arguments (3 given)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Wed Feb  3 17:38:38 2021
+Wed Feb  3 21:30:59 2021
