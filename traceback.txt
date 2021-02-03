@@ -9,7 +9,7 @@ While running game code:
     $ game.advanceNight()
   File "game/gameloop.rpy", line 58, in <module>
     $ game.advanceNight()
-AttributeError: 'Game' object has no attribute 'giveMedicine'
+ValueError: math domain error
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,10 +26,11 @@ Full traceback:
     exec(bytecode, globals, locals)
   File "game/gameloop.rpy", line 58, in <module>
     $ game.advanceNight()
-  File "game.py", line 287, in advanceNight
-AttributeError: 'Game' object has no attribute 'giveMedicine'
+  File "game.py", line 327, in advanceNight
+  File "game.py", line 304, in hungercheck
+ValueError: math domain error
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Tue Feb  2 17:49:18 2021
+Wed Feb  3 17:38:38 2021

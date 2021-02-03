@@ -1,4 +1,5 @@
 import random
+import math
 
 class Charac(object):
     def __init__(self,like,respect,attract,name,img,ide,characters):
@@ -42,13 +43,15 @@ class Peasant(object):
         self.name = name
         self.age = getRandomAge()
         self.warmth = 100
-        self.hunger = 0
+        self.maxwarmth = 100
+        self.hunger = 100
+        self.maxhunger = 100
         if self.age > 20:
             self.maxhealth = 120-self.age
         else:
             self.maxhealth = 100
 
-        self.currenthealth = round(3*self.maxhealth/4)
+        self.currenthealth = (3*self.maxhealth/4)
 
         self.passionHunting = random.randint(random.randint(1,4),random.randint(6,10))
         self.passionFishing = random.randint(random.randint(1,4),random.randint(6,10))
@@ -135,8 +138,11 @@ class Game(object):
         self.worldpelts = 180
         self.pelts = 0
         self.food = 300
-        self.worldfood = 10000
+        self.worldfood = 5000
        
+        self.fueleffect = 20
+        self.foodeffect = 20
+
         self.foodchoice = 2
         self.fuelchoice = 2
         self.herbchoice = 3
@@ -208,7 +214,7 @@ class Game(object):
 
     def worldDecay(self):
         def fromWorld(percentage,resource):
-            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)])
+            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)]*(2**(self.popMorale/50-1)))
             self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
             return takeaway
         fromWorld(1.5,'fuel')
@@ -278,6 +284,37 @@ class Game(object):
             self.alcohol += product
         self.herbs = 0
 
+    def warmcheck(self):
+        for peasant in self.peasants:
+            heat = 0
+            if peasant.hasFire > 0:
+                heat = (math.log(peasant.hasFire,2)+2)*self.fueleffect
+            print(heat)
+            if peasant.hasPelt > 0:
+                heat += (self.fueleffect)
+            warmthchange = (heat-self.cold)
+            print(heat)
+            print(self.cold)
+            print(warmthchange)
+            self.addsubLim(peasant.warmth,warmthchange,peasant.maxwarmth) 
+
+            
+            self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth)/4,peasant.maxhealth)
+
+    def hungercheck(self):
+        for peasant in self.peasants:
+            hunger = 0
+            if peasant.hasFood > 0:
+                hunger = (math.log(peasant.hasFood,2)+2)*self.foodeffect
+            
+            hungerchange = (hunger-self.cold)
+            self.addsubLim(peasant.hunger,hungerchange,peasant.maxhunger)
+
+
+            self.addLim(peasant.currenthealth,peasant.hunger/20,peasant.maxhealth)
+            print(" Name : {name} - Occupation : {occ} - Health : {health}/{maxhealth}".format(name=peasant.name,occ=peasant.occupation,health=peasant.currenthealth,maxhealth=peasant.maxhealth))
+    
+
     def advanceNight(self):
         self.bigFeast()
         self.bigBurn()
@@ -289,6 +326,11 @@ class Game(object):
         self.recovered()
         self.sickDie()
         self.newSick()
+
+        self.warmcheck()
+        self.hungercheck()
+
+        # morning here
         self.morale_sick_dead()
         self.checkPop()
 
@@ -377,14 +419,14 @@ class Game(object):
         pass
 
     def distributePelts(self):
-        used_pelts = 0
-        def peltTime(peasant,used_pelts):
+        self.used_pelts = 0
+        def peltTime(peasant):
             peasant.hasPelt = 0
-            if used_pelts < self.pelts:
+            if self.used_pelts < self.pelts:
                 peasant.hasPelt = 1
-                used_pelts += 1
+                self.used_pelts += 1
         for peasant in self.peasants:
-            peltTime(peasant,used_pelts)
+            peltTime(peasant)
 
     def checkPop(self):
         self.popIll = 0
@@ -471,6 +513,7 @@ class Game(object):
     def genworkerRandomChange(self):
         for i in range(len(self.genworkers)):
             self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-5,5),self.genworkers[i].maxhealth)
+            
 
     def recovered(self):
         for i in range(len(self.peasants)):
@@ -481,8 +524,7 @@ class Game(object):
         self.newRecovered = 0
         self.newDead = 0
         def tryTakeMeds(sicko):
-            if self.herbs > 0:
-                self.herbs -= 1
+            if sicko.hasMeds > 0:
                 print(sicko.name + " is recovering from sickness after being treated")
                 sicko.status = 'Recovering from Sickness'
                 self.newRecovered += 1
@@ -493,7 +535,7 @@ class Game(object):
                     self.newDead += 1
                 else:
                     sicko.currenthealth = self.addLim(sicko.currenthealth, round(0.2*sicko.currenthealth),sicko.maxhealth)
-                    print(sicko.name + " is recovering from sickness despite the lack of herbs")
+                    print(sicko.name + " is recovering from sickness despite the lack of medicine")
                     sicko.status = 'Recovering from Sickness'
                     self.newRecovered += 1
                 
@@ -510,9 +552,9 @@ class Game(object):
     def newSick(self):
         self.newIll = 0
         for i in range(len(self.peasants)):
-            if self.peasants[i].status == 'Alive and Well' and self.peasants[i].currenthealth < 50:
+            if self.peasants[i].status == 'Alive and Well' and self.peasants[i].currenthealth < 40:
                 if random.randint(1,100) > self.peasants[i].currenthealth:
-                    print(self.peasants[i].name + " has taken ill")
+                    print(self.peasants[i].name + " (" + self.peasants[i].occupation + ") has taken ill")
                     self.peasants[i].status = 'Sick'
                     self.newIll += 1
                 else:
@@ -574,7 +616,7 @@ class Game(object):
             self.weatherWind = 1 # breezy
         """
 
-        self.cold = (self.precip + self.wind)*0.5 # ranges from 0-70 day 0, to 30-100 day 30
+        self.cold = (self.precip + self.wind)*0.6 # ranges from 0-70 day 0, to 30-100 day 30 // now 0-105 tending to 52
 
         """
         if cold > 80:
