@@ -360,6 +360,9 @@ class Game(object):
 
     def addLim(self, a, b, limit):
         c = a+b
+        print(a)
+        print(b)
+        print(c)
         if c>limit:
             return limit
         else:

@@ -512,7 +512,7 @@ screen Mapscreen(food = game.food,fuel = game.fuel, herbs = game.herbs, pelts = 
     text "{color=#f00}Alcohol: [game.alcohol]{/color}" xalign 0.99 yalign 0.55
 
 label maploop:
-    scene main_map
+    scene mapscreen1
     show screen Mapscreen
     menu:
         "Herbalist":
