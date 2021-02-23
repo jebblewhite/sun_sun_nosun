@@ -135,7 +135,7 @@ class Game(object):
         self.medicine = 0
         self.alcohol = 0
         self.worldfuel = 9000
-        self.fuel = 350
+        self.fuel = 200
         self.worldpelts = 180
         self.pelts = 0
         self.food = 250
@@ -294,14 +294,18 @@ class Game(object):
             if peasant.hasPelt > 0:
                 heat += (self.fueleffect)
             warmthchange = (heat-self.cold)
-            print(heat)
-            print(self.cold)
-            print(warmthchange)
+            print("heat :" +str(heat))
+            print("coldness of weather : " + str(self.cold))
+            print("warmth change : " + str(warmthchange))
+
+            print("old warmth : " + str(peasant.warmth))
             peasant.warmth = self.addsubLim(peasant.warmth,warmthchange,peasant.maxwarmth) 
 
-            
+            print("new warmth : " + str(peasant.warmth))
             a = self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth),0)
             peasant.currenthealth = a
+            print("current health : " + str(peasant.currenthealth))
+
 
     def hungercheck(self):
         for peasant in self.peasants:
@@ -311,11 +315,11 @@ class Game(object):
             
             hungerchange = (hunger-self.cold)
             peasant.hunger = self.addsubLim(peasant.hunger,hungerchange,peasant.maxhunger)
-            print(peasant.hunger)
-            print(peasant.currenthealth)
-            a = peasant.currenthealth = self.addsubLim(peasant.currenthealth,(peasant.hunger-50)/10,peasant.maxhealth)
+            print("fedness : "+ str(peasant.hunger))
+            print("current health : " + str(peasant.currenthealth))
+            a = self.addsubLim(peasant.currenthealth,(peasant.hunger-50)/10,peasant.maxhealth)
             peasant.currenthealth = a
-            print(peasant.currenthealth)
+            print("new health : " + str(peasant.currenthealth))
             print(" Name : {name} - Occupation : {occ} - Health : {health}/{maxhealth}".format(name=peasant.name,occ=peasant.occupation,health=peasant.currenthealth,maxhealth=peasant.maxhealth))
     
 
@@ -375,11 +379,11 @@ class Game(object):
         else:
             return d
 
-    def addsubLim(self,a,b,uplim,downlim=0):
+    def addsubLim(self,a,b,uplim=100,downlim=0):
         if b>=0:
             return self.addLim(a,b,uplim)
         else:
-            return self.subLim(a, b, downlim)
+            return self.subLim(a, -b, downlim)
 
     def genworkersMiniEvent(self): # if too few townspeople for nonworkers and resource management, lose cohesion, morale or resources / else vice versa
         pass
@@ -519,7 +523,7 @@ class Game(object):
 
     def genworkerRandomChange(self):
         for i in range(len(self.genworkers)):
-            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-10,10),self.genworkers[i].maxhealth)
+            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-5,5),self.genworkers[i].maxhealth)
             
 
     def recovered(self):
@@ -537,18 +541,18 @@ class Game(object):
                 sicko.status = 'Recovering from Sickness'
                 self.newRecovered += 1
             else:
-                if random.randint(1,100) > sicko.currenthealth:
+                if random.randint(1,100) > (sicko.currenthealth+sicko.warmth)/2:
                     print(sicko.name + " has died.")
                     sicko.status = 'Dead'
                     self.newDead += 1
                 else:
-                    sicko.currenthealth = self.addLim(sicko.currenthealth, round(0.2*sicko.currenthealth),sicko.maxhealth)
+                    sicko.currenthealth = self.addLim(sicko.currenthealth, round(0.1*sicko.currenthealth),sicko.maxhealth)
                     print(sicko.name + " is recovering from sickness despite the lack of medicine")
                     sicko.status = 'Recovering from Sickness'
                     self.newRecovered += 1
 
         for i in range(len(self.peasants)):
-            if self.peasants[i].currenthealth == 0:
+            if self.peasants[i].currenthealth <= 0 and self.peasants[i].status != 'Dead':
                 self.peasants[i].status = 'Dead'
                 self.newDead += 1
             if self.peasants[i].status == 'Dead':
@@ -562,7 +566,7 @@ class Game(object):
     def newSick(self):
         self.newIll = 0
         for i in range(len(self.peasants)):
-            if self.peasants[i].status == 'Alive and Well' and self.peasants[i].currenthealth < 40:
+            if self.peasants[i].status == 'Alive and Well' and (self.peasants[i].currenthealth+self.peasants[i].warmth)/2 < 40:
                 if random.randint(1,100) > self.peasants[i].currenthealth:
                     print(self.peasants[i].name + " (" + self.peasants[i].occupation + ") has taken ill")
                     self.peasants[i].status = 'Sick'
@@ -703,16 +707,32 @@ def main():
 
     display(sorted(game.workers, key=lambda x: x.occupation, reverse=True))
 
-    game.advanceDay()
+
+    class statistics:
+        def __init__(self):
+            self.currenthealths = []
+            self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
+            self.avghealth = []
+            self.avghealth.append(sum(self.currenthealths[0])/len(self.currenthealths[0]))
+
+        def update(self,i):
+            self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
+            self.avghealth.append(sum(self.currenthealths[i+1])/len(self.currenthealths[i+1]))
+
+    stats = statistics()
+
+    def daynightcycle():
+        game.weatherMake()
+        game.advanceDay()
+        game.updateFood()
+        game.updateFuel()
+        game.updateHerb()
+        game.advanceNight()
     
-    game.advanceDay()
-    game.advanceDay()
-    game.advanceDay()
-    game.advanceDay()
-    game.advanceDay()
-    game.advanceDay()
-    game.advanceDay()
-    
+
+    for i in range(29):
+        daynightcycle()
+        stats.update(i)
 
     display(sorted(game.peasants, key=lambda x: x.occupation, reverse=True))
     print(game.countAlive)
