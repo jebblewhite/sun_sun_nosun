@@ -734,6 +734,7 @@ def main():
         daynightcycle()
         stats.update(i)
 
+    
     display(sorted(game.peasants, key=lambda x: x.occupation, reverse=True))
     print(game.countAlive)
         
