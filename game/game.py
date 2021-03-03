@@ -653,7 +653,7 @@ class Game(object):
   
 def main():
 
-    game = Game()
+    
 
     """
     print(game.crier.widow)
@@ -698,7 +698,7 @@ def main():
             print(" __ __ __ Workers __ __ __")
         for i in range(len(x)):
             print(x[i].__dict__)
-
+    """
     display(game.hunters,True)
     display(game.foragers,True)
     display(game.gatherers,True)
@@ -707,9 +707,9 @@ def main():
 
     display(sorted(game.workers, key=lambda x: x.occupation, reverse=True))
 
-
+    """
     class statistics:
-        def __init__(self):
+        def __init__(self,game):
             self.currenthealths = []
             self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
             self.avghealth = []
@@ -719,7 +719,7 @@ def main():
             self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
             self.avghealth.append(sum(self.currenthealths[i+1])/len(self.currenthealths[i+1]))
 
-    stats = statistics()
+    
 
     def daynightcycle():
         game.weatherMake()
@@ -728,14 +728,30 @@ def main():
         game.updateFuel()
         game.updateHerb()
         game.advanceNight()
-    
 
-    for i in range(29):
-        daynightcycle()
-        stats.update(i)
-
+    import matplotlib.pyplot as plt
     
-    display(sorted(game.peasants, key=lambda x: x.occupation, reverse=True))
-    print(game.countAlive)
+    def openplot(x,y):
+        ax.plot(x, y)
+
+        ax.set(xlabel='time (days)', ylabel='Average health of VILLAGE',
+            title='About as simple as it gets, folks')
+        ax.grid()
+    time = range(30)
+    stats = {}
+    fig, ax = plt.subplots()
+    for j in range(100):
+        game = Game()
+        stats[j] = statistics(game)
+        for i in range(29):
+            daynightcycle()
+            stats[j].update(i)
+        openplot(time,stats[j].avghealth)
+
+    plt.show()
+    
+    
+    print([stat.avghealth for stat in stats.values()])
+
         
 main()
