@@ -714,10 +714,13 @@ def main():
             self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
             self.avghealth = []
             self.avghealth.append(sum(self.currenthealths[0])/len(self.currenthealths[0]))
+            self.popalive = []
+            self.popalive.append(100-game.popDead)
 
         def update(self,i):
             self.currenthealths.append([peasant.currenthealth for peasant in game.peasants])
             self.avghealth.append(sum(self.currenthealths[i+1])/len(self.currenthealths[i+1]))
+            self.popalive.append(100-game.popDead)
 
     
 
@@ -731,22 +734,26 @@ def main():
 
     import matplotlib.pyplot as plt
     
-    def openplot(x,y):
+    def openplot(ax,x,y,ylabel):
         ax.plot(x, y)
 
-        ax.set(xlabel='time (days)', ylabel='Average health of VILLAGE',
-            title='About as simple as it gets, folks')
+        ax.set(xlabel='time (days)', ylabel=ylabel,
+            title='')
         ax.grid()
     time = range(30)
     stats = {}
-    fig, ax = plt.subplots()
+    ax1 = plt.subplot(211)
+
+    ax2 = plt.subplot(212, sharex=ax1)
+
     for j in range(100):
         game = Game()
         stats[j] = statistics(game)
         for i in range(29):
             daynightcycle()
             stats[j].update(i)
-        openplot(time,stats[j].avghealth)
+        openplot(ax1,time,stats[j].avghealth,ylabel='Average health of VILLAGE')
+        openplot(ax2,time,stats[j].popalive,ylabel='surviving pop of VILLAGE')
 
     plt.show()
     
