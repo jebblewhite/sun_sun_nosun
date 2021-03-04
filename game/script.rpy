@@ -196,6 +196,12 @@ label start:
     #call hintcheck
     #call intro_sequence
     #show bachnight with dissolve
+    "Jason or Angus?"
+    menu:
+        "Angus":
+            jump angus
+        "Jason":
+            pass
     jump prolog_run
 
 label nameask:

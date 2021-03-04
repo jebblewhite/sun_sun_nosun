@@ -1,36 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 493, in script call
-    call gameloop
-  File "game/gameloop.rpy", line 7, in script call
-    call sleep
-  File "game/gameloop.rpy", line 58, in script
-    $ game.advanceNight()
-  File "game/gameloop.rpy", line 58, in <module>
-    $ game.advanceNight()
-TypeError: subLim() takes exactly 4 arguments (3 given)
+  File "game/angus.rpy", line 5, in script
+    show widowimg at halfsize, left
+  File "game/angus.rpy", line 5, in <module>
+    show widowimg at halfsize, left
+NameError: name 'halfsize' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 493, in script call
-    call gameloop
-  File "game/gameloop.rpy", line 7, in script call
-    call sleep
-  File "game/gameloop.rpy", line 58, in script
-    $ game.advanceNight()
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/gameloop.rpy", line 58, in <module>
-    $ game.advanceNight()
-  File "game.py", line 334, in advanceNight
-  File "game.py", line 303, in warmcheck
-TypeError: subLim() takes exactly 4 arguments (3 given)
+  File "game/angus.rpy", line 5, in script
+    show widowimg at halfsize, left
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1191, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1150, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/angus.rpy", line 5, in <module>
+    show widowimg at halfsize, left
+NameError: name 'halfsize' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Wed Feb  3 21:30:59 2021
+Thu Mar  4 13:46:22 2021

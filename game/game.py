@@ -761,4 +761,4 @@ def main():
     print([stat.avghealth for stat in stats.values()])
 
         
-main()
+#main()
