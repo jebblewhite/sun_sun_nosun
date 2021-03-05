@@ -512,6 +512,40 @@ class Game(object):
         fishedFood = fromWorld(fishedsucc,'food')
         return gatheredFuel, foragedHerb, huntedFood, huntedPelts, fishedFood
 
+    def playerHarvest(self,harvesttype,actioncost):
+        def fromWorld(percentage,resource):
+            takeaway = round(((actioncost*1.5)-0.5)*(percentage/1000.0)*self.__dict__['world'+str(resource)])
+            self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
+            return takeaway
+
+        def fromWorldAbs(absol,resource):
+            takeaway = absol
+            self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
+            return takeaway
+
+        self.playersuccess = 10
+        if harvesttype == "hunt" or harvesttype == "fish":
+            restype = "food"
+        elif harvesttype == "gather":
+            restype = "fuel"
+        else:
+            restype = "herbs"
+
+        harvested = fromWorld(self.playersuccess,restype)
+        if harvesttype == "gather":
+            self.playerFuel += harvested
+        elif harvesttype == "forage":
+            self.playerHerb += harvested
+        elif harvesttype == "fish":
+            self.playerfishedFood += harvested
+        else:
+            huntedpeltssucc = 0
+            for i in range(int(harvested)):
+                if random.randint(1,100) >= 99:
+                    huntedpeltssucc+=1
+            self.playerPelts += fromWorldAbs(huntedpeltssucc,'pelts')
+            self.playerhuntedFood += harvested
+
     def updateRes(self, gatheredFuel, foragedHerb, huntedFood, huntedPelts, fishedFood):
         self.food += fishedFood
         self.fuel += gatheredFuel
@@ -724,8 +758,10 @@ def main():
 
     
 
-    def daynightcycle():
+    def daynightcycle(number):
+        choices = ["hunt", "fish", "forage", "gather"]
         game.weatherMake()
+        game.playerHarvest(choices[random.randint(1,4)-1],number)
         game.advanceDay()
         game.updateFood()
         game.updateFuel()
@@ -750,7 +786,7 @@ def main():
         game = Game()
         stats[j] = statistics(game)
         for i in range(29):
-            daynightcycle()
+            daynightcycle(5)
             stats[j].update(i)
         openplot(ax1,time,stats[j].avghealth,ylabel='Average health of VILLAGE')
         openplot(ax2,time,stats[j].popalive,ylabel='surviving pop of VILLAGE')
@@ -761,4 +797,4 @@ def main():
     print([stat.avghealth for stat in stats.values()])
 
         
-#main()
+main()
