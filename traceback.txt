@@ -1,30 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/angus.rpy", line 5, in script
-    show widowimg at halfsize, left
-  File "game/angus.rpy", line 5, in <module>
-    show widowimg at halfsize, left
-NameError: name 'halfsize' is not defined
+  File "game/script.rpy", line 499, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 5, in script call
+    call maploop
+  File "game/script.rpy", line 529, in script call
+    call woods
+  File "game/script.rpy", line 766, in script
+    if rollevent == 3: # 1 of the 4 actions
+  File "game/script.rpy", line 766, in <module>
+    if rollevent == 3: # 1 of the 4 actions
+NameError: name 'rollevent' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/angus.rpy", line 5, in script
-    show widowimg at halfsize, left
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1191, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1150, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2249, in py_eval
+  File "game/script.rpy", line 499, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 5, in script call
+    call maploop
+  File "game/script.rpy", line 529, in script call
+    call woods
+  File "game/script.rpy", line 766, in script
+    if rollevent == 3: # 1 of the 4 actions
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2059, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2242, in py_eval_bytecode
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2052, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/angus.rpy", line 5, in <module>
-    show widowimg at halfsize, left
-NameError: name 'halfsize' is not defined
+  File "game/script.rpy", line 766, in <module>
+    if rollevent == 3: # 1 of the 4 actions
+NameError: name 'rollevent' is not defined
 
-Windows-10-10.0.19041
-Ren'Py 7.4.1.1270
+Darwin-19.5.0-x86_64-i386-64bit
+Ren'Py 7.3.5.606
 sunsunsun 1.0
-Thu Mar  4 13:46:22 2021
+Sun Mar  7 14:05:29 2021

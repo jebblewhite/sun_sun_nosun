@@ -2,9 +2,53 @@
 errors listed below, and try again.
 
 
-The label gameloop is defined twice, at
-  File "game/gameloop.rpy", line 1 and
-  File "game/script2.rpyc", line 1.
+File "game/script.rpy", line 640: expected statement.
+    game.playerHarvest("fish",1)
+                                ^
+
+File "game/script.rpy", line 643: expected statement.
+    game.playerHarvest("fish",2)
+                                ^
+
+File "game/script.rpy", line 646: expected statement.
+    game.playerHarvest("fish",3)
+                                ^
+
+File "game/script.rpy", line 714: expected statement.
+    game.playerHarvest("gather",1)
+                                  ^
+
+File "game/script.rpy", line 717: expected statement.
+    game.playerHarvest("gather",2)
+                                  ^
+
+File "game/script.rpy", line 720: expected statement.
+    game.playerHarvest("gather",3)
+                                  ^
+
+File "game/script.rpy", line 758: expected statement.
+    game.playerHarvest("forage",1)
+                                  ^
+
+File "game/script.rpy", line 761: expected statement.
+    game.playerHarvest("forage",2)
+                                  ^
+
+File "game/script.rpy", line 764: expected statement.
+    game.playerHarvest("forage",3)
+                                  ^
+
+File "game/script.rpy", line 801: expected statement.
+    game.playerHarvest("hunt",1)
+                                ^
+
+File "game/script.rpy", line 804: expected statement.
+    game.playerHarvest("hunt",2)
+                                ^
+
+File "game/script.rpy", line 807: expected statement.
+    game.playerHarvest("hunt",3)
+                                ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Jan  7 18:05:33 2021
+Sun Mar  7 13:50:58 2021

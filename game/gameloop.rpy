@@ -3,7 +3,6 @@ label gameloop:
         call wakeup
         while game.actions > 0:
             call maploop
-            $ game.actions -= 1
         call sleep
     
     jump end

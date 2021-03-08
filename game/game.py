@@ -129,17 +129,18 @@ class Game(object):
         self.popMorale = 50
         self.popCohesion = 30
 
+        self.debugmod = 100
         # starting values for resources
-        self.worldherbs = 2000
+        self.worldherbs = 2000*self.debugmod
         self.herbs = 0
         self.medicine = 0
         self.alcohol = 0
-        self.worldfuel = 9000
+        self.worldfuel = 9000*self.debugmod
         self.fuel = 200
-        self.worldpelts = 180
+        self.worldpelts = 180*self.debugmod
         self.pelts = 0
         self.food = 250
-        self.worldfood = 4000
+        self.worldfood = 4000*self.debugmod
        
         self.fueleffect = 20
         self.foodeffect = 20
@@ -150,6 +151,7 @@ class Game(object):
         self.peltchoice = 2
 
         self.day = 0
+        self.rollevent = random.randint(1,4)
         self.adjectivePrecip = ['dry','raining','snowing']
         self.adjectiveWind = ['calm','windy','blowing a gale']
         self.adjectiveCold = ['mild','chilly','brisk','freezing','deathly']
@@ -302,7 +304,7 @@ class Game(object):
             peasant.warmth = self.addsubLim(peasant.warmth,warmthchange,peasant.maxwarmth) 
 
             print("new warmth : " + str(peasant.warmth))
-            a = self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth),0)
+            a = self.subLim(peasant.currenthealth,(peasant.maxwarmth-peasant.warmth)/5,0)
             peasant.currenthealth = a
             print("current health : " + str(peasant.currenthealth))
 
@@ -397,6 +399,13 @@ class Game(object):
             if self.distfood > 0:
                 self.distfood -= self.foodpp
                 peasant.hasFood = (self.foodpp)
+            if peasant.hasFood >= 2:
+                self.popCohesion = self.addLim(self.popCohesion,0.1,100)
+            elif peasant.hasFood < 1 and peasant.hasFood > 0:
+                self.popMorale = self.subLim(self.popMorale,0.1,0)
+            else:
+                self.popMorale = self.subLim(self.popMorale,1,0)
+                self.popCohesion = self.subLim(self.popCohesion,1,0)
 
         random.shuffle(self.peasants)
         for peasant in self.peasants:
@@ -409,6 +418,13 @@ class Game(object):
             if self.distfuel > 0:
                 self.distfuel -= self.fuelpp
                 peasant.hasFire = (self.fuelpp)
+            if peasant.hasFire >= 2:
+                self.popMorale = self.addLim(self.popMorale,0.1,100)
+            elif peasant.hasFire < 1 and peasant.hasFire > 0:
+                self.popCohesion = self.subLim(self.popCohesion,0.1,0)
+            else:
+                self.popMorale = self.subLim(self.popMorale,1,0)
+                self.popCohesion = self.subLim(self.popCohesion,1,0)
 
         random.shuffle(self.peasants)
         for peasant in self.peasants:
@@ -464,11 +480,11 @@ class Game(object):
             if rnd < worker.__dict__[skill]:
                 return m_yield
             else:
-                worker.currenthealth = self.subLim(worker.currenthealth, rnd, 0)
+                #worker.currenthealth = self.subLim(worker.currenthealth, rnd, 0)
                 return m_yield/2
 
         def fromWorld(percentage,resource):
-            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)])
+            takeaway = round((percentage/1000.0)*self.__dict__['world'+str(resource)]*(2**((self.popMorale/50)-1)))
             self.__dict__['world'+str(resource)] = self.subLim(self.__dict__['world'+str(resource)],takeaway,0) 
             return takeaway
 
@@ -489,16 +505,16 @@ class Game(object):
         for i in range(len(self.gatherers)): # all workers roll for success, and can either fail or choose to half succeed with a consequence
             
             gatheredsucc += skillRoll(self.gatherers[i],'passionGathering',1)
-            self.gatherers[i].currenthealth = self.subLim(self.gatherers[i].currenthealth,2*random.randint(1,5),0) 
+            self.gatherers[i].currenthealth = self.subLim(self.gatherers[i].currenthealth,random.randint(1,8),0) 
         for i in range(len(self.foragers)):
             foragedsucc += skillRoll(self.foragers[i],'passionForaging',1)
-            self.foragers[i].currenthealth = self.subLim(self.foragers[i].currenthealth, 2*random.randint(1,5),0)
+            self.foragers[i].currenthealth = self.subLim(self.foragers[i].currenthealth, random.randint(1,8),0)
         for i in range(len(self.hunters)):
             huntedsucc += skillRoll(self.hunters[i],'passionHunting',1)
-            self.hunters[i].currenthealth = self.subLim(self.hunters[i].currenthealth, 2*random.randint(1,5),0)
+            self.hunters[i].currenthealth = self.subLim(self.hunters[i].currenthealth, random.randint(1,8),0)
         for i in range(len(self.fishermen)):
             fishedsucc += skillRoll(self.fishermen[i],'passionFishing',1)
-            self.fishermen[i].currenthealth = self.subLim(self.fishermen[i].currenthealth, 2*random.randint(1,5),0)
+            self.fishermen[i].currenthealth = self.subLim(self.fishermen[i].currenthealth, random.randint(1,8),0)
 
         gatheredFuel = fromWorld(gatheredsucc,'fuel')
         foragedHerb = fromWorld(foragedsucc,'herbs')
@@ -545,6 +561,7 @@ class Game(object):
                     huntedpeltssucc+=1
             self.playerPelts += fromWorldAbs(huntedpeltssucc,'pelts')
             self.playerhuntedFood += harvested
+        self.actions -= (actioncost)
 
     def updateRes(self, gatheredFuel, foragedHerb, huntedFood, huntedPelts, fishedFood):
         self.food += fishedFood
@@ -557,7 +574,7 @@ class Game(object):
 
     def genworkerRandomChange(self):
         for i in range(len(self.genworkers)):
-            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-5,5),self.genworkers[i].maxhealth)
+            self.genworkers[i].currenthealth = self.addsubLim(self.genworkers[i].currenthealth,random.randint(-2,2),self.genworkers[i].maxhealth)
             
 
     def recovered(self):
