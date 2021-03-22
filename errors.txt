@@ -2,53 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 640: expected statement.
-    game.playerHarvest("fish",1)
-                                ^
-
-File "game/script.rpy", line 643: expected statement.
-    game.playerHarvest("fish",2)
-                                ^
-
-File "game/script.rpy", line 646: expected statement.
-    game.playerHarvest("fish",3)
-                                ^
-
-File "game/script.rpy", line 714: expected statement.
-    game.playerHarvest("gather",1)
-                                  ^
-
-File "game/script.rpy", line 717: expected statement.
-    game.playerHarvest("gather",2)
-                                  ^
-
-File "game/script.rpy", line 720: expected statement.
-    game.playerHarvest("gather",3)
-                                  ^
-
-File "game/script.rpy", line 758: expected statement.
-    game.playerHarvest("forage",1)
-                                  ^
-
-File "game/script.rpy", line 761: expected statement.
-    game.playerHarvest("forage",2)
-                                  ^
-
-File "game/script.rpy", line 764: expected statement.
-    game.playerHarvest("forage",3)
-                                  ^
-
-File "game/script.rpy", line 801: expected statement.
-    game.playerHarvest("hunt",1)
-                                ^
-
-File "game/script.rpy", line 804: expected statement.
-    game.playerHarvest("hunt",2)
-                                ^
-
-File "game/script.rpy", line 807: expected statement.
-    game.playerHarvest("hunt",3)
-                                ^
+File "game/angus.rpy", line 8: expected 'comma or end of line' not found.
+    xalign 0.05 yalign 0.2 zorder 0
+                           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Mar  7 13:50:58 2021
+Mon Mar 22 14:45:40 2021
