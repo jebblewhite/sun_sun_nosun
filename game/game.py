@@ -103,7 +103,8 @@ class Game(object):
 
         self.actions = 5
         self.playerFuel, self.playerHerb, self.playerhuntedFood, self.playerPelts, self.playerfishedFood = 0,0,0,0,0
-        
+        self.eventstag = False # initialise all events and scenes as booleans and ranges within arrays respectively
+        self.eventstagnight = False
 
         for i in range(100):
             Peasant('Tudor ' + str(i),self.peasants,self.children,self.elders,self.workers)

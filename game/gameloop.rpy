@@ -54,6 +54,7 @@ label sleep:
     show screen Mapscreen
     "Morale/Cohesion change"
     call playerChoices
+    call eventBlock
     $ game.advanceNight()
     return
 
@@ -100,4 +101,10 @@ label playerChoices:
     $ game.updateHerb()
     show screen Mapscreen
     
+    return
+
+label eventBlock:
+    if game.eventstag == True and game.eventstagnight == False:
+        call thestagnight
+        $ game.eventstagnight = True
     return

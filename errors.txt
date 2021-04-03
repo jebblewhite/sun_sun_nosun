@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/angus.rpy", line 8: expected 'comma or end of line' not found.
-    xalign 0.05 yalign 0.2 zorder 0
-                           ^
+File "game/events/thestag.rpy", line 84: expected menuitem
+    menu:
+    ^
 
-Ren'Py Version: Ren'Py 7.3.5.606
-Mon Mar 22 14:45:40 2021
+File "game/gameloop.rpy", line 109: expected statement.
+    game.eventstagnight = True
+                        ^
+
+File "game/script.rpy", line 248: choice menuitem expects a non-empty block.
+    "marked":
+             ^
+
+Ren'Py Version: Ren'Py 7.4.1.1270
+Sat Apr  3 18:31:48 2021

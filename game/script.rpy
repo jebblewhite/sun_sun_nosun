@@ -243,7 +243,20 @@ label start:
         "Angus":
             jump angus
         "Jason":
-            pass
+            "What background ????"
+            menu:
+                "marked":
+                    $ game.playerbackground = "marked"
+                
+                "woodsman":
+                    $ game.playerbackground = "woodsman"
+                
+                "merchant":
+                    $ game.playerbackground = "merchant"
+                
+                "deserter":
+                    $ game.playerbackground = "deserter"
+                
     jump prolog_run
 
 label nameask:
@@ -880,6 +893,8 @@ label woods:
                     $ game.rollevent = 0
             else:
                 "get meat n pelts"
+        "(debug) the stag event":
+            call thestag
         "Go back":
             call maploop
     return
