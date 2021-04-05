@@ -1,30 +1,29 @@
-Sat Apr  3 22:31:32 2021
+Mon Apr  5 14:38:34 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.09s
-Loading error handling took 0.03s
-Loading script took 0.89s
-Loading save slot metadata. took 0.02s
+Loader init took 0.14s
+Loading error handling took 0.04s
+Loading script took 0.83s
+Loading save slot metadata. took 0.11s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-[<game.Charac object at 0x0533e750>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>, <game.Charac object at 0x0533ee70>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>, <game.Charac object at 0x0533ee70>, <game.Charac object at 0x0533ee90>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>, <game.Charac object at 0x0533ee70>, <game.Charac object at 0x0533ee90>, <game.Charac object at 0x0533eeb0>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>, <game.Charac object at 0x0533ee70>, <game.Charac object at 0x0533ee90>, <game.Charac object at 0x0533eeb0>, <game.Charac object at 0x0533eef0>]
-[<game.Charac object at 0x0533e750>, <game.Charac object at 0x04d0df90>, <game.Charac object at 0x0533edb0>, <game.Charac object at 0x0533ee70>, <game.Charac object at 0x0533ee90>, <game.Charac object at 0x0533eeb0>, <game.Charac object at 0x0533eef0>, <game.Charac object at 0x0533ef10>]
-Running init code took 0.08s
-Loading analysis data took 0.02s
+[<game.Charac object at 0x04ab85d0>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>, <game.Charac object at 0x04ab8f30>]
+[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>, <game.Charac object at 0x04ab8f30>, <game.Charac object at 0x04ab8f50>]
+Running init code took 0.10s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\theja\\AppData\\Roaming/RenPy/backups\\sun_sun_nosun':
-Dump and make backups. took 0.10s
+Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -33,12 +32,12 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.12s
-Save bytecode. took 0.03s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.07s
@@ -469,6 +468,4 @@ Texture testing:
 Screen sizes: virtual=(3072, 1920) physical=(1920, 1080) drawable=(1920, 1080)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 2.04054188728s
-controller: '030000007e0500000920000000000000' 'Nintendo Switch Pro Controller' 1L
-Controller found in blocklist, not using.
+Total time until interface ready: 1.92973709106s

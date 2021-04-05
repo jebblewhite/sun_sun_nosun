@@ -88,6 +88,33 @@ label thestag:
     menu:
         "Approach, slowly, with your hand out to pet it":
             $ c = 3
+            """
+            You place your tools gently down on the snow and stand up straight. The stag adjusts its head so it may
+            still look you in the eyes, but apart from that it makes no movement as you slowly walk across the
+            clearing, your palm flat and outstretched. Only when you are within a step of it does it finally change
+            position, stretching out its head and nuzzling your hand with its nose.
+
+            The feeling of warmth, strength, purity and power reaches its zenith as the light grows, overwhelming you
+            as the stag, its eyes infinitely deep whirlpools of stars, stares deep into you, and its tongue, so bright it
+            appears as nothing more than a blur to you, licks your hand and...
+
+            ...you wake up in the centre of the clearing, your whole body feeling warm and strong. You do not know
+            how much time has passed, but the forest is dark again and you no longer feel that your skin is ice or your
+            eyes are sending vitality through your body.
+
+            But you do not feel the quite same as you did before. You feel...pure. Healthy. Well. Your limbs no
+            longer ache, your bruises and cuts have vanished and you feel calm. You head back to town feeling
+            young again, fit and ready for life as you were in your adolescence, long before the sun set for that last
+            time.
+
+            {All player health restored}
+            """
+            $ game.eventstag = True # temporary
+            hide woodssky onlayer skyback
+            hide woodsdeepest onlayer farfarback
+            hide woodsdeeper onlayer farback
+            hide woodsdeep onlayer back
+            return
         "Turn and leave":
             if game.playerbackground != "marked":
                 $ c = 4
