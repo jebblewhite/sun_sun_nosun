@@ -1,29 +1,29 @@
-Mon Apr  5 14:38:34 2021
+Wed Apr  7 20:15:58 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.14s
-Loading error handling took 0.04s
-Loading script took 0.83s
+Loader init took 0.32s
+Loading error handling took 0.07s
+Loading script took 1.12s
 Loading save slot metadata. took 0.11s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-[<game.Charac object at 0x04ab85d0>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>, <game.Charac object at 0x04ab8f30>]
-[<game.Charac object at 0x04ab85d0>, <game.Charac object at 0x04ab8810>, <game.Charac object at 0x04ab8850>, <game.Charac object at 0x04ab8e50>, <game.Charac object at 0x04ab8e70>, <game.Charac object at 0x04ab8f10>, <game.Charac object at 0x04ab8f30>, <game.Charac object at 0x04ab8f50>]
+[<game.Charac object at 0x04a81090>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>, <game.Charac object at 0x04a80910>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>, <game.Charac object at 0x04a80910>, <game.Charac object at 0x04a80930>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>, <game.Charac object at 0x04a80910>, <game.Charac object at 0x04a80930>, <game.Charac object at 0x04a80970>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>, <game.Charac object at 0x04a80910>, <game.Charac object at 0x04a80930>, <game.Charac object at 0x04a80970>, <game.Charac object at 0x04a80990>]
+[<game.Charac object at 0x04a81090>, <game.Charac object at 0x04a80830>, <game.Charac object at 0x04a808f0>, <game.Charac object at 0x04a80910>, <game.Charac object at 0x04a80930>, <game.Charac object at 0x04a80970>, <game.Charac object at 0x04a80990>, <game.Charac object at 0x04a80a10>]
 Running init code took 0.10s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -32,12 +32,12 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.02s
+Load screen analysis took 0.08s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.07s
@@ -468,4 +468,80 @@ Texture testing:
 Screen sizes: virtual=(3072, 1920) physical=(1920, 1080) drawable=(1920, 1080)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.92973709106s
+Total time until interface ready: 2.5626809597s
+
+Full traceback:
+  File "game/script.rpy", line 554, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 5, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call woods
+  File "game/script.rpy", line 897, in script call
+    call thestag
+  File "game/events/thestag.rpy", line 91, in script
+    """
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 715, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/exports.py", line 1384, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/character.py", line 1179, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/character.py", line 851, in do_display
+    **display_args)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/character.py", line 601, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/core.py", line 3006, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/core.py", line 3516, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/core.py", line 2376, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/screen.py", line 681, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/layout.py", line 751, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/display/layout.py", line 1156, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/text/text.py", line 2033, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/text/text.py", line 607, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/text/text.py", line 1218, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag u'All player health restored'
+
+While processing text tag {All player health restored} in u'{All player health restored}'.:
+  File "game/script.rpy", line 554, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 5, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call woods
+  File "game/script.rpy", line 897, in script call
+    call thestag
+  File "game/events/thestag.rpy", line 91, in script
+    """
+Exception: Unknown text tag u'All player health restored'

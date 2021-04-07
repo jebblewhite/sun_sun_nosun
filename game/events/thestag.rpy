@@ -107,8 +107,9 @@ label thestag:
             young again, fit and ready for life as you were in your adolescence, long before the sun set for that last
             time.
 
-            {All player health restored}
+            
             """
+            "All player health restored" # code this
             $ game.eventstag = True # temporary
             hide woodssky onlayer skyback
             hide woodsdeepest onlayer farfarback
