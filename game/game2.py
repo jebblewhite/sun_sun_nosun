@@ -15,7 +15,10 @@ class Charac(object):
         self.ide = ide
         self.scene = 1
         characters.append(self)
-        print(characters)
+        """
+        for character in characters:
+            print(character.ide)
+        """
 
     def __str__(self):
         print(self.ide)
@@ -170,6 +173,10 @@ class Game(object):
 
         self.resetvars()
 
+    def initrels(self,characters):
+        for i in range(len(characters)):
+                characters[i].establishrels(characters)
+
     def resetvars(self):
         self.new_ill = 0
         self.new_dead = 0
@@ -237,13 +244,11 @@ class Game(object):
         self.windadj = windadj
         self.precipadj = precipadj
  
-       return coldness, wetness, temp, windadj, precipadj
+        return coldness, wetness, temp, windadj, precipadj
 
     def community_change(self,dayornight):
         # check if fuel and food provisions are enough for everyone at current, else subtract morale or cohesion
-        self.stockpilecheck = 
-        self.moralecheck = 
-        self.cohesioncheck = 
+        pass
 
     def assign_workers(self):
         pass
