@@ -146,8 +146,8 @@ class Game(object):
         self.workersnum = 5
         self.workersorder = 0
 
-        self.popMorale = 50
-        self.popCohesion = 30
+        self.pop_morale = 50
+        self.pop_cohesion = 30
 
         # starting values for resources
         self.herbs = 0
@@ -168,10 +168,20 @@ class Game(object):
         self.day = 0
         self.initeventchance = 0.05
 
+        self.resetvars()
+
+    def resetvars(self):
+        self.new_ill = 0
+        self.new_dead = 0
+        self.new_buried = 0
+        self.new_recovering = 0
+
+        self.moralechange = 0
+        self.cohesionchange = 0
 
     def initday(self):
+        self.community_change("day")
         self.weather_make()
-        self.community_change()
         self.assign_workers()
         self.eventchance = (self.initeventchance)
 
@@ -229,8 +239,8 @@ class Game(object):
  
        return coldness, wetness, temp, windadj, precipadj
 
-    def community_change(self):
-        
+    def community_change(self,dayornight):
+        # check if fuel and food provisions are enough for everyone at current, else subtract morale or cohesion
         self.stockpilecheck = 
         self.moralecheck = 
         self.cohesioncheck = 
@@ -243,3 +253,11 @@ class Game(object):
 
     def check_for_event(self):
         pass
+
+    def harvest_action(self):
+        pass
+
+def main():
+    game = Game()
+
+main()

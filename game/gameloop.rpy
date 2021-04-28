@@ -1,7 +1,8 @@
 label gameloop:
     while game.day < 30:
-        $ game.initday
+        $ game.initday()
         call wakeup
+        $ game.resetvars()
         while game.actions > 0:
             call maploop
         call sleep
@@ -19,8 +20,12 @@ label wakeup:
     #call wakemessage
     "You wake up"
     "The weather is shit"
+    "temp: [game.temp], wind: [game.windadj], precipitation: [game.precipadj]"
     scene town_map
     "You trudge along to the town centre where workers are gathering to leave for the woods"
+    "new ill: [game.new_ill], new dead: [game.new_dead]"
+    "new recovering: [game.new_recovering], new buried: [game.new_buried]"
+    "Overall morale change"
     return
         #### DETERMINE HOW PEOPLE TAKE ILL
         
