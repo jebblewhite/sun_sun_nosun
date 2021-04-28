@@ -134,9 +134,9 @@ class Game(object):
         """
         Initialise potential events as viable based on environments
         """
-        forestevents = {"thestag":True,}
-        riverevents = {}
-        townevents = {"thestagnight":False,}
+        self.forestevents = {"thestag":True, "theghouls":True, "thelovers":True, "themachineman":True, "themusic":True}
+        self.riverevents = {"ontheotherbank":True, "thehutbytheriver":True, "theleviathan":True, "thestatues":True, "thethreesome":True}
+        self.townevents = {"thestagnight":False,}
     
 
         for i in range(100):
@@ -168,15 +168,66 @@ class Game(object):
         self.day = 0
         self.initeventchance = 0.05
 
-        self.initday()
 
     def initday(self):
         self.weather_make()
         self.community_change()
         self.assign_workers()
+        self.eventchance = (self.initeventchance)
 
     def weather_make(self):
-        pass
+        # weather /
+       cold_upper_lim = 10-math.floor(day/6)
+       cold_lower_lim = 0-math.floor(day/2)
+       cold_range = cold_upper_lim-cold_lower_lim
+       maxchange = round(cold_range)
+       minchange = round(cold_range/2)
+       if temp != None:
+           change = random.randint(minchange,maxchange)
+           if time == 'day':
+               temp = self.addLim(temp,change,cold_upper_lim)
+           else:
+               temp = self.subLim(temp,change,cold_lower_lim)
+       else:
+           temp = random.randint(cold_lower_lim,cold_upper_lim)
+ 
+       windarray = [0,0,0,0,0.3,0.3,0.6,0.6,1,1]
+       preciparray = [0,0,0,0,0.3,0.3,0.6,0.6,1,1]
+       windno = random.randint(0,9)
+       precipno = random.randint(0,9)
+      
+       if windno > 7:
+           windadj = "heavy wind"
+       elif windno > 5:
+           windadj = "moderate wind"
+       elif windno > 3:
+           windadj = "light wind"
+       else:
+           windadj = "no wind"
+ 
+       if precipno > 7:
+           precipadj = "heavy precipitation"
+       elif precipno > 5:
+           precipadj = "moderate precipitation"
+       elif precipno > 3:
+           precipadj = "light precipitation"
+       else:
+           precipadj = "no precipitation"
+ 
+       windmulti = windarray[windno]
+       precipmulti = preciparray[precipno]
+ 
+       coldness = 2*(20-temp)
+       coldness += coldness*windmulti
+       wetness = precipmulti*coldness
+      
+       self.coldness = coldness
+       self.wetness = wetness
+       self.temp = temp
+       self.windadj = windadj
+       self.precipadj = precipadj
+ 
+       return coldness, wetness, temp, windadj, precipadj
 
     def community_change(self):
         pass

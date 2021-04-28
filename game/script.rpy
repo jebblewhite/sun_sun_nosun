@@ -48,8 +48,8 @@ init python:
     import random
     
     random.seed()
-    from game import Charac
-    from game import Game
+    from game2 import Charac
+    from game2 import Game
     game = Game()
     
     # ----------------
@@ -734,21 +734,10 @@ label river:
                 "get fish"
                 
 
-        "Investigate the light in the distance" if game.cold > 2:
-            "You begin walking."
-            "You follow along the river as it winds up to a fork, you see that the light you were chasing is on the other side, it must be at the end of the other section of the river."
-            menu:
-                "Go back while you can":
-                    call river
-                "Try to cross to the other side":
-                    call lighthouse
         "Go back":
             call maploop
     return
 
-label lighthouse:
-    scene river_extr
-    "HAAAAAARK"
 
 label inn:
     scene inn_intr

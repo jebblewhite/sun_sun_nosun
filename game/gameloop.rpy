@@ -1,5 +1,6 @@
 label gameloop:
     while game.day < 30:
+        $ game.initday
         call wakeup
         while game.actions > 0:
             call maploop
@@ -15,8 +16,11 @@ label endDayChoices:
 label wakeup:
     scene home_intr
      # place holder stuff VVV
-    $ game.weatherMake()
     #call wakemessage
+    "You wake up"
+    "The weather is shit"
+    scene town_map
+    "You trudge along to the town centre where workers are gathering to leave for the woods"
     return
         #### DETERMINE HOW PEOPLE TAKE ILL
         
