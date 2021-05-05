@@ -190,7 +190,7 @@ class Game(object):
                 self.popHealthy += 1
             elif peasant.status == "Sick":
                 self.popIll += 1
-            elif peasant.status == "Recovering from Sickness":
+            elif peasant.status == "Recovering from Sickness":          
                 self.popHealthy += 1
             elif peasant.status == "Dead":
                 self.popDead += 1

@@ -1,5 +1,6 @@
 label gameloop:
     while game.day < 30:
+        $ game.actions = 5
         $ game.initday()
         show screen Mapscreen
         call wakeup
