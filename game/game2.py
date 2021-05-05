@@ -373,7 +373,7 @@ def display(x,occ=False):
 
 def main():
     game = Game()
-    display(peasants)
+    display(game.peasants)
 
 
 main()
