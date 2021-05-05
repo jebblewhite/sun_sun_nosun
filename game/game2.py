@@ -139,7 +139,7 @@ class Game(object):
         """
         self.forestevents = {"thestag":True, "theghouls":True, "thelovers":True, "themachineman":True, "themusic":True}
         self.riverevents = {"ontheotherbank":True, "thehutbytheriver":True, "theleviathan":True, "thestatues":True, "thethreesome":True}
-        self.townevents = {"thestagnight":False,}
+        self.townevents = {"thestagnight":False}
     
 
         for i in range(100):
@@ -149,8 +149,8 @@ class Game(object):
         self.workersnum = 5
         self.workersorder = 0
 
-        self.pop_morale = 50
-        self.pop_cohesion = 30
+        self.popMorale = 50
+        self.popCohesion = 30
 
         # starting values for resources
         self.herbs = 0
@@ -170,12 +170,33 @@ class Game(object):
 
         self.day = 0
         self.initeventchance = 0.05
+        self.temp = None
 
+        self.checkPopStatus()
         self.resetvars()
 
     def initrels(self,characters):
         for i in range(len(characters)):
                 characters[i].establishrels(characters)
+
+    def checkPopStatus(self):
+        self.popIll = 0
+        self.popHealthy = 0
+        self.popDead = 0
+        self.popRecovering = 0
+        self.popBuried = 0
+        for peasant in self.peasants:
+            if peasant.status == "Alive and Well":
+                self.popHealthy += 1
+            elif peasant.status == "Sick":
+                self.popIll += 1
+            elif peasant.status == "Recovering from Sickness":
+                self.popHealthy += 1
+            elif peasant.status == "Dead":
+                self.popDead += 1
+            else:
+                self.popBuried += 1
+        self.popAlive = self.popHealthy+self.popIll+self.popRecovering
 
     def resetvars(self):
         self.new_ill = 0
@@ -187,12 +208,14 @@ class Game(object):
         self.cohesionchange = 0
 
     def initday(self):
+        day = self.day
+        temp = self.temp
         self.community_change("day")
-        self.weather_make()
+        self.weather_make(day,temp)
         self.assign_workers()
         self.eventchance = (self.initeventchance)
 
-    def weather_make(self):
+    def weather_make(self, day, temp, time='day'):
         # weather /
         cold_upper_lim = 10-math.floor(day/6)
         cold_lower_lim = 0-math.floor(day/2)
@@ -248,10 +271,64 @@ class Game(object):
 
     def community_change(self,dayornight):
         # check if fuel and food provisions are enough for everyone at current, else subtract morale or cohesion
-        pass
+        if dayornight == 'day':
+            self.moralechange += self.new_buried - 2*self.new_dead
+            self.cohesionchange += self.new_recovering - self.new_ill
+            if self.fuel < self.popAlive:
+                self.moralechange -= 5
+            if self.food < self.popAlive:
+                self.cohesionchange -= 5
+        self.popMorale = self.addsubLim(self.popMorale, self.moralechange)
+        self.popCohesion = self.addsubLim(self.popCohesion, self.cohesionchange)
 
     def assign_workers(self):
-        pass
+        def topWorker(professionlist, occTag, passion):
+            tagged = 0
+            count = 0
+            #print(passion)
+            high = sorted(self.workers, key=lambda x: x.__dict__[passion], reverse=True)
+            while tagged == 0:
+                #print(count)
+                #print(high[count].occupation)
+                if high[count].occupation == 'General Worker':
+                    high[count].occupation = occTag
+                    professionlist.append(high[count])
+                    tagged = 1
+                else:
+                    if count<len(high)-1:
+                        count += 1
+                    else:
+                        tagged = 1
+        self.genworkers = []
+        self.hunters = []
+        self.gatherers = []
+        self.fishermen = []
+        self.foragers = []
+        if self.workersorder == 0:
+            while len(self.hunters) < self.workersnum and self.checkforatt('occupation','General Worker') == True:
+                order = [1,2,3,4]
+                random.shuffle(order)
+                #print(order)
+                for i in range(4):
+                    #print(i)
+                    if order[i] == 1:
+                        topWorker(self.hunters, "Hunter", "passionHunting")
+                    elif order[i] == 2:
+                        topWorker(self.gatherers, "Gatherer", "passionGathering")
+                    elif order[i] == 3:
+                        topWorker(self.fishermen, "Fisherman", "passionFishing")
+                    else:
+                        topWorker(self.foragers, "Forager", "passionForaging")
+        for i in range(len(self.workers)):
+            if self.workers[i].occupation == "General Worker":
+                self.genworkers.append(self.workers[i])
+    
+    def checkforatt(self,att,value):
+        for i in range(len(self.workers)):
+            if self.workers[i].__dict__[att] == (value):
+                return True
+        else:
+            return False
     
     def viable_events(self):
         pass
@@ -261,8 +338,42 @@ class Game(object):
 
     def harvest_action(self):
         pass
+    
+    def addLim(self, a, b, limit):
+        c = a+b
+        if c>limit:
+            return limit
+        else:
+            return c
+
+    def subLim(self, a, b, limit):
+        d = a-b
+        if d<limit:
+            return limit
+        else:
+            return d
+
+    def addsubLim(self,a,b,uplim=100,downlim=0):
+        if b>=0:
+            return self.addLim(a,b,uplim)
+        else:
+            return self.subLim(a, -b, downlim)
+
+"""
+--------------------------- END OF CLASS -   - -- -  -- - -
+"""
+
+def display(x,occ=False):
+        if occ == True:
+            print(" __ __ __ " + str((x[0].occupation)) + " __ __ __")
+        else:
+            print(" __ __ __ Workers __ __ __")
+        for i in range(len(x)):
+            print(x[i].__dict__)
 
 def main():
     game = Game()
+    display(peasants)
+
 
 main()

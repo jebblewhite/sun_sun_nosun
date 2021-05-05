@@ -175,8 +175,6 @@ class Game(object):
                         count += 1
                     else:
                         tagged = 1
-            
-
         self.genworkers = []
         self.hunters = []
         self.gatherers = []

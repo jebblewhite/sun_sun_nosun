@@ -1,6 +1,7 @@
 label gameloop:
     while game.day < 30:
         $ game.initday()
+        show screen Mapscreen
         call wakeup
         $ game.resetvars()
         while game.actions > 0:
@@ -25,7 +26,7 @@ label wakeup:
     "You trudge along to the town centre where workers are gathering to leave for the woods"
     "new ill: [game.new_ill], new dead: [game.new_dead]"
     "new recovering: [game.new_recovering], new buried: [game.new_buried]"
-    "Overall morale change"
+    "Overall (morale,cohesion) change : ([game.moralechange],[game.cohesionchange])"
     return
         #### DETERMINE HOW PEOPLE TAKE ILL
         
