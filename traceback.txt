@@ -3,92 +3,30 @@
 While running game code:
   File "game/script.rpy", line 554, in script call
     call gameloop
-  File "game/gameloop.rpy", line 8, in script call
-    call maploop
-  File "game/script.rpy", line 590, in script call
-    call maptown
-  File "game/script.rpy", line 611, in script call
-    call maploop
-  File "game/script.rpy", line 580, in script call
-    call herbs
-  File "game/script.rpy", line 683, in script call
-    call maploop
-  File "game/script.rpy", line 582, in script call
-    call river
-  File "game/script.rpy", line 738, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 888, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 888, in script call
-    call maploop
-  File "game/script.rpy", line 590, in script call
-    call maptown
-  File "game/script.rpy", line 611, in script call
-    call maploop
-  File "game/script.rpy", line 580, in script call
-    call herbs
-  File "game/script.rpy", line 683, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 848, in script
-    $ game.playerHarvest("hunt",2)
-  File "game/script.rpy", line 848, in <module>
-    $ game.playerHarvest("hunt",2)
-AttributeError: 'Game' object has no attribute 'playerHarvest'
+  File "game/gameloop.rpy", line 9, in script
+    $ game.endofday()
+  File "game/gameloop.rpy", line 9, in <module>
+    $ game.endofday()
+TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 554, in script call
     call gameloop
-  File "game/gameloop.rpy", line 8, in script call
-    call maploop
-  File "game/script.rpy", line 590, in script call
-    call maptown
-  File "game/script.rpy", line 611, in script call
-    call maploop
-  File "game/script.rpy", line 580, in script call
-    call herbs
-  File "game/script.rpy", line 683, in script call
-    call maploop
-  File "game/script.rpy", line 582, in script call
-    call river
-  File "game/script.rpy", line 738, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 888, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 888, in script call
-    call maploop
-  File "game/script.rpy", line 590, in script call
-    call maptown
-  File "game/script.rpy", line 611, in script call
-    call maploop
-  File "game/script.rpy", line 580, in script call
-    call herbs
-  File "game/script.rpy", line 683, in script call
-    call maploop
-  File "game/script.rpy", line 584, in script call
-    call woods
-  File "game/script.rpy", line 848, in script
-    $ game.playerHarvest("hunt",2)
+  File "game/gameloop.rpy", line 9, in script
+    $ game.endofday()
   File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 848, in <module>
-    $ game.playerHarvest("hunt",2)
-AttributeError: 'Game' object has no attribute 'playerHarvest'
+  File "game/gameloop.rpy", line 9, in <module>
+    $ game.endofday()
+  File "game2.py", line 219, in endofday
+  File "game2.py", line 395, in workers_harvest
+TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Wed May  5 17:19:35 2021
+Wed May  5 19:23:15 2021

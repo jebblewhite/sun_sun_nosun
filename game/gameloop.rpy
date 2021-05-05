@@ -6,6 +6,9 @@ label gameloop:
         $ game.resetvars()
         while game.actions > 0:
             call maploop
+        $ game.endofday()
+        call endoday
+        $ game.initnight()
         call sleep
     
     jump end
@@ -29,7 +32,16 @@ label wakeup:
     "Overall (morale,cohesion) change : ([game.moralechange],[game.cohesionchange])"
     return
         #### DETERMINE HOW PEOPLE TAKE ILL
-        
+
+label endoday:
+    scene town_map
+    "You end the day in the same place you started: the town center"
+    return
+
+label sleep:
+    scene home_intr
+    return
+
 label wakemessage:
     $ day = game.day
     "you wake up! it is day [day]."
@@ -52,7 +64,7 @@ label wakemessage:
     "Healthy: [game.popHealthy]  Ill:[game.popIll]  Dead: [game.popDead]"
     return
 
-label sleep:
+label sleep2:
     scene home_intr
     "you go to sleep after a long day of toil"
     $ food, fuel, herbs, pelts = game.food, game.fuel, game.herbs, game.pelts

@@ -215,6 +215,20 @@ class Game(object):
         self.assign_workers()
         self.eventchance = (self.initeventchance)
 
+    def endofday(self):
+        self.workers_harvest()
+        self.workers_project()
+        self.elders_inspire()
+        self.children_play()
+        self.tudortakedamage()
+        self.internalsystemsbalance()
+        self.community_change("night")
+
+    def initnight(self):
+        day = self.day
+        temp = self.temp
+        self.weather_make(day,temp)
+
     def weather_make(self, day, temp, time='day'):
         # weather /
         cold_upper_lim = 10-math.floor(day/6)
@@ -339,6 +353,71 @@ class Game(object):
     def harvest_action(self):
         pass
     
+    def workers_harvest(self):
+        def getYields(peasant,passion):
+            if random.randint(1,10) < peasant.__dict__[passion]:
+                return 1
+            elif random.randint(1,10) < peasant.__dict__[passion]:
+                return 0.5
+            elif random.randint(1,10) < peasant.__dict__[passion]:
+                return 0.25
+            else:
+                return 0
+
+        def getInjuries(peasant,passion):
+            if random.randint(1,10) < peasant.__dict__[passion]:
+                peasant.injury += 0
+            elif random.randint(1,10) < peasant.__dict__[passion]:
+                peasant.injury += 1
+            elif random.randint(1,10) < peasant.__dict__[passion]:
+                peasant.injury += 2
+            else:
+                peasant.injury += 3
+            return
+
+        gatheredsucc = 0
+        gatheredFuel = 0
+
+        foragedsucc = 0
+        foragedHerb = 0
+
+        huntedsucc = 0
+        huntedPelts = 0
+        huntedFood = 0
+
+        fishedsucc = 0
+        fishedFood = 0
+
+        for gatherer in self.gatherers:
+            gatheredsucc += getYields(gatherer, 'passionGathering')
+            getInjuries(gatherer, 'passionGathering')
+        for forager in self.foragers:
+            foragedsucc += getYields(forager, 'passionForaging')
+            getInjuries(forager, 'passionForaging')
+        for hunter in self.hunters:
+            huntedsucc += getYields(hunter, 'passionHunting')
+            getInjuries(hunter, 'passionHunting')
+        for fisher in self.fishermen:
+            fishedsucc += getYields(fisher, 'passionFishing')
+            getInjuries(fisher, 'passionFishing')
+
+    def workers_project(self):
+        pass
+
+    def elders_inspire(self):
+        for elder in self.elders:
+            self.cohesionchange += 1
+
+    def children_play(self):
+        for child in self.children:
+            self.moralechange += 1
+
+    def tudortakedamage(self):
+        pass
+
+    def internalsystemsbalance(self):
+        pass
+
     def addLim(self, a, b, limit):
         c = a+b
         if c>limit:

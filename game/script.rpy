@@ -620,7 +620,7 @@ label home:
 
         "Sleep the entire day away":
             "Oh no"
-            $ game.actions = 1
+            $ game.actions = 0
 
         "Go back":
             call maptown
