@@ -617,6 +617,7 @@ label home:
     menu:
         "Take a nap":
             "You doze off"
+            $ game.actions -= 1
 
         "Sleep the entire day away":
             "Oh no"

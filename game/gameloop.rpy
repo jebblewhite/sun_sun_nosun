@@ -14,8 +14,6 @@ label gameloop:
     
     jump end
 
-label endDayChoices:
-
 
 
 
@@ -37,6 +35,11 @@ label wakeup:
 label endoday:
     scene town_map
     "You end the day in the same place you started: the town center"
+    "new fuel: [game.newfuel]"
+    "new food: [game.newfood]"
+    "new fish: [game.newfish]"
+    "new pelts: [game.newpelts]"
+    "new injured: [game.new_injured]"
     return
 
 label sleep:

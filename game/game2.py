@@ -203,9 +203,16 @@ class Game(object):
         self.new_dead = 0
         self.new_buried = 0
         self.new_recovering = 0
+        self.new_injured = 0
 
         self.moralechange = 0
         self.cohesionchange = 0
+
+        self.newherbs = 0
+        self.newfuel = 0
+        self.newfish = 0
+        self.newfood = 0
+        self.newpelts = 0
 
     def initday(self):
         day = self.day
@@ -369,10 +376,13 @@ class Game(object):
                 peasant.injury += 0
             elif random.randint(1,10) < peasant.__dict__[passion]:
                 peasant.injury += 1
+                self.new_injured += 1
             elif random.randint(1,10) < peasant.__dict__[passion]:
                 peasant.injury += 2
+                self.new_injured += 1
             else:
                 peasant.injury += 3
+                self.new_injured += 1
             return
 
         gatheredsucc = 0
@@ -400,6 +410,17 @@ class Game(object):
         for fisher in self.fishermen:
             fishedsucc += getYields(fisher, 'passionFishing')
             getInjuries(fisher, 'passionFishing')
+
+        self.newherbs += 4*foragedsucc
+        self.newfuel += 24*gatheredsucc
+        self.newfish += 12*fishedsucc
+        self.newfood += 8*huntedsucc
+        self.newpelts += 4*huntedsucc
+
+        self.herbs+= self.newherbs
+        self.fuel += self.newfuel
+        self.food += self.newfish + self.newfood
+        self.pelts += self.newpelts
 
     def workers_project(self):
         pass
