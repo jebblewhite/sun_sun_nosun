@@ -121,11 +121,11 @@ class Peasant(object):
         peasants.append(self)
 
     def display(self):
-        display_string_header = "Name : {}  Age : {}  Status : {} Occupation : {}  Location : {}\n -------- ".format(self.name, self.age, self.status, self.occupation, self.location)
-        display_string_passion = "Passions : {} Hunting, {} Fishing, {} Foraging, {} Gathering \n ------ ".format(self.passionHunting, self.passionFishing, self.passionForaging, self.passionGathering)
-        display_string_stats = "Stats // Health : {}/{}  Energy : {}/{} Warmth : {}/{}  Fedness : {}/{}  Wetness {}/{}  \n ---- ".format(self.currenthealth, self.maxhealth, self.energy, self.maxenergy, self.warmth, self.maxwarmth, self.fedness, self.maxfedness, self.wetness, self.maxwetness)
-        display_string_conds = "Conditions // Injury : {}  Sickness : {}  Food : {} Fire : {}  Pelt : {}  Meds : {}  Beer : {}\n -- ".format(self.injury, self.sickness, self.hasFood, self.hasFire, self.hasPelt, self.hasMeds, self.hasBeer)
-        display_string_flag = "Staging flag : {}".format(self.staging_flag)
+        display_string_header = "Name : {} | Age : {} | Status : {} | Occupation : {} | Location : {}\n -- ".format(self.name, self.age, self.status, self.occupation, self.location)
+        display_string_passion = "Passions // {} Hunting | {} Fishing | {} Foraging | {} Gathering \n -- ".format(self.passionHunting, self.passionFishing, self.passionForaging, self.passionGathering)
+        display_string_stats = "Stats // Health : {}/{} | Energy : {}/{} | Warmth : {}/{} | Fedness : {}/{} | Wetness {}/{}  \n -- ".format(self.currenthealth, self.maxhealth, self.energy, self.maxenergy, self.warmth, self.maxwarmth, self.fedness, self.maxfedness, self.wetness, self.maxwetness)
+        display_string_conds = "Conditions // Injury : {} | Sickness : {} | Food : {} | Fire : {} | Pelt : {} | Meds : {} | Beer : {}\n - ".format(self.injury, self.sickness, self.hasFood, self.hasFire, self.hasPelt, self.hasMeds, self.hasBeer)
+        display_string_flag = "Staging flag : {} \n ".format(self.staging_flag)
         display_string_final = display_string_header + display_string_passion + display_string_stats + display_string_conds + display_string_flag
         
         return display_string_final
