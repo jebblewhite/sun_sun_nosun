@@ -69,9 +69,6 @@ class Peasant(object):
         self.wetness = 0
         self.maxwetness = 100
 
-        self.sickness = 0
-        self.injury = 0
-
         if self.age > 20:
             self.maxhealth = 120-self.age
         else:
@@ -97,12 +94,22 @@ class Peasant(object):
             self.passionGathering = random.randint(1,10)
 
         """
-        Age Group assignment
+        Age Group assignment and conditions
         """
         self.occupation = "General Worker"
+        self.location = "inside"
         self.status = "Alive and Well"
+
+        self.sickness = 0
+        self.injury = 0
         self.hasPelt = 0
         self.hasFire = 0
+        self.hasFood = 0
+        self.hasMeds = 0
+        self.hasBeer = 0
+
+        self.staging_flag = "initialisation"
+
         if self.age > 60:
             self.occupation = "Elder"
             elders.append(self)
@@ -112,7 +119,16 @@ class Peasant(object):
         else:
             workers.append(self)
         peasants.append(self)
+
+    def display(self):
+        display_string_header = "Name : {}  Age : {}  Status : {} Occupation : {}  Location : {}\n -------- ".format(self.name, self.age, self.status, self.occupation, self.location)
+        display_string_passion = "Passions : {} Hunting, {} Fishing, {} Foraging, {} Gathering \n ------ ".format(self.passionHunting, self.passionFishing, self.passionForaging, self.passionGathering)
+        display_string_stats = "Stats // Health : {}/{}  Energy : {}/{} Warmth : {}/{}  Fedness : {}/{}  Wetness {}/{}  \n ---- ".format(self.currenthealth, self.maxhealth, self.energy, self.maxenergy, self.warmth, self.maxwarmth, self.fedness, self.maxfedness, self.wetness, self.maxwetness)
+        display_string_conds = "Conditions // Injury : {}  Sickness : {}  Food : {} Fire : {}  Pelt : {}  Meds : {}  Beer : {}\n -- ".format(self.injury, self.sickness, self.hasFood, self.hasFire, self.hasPelt, self.hasMeds, self.hasBeer)
+        display_string_flag = "Staging flag : {}".format(self.staging_flag)
+        display_string_final = display_string_header + display_string_passion + display_string_stats + display_string_conds + display_string_flag
         
+        return display_string_final
 
 class Game(object):
     def __init__(self):
@@ -313,6 +329,7 @@ class Game(object):
                 #print(high[count].occupation)
                 if high[count].occupation == 'General Worker':
                     high[count].occupation = occTag
+                    high[count].location = "woods"
                     professionlist.append(high[count])
                     tagged = 1
                 else:
@@ -343,6 +360,7 @@ class Game(object):
         for i in range(len(self.workers)):
             if self.workers[i].occupation == "General Worker":
                 self.genworkers.append(self.workers[i])
+                self.workers[i].location = "outside"
     
     def checkforatt(self,att,value):
         for i in range(len(self.workers)):
@@ -427,11 +445,11 @@ class Game(object):
 
     def elders_inspire(self):
         for elder in self.elders:
-            self.cohesionchange += 1
+            self.cohesionchange += 0.5
 
     def children_play(self):
         for child in self.children:
-            self.moralechange += 1
+            self.moralechange += 0.5
 
     def tudortakedamage(self):
         pass
@@ -469,7 +487,7 @@ def display(x,occ=False):
         else:
             print(" __ __ __ Workers __ __ __")
         for i in range(len(x)):
-            print(x[i].__dict__)
+            print(x[i].display())
 
 def main():
     game = Game()
