@@ -156,6 +156,7 @@ class Game(object):
         self.forestevents = {"thestag":True, "theghouls":True, "thelovers":True, "themachineman":True, "themusic":True}
         self.riverevents = {"ontheotherbank":True, "thehutbytheriver":True, "theleviathan":True, "thestatues":True, "thethreesome":True}
         self.townevents = {"thestagnight":False}
+        self.progress = 0
     
 
         for i in range(100):
@@ -239,10 +240,7 @@ class Game(object):
         self.eventchance = (self.initeventchance)
 
     def endofday(self):
-        self.workers_harvest()
-        self.workers_project()
-        self.elders_inspire()
-        self.children_play()
+        self.vocations()
         self.tudortakedamage()
         self.internalsystemsbalance()
         self.community_change("night")
@@ -361,6 +359,8 @@ class Game(object):
             if self.workers[i].occupation == "General Worker":
                 self.genworkers.append(self.workers[i])
                 self.workers[i].location = "outside"
+        for peasant in self.peasants:
+            peasant.staging_flag = "work_assignment"
     
     def checkforatt(self,att,value):
         for i in range(len(self.workers)):
@@ -378,6 +378,12 @@ class Game(object):
     def harvest_action(self):
         pass
     
+    def vocations(self):
+        self.workers_harvest()
+        self.workers_project()
+        self.elders_inspire()
+        self.children_play()
+
     def workers_harvest(self):
         def getYields(peasant,passion):
             if random.randint(1,10) < peasant.__dict__[passion]:
@@ -419,15 +425,19 @@ class Game(object):
         for gatherer in self.gatherers:
             gatheredsucc += getYields(gatherer, 'passionGathering')
             getInjuries(gatherer, 'passionGathering')
+            gatherer.staging_flag = 'gathering'
         for forager in self.foragers:
             foragedsucc += getYields(forager, 'passionForaging')
             getInjuries(forager, 'passionForaging')
+            forager.staging_flag = 'foraging'
         for hunter in self.hunters:
             huntedsucc += getYields(hunter, 'passionHunting')
             getInjuries(hunter, 'passionHunting')
+            hunter.staging_flag = 'hunting'
         for fisher in self.fishermen:
             fishedsucc += getYields(fisher, 'passionFishing')
             getInjuries(fisher, 'passionFishing')
+            fisher.staging_flag = 'fishing'
 
         self.newherbs += 4*foragedsucc
         self.newfuel += 24*gatheredsucc
@@ -441,21 +451,29 @@ class Game(object):
         self.pelts += self.newpelts
 
     def workers_project(self):
-        pass
+        for worker in self.genworkers:
+            self.progress += 1
+            worker.staging_flag = 'project'
 
     def elders_inspire(self):
         for elder in self.elders:
             self.cohesionchange += 0.5
+            elder.staging_flag = 'inspire'
 
     def children_play(self):
         for child in self.children:
             self.moralechange += 0.5
+            child.staging_flag = 'play'
 
     def tudortakedamage(self):
-        pass
+        for tudor in self.peasants:
+            tudor.staging_flag = 'take_damage'
+        
 
     def internalsystemsbalance(self):
-        pass
+        for tudor in self.peasants:
+            tudor.staging_flag = 'internal_balance'
+        
 
     def addLim(self, a, b, limit):
         c = a+b
@@ -490,8 +508,29 @@ def display(x,occ=False):
             print(x[i].display())
 
 def main():
-    game = Game()
-    display(game.peasants)
+    import sys
+    def entry_to_71():
+        print(game.peasants[71].display(), file=f)
+
+    print('Tudor 71 report generating...')
+
+    with open('tudor71report.txt', 'w') as f:
+        print('Start of report', file=f)
+        game = Game()
+        
+        #print(display(game.peasants), file=f)
+        entry_to_71()
+        game.initday()
+        entry_to_71()
+        game.resetvars()
+        game.vocations()
+        entry_to_71()
+        game.tudortakedamage()
+        entry_to_71()
+        game.internalsystemsbalance()
+        entry_to_71()
+        game.community_change("night")
+
 
 
 main()

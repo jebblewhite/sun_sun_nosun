@@ -1,0 +1,31 @@
+Start of report
+Name : Tudor 71 | Age : 24 | Status : Alive and Well | Occupation : General Worker | Location : inside
+ -- Passions // 5 Hunting | 7 Fishing | 4 Foraging | 10 Gathering 
+ -- Stats // Health : 72.0/96 | Energy : 50/100 | Warmth : 100/100 | Fedness : 100/100 | Wetness 0/100  
+ -- Conditions // Injury : 0 | Sickness : 0 | Food : 0 | Fire : 0 | Pelt : 0 | Meds : 0 | Beer : 0
+ - Staging flag : initialisation 
+ 
+Name : Tudor 71 | Age : 24 | Status : Alive and Well | Occupation : Gatherer | Location : woods
+ -- Passions // 5 Hunting | 7 Fishing | 4 Foraging | 10 Gathering 
+ -- Stats // Health : 72.0/96 | Energy : 50/100 | Warmth : 100/100 | Fedness : 100/100 | Wetness 0/100  
+ -- Conditions // Injury : 0 | Sickness : 0 | Food : 0 | Fire : 0 | Pelt : 0 | Meds : 0 | Beer : 0
+ - Staging flag : work_assignment 
+ 
+Name : Tudor 71 | Age : 24 | Status : Alive and Well | Occupation : Gatherer | Location : woods
+ -- Passions // 5 Hunting | 7 Fishing | 4 Foraging | 10 Gathering 
+ -- Stats // Health : 72.0/96 | Energy : 50/100 | Warmth : 100/100 | Fedness : 100/100 | Wetness 0/100  
+ -- Conditions // Injury : 0 | Sickness : 0 | Food : 0 | Fire : 0 | Pelt : 0 | Meds : 0 | Beer : 0
+ - Staging flag : gathering 
+ 
+Name : Tudor 71 | Age : 24 | Status : Alive and Well | Occupation : Gatherer | Location : woods
+ -- Passions // 5 Hunting | 7 Fishing | 4 Foraging | 10 Gathering 
+ -- Stats // Health : 72.0/96 | Energy : 50/100 | Warmth : 100/100 | Fedness : 100/100 | Wetness 0/100  
+ -- Conditions // Injury : 0 | Sickness : 0 | Food : 0 | Fire : 0 | Pelt : 0 | Meds : 0 | Beer : 0
+ - Staging flag : take_damage 
+ 
+Name : Tudor 71 | Age : 24 | Status : Alive and Well | Occupation : Gatherer | Location : woods
+ -- Passions // 5 Hunting | 7 Fishing | 4 Foraging | 10 Gathering 
+ -- Stats // Health : 72.0/96 | Energy : 50/100 | Warmth : 100/100 | Fedness : 100/100 | Wetness 0/100  
+ -- Conditions // Injury : 0 | Sickness : 0 | Food : 0 | Fire : 0 | Pelt : 0 | Meds : 0 | Beer : 0
+ - Staging flag : internal_balance 
+ 
