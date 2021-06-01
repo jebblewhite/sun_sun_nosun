@@ -156,6 +156,7 @@ class Game(object):
         self.forestevents = {"thestag":True, "theghouls":True, "thelovers":True, "themachineman":True, "themusic":True}
         self.riverevents = {"ontheotherbank":True, "thehutbytheriver":True, "theleviathan":True, "thestatues":True, "thethreesome":True}
         self.townevents = {"thestagnight":False}
+        self.vocationexertion = {"General Worker":30, "Child":20, "Elder":20, "Hunter":40, "Fisherman":40, "Forager":40, "Gatherer":40}
         self.progress = 0
     
 
@@ -177,8 +178,8 @@ class Game(object):
         self.pelts = 0
         self.food = 250
        
-        self.fueleffect = 20
-        self.foodeffect = 20
+        self.fueleffect = 40
+        self.foodeffect = 40
 
         self.foodchoice = 2
         self.fuelchoice = 2
@@ -188,6 +189,8 @@ class Game(object):
         self.day = 0
         self.initeventchance = 0.05
         self.temp = None
+        self.coldness = 0
+        self.wetness = 0
 
         self.checkPopStatus()
         self.resetvars()
@@ -230,6 +233,14 @@ class Game(object):
         self.newfish = 0
         self.newfood = 0
         self.newpelts = 0
+
+    def display_new(self):
+        display_stuff = " --DAY{}|| herb: {}, fuel: {}, food: {}, pelts: {}\n -- ".format(self.day,self.herbs,self.fuel,self.food,self.pelts)
+        display_new_pops = "new_ill: {}, new_dead: {}, new_buried: {}, new_recovering: {}, new_injured {}\n -- ".format(self.new_ill,self.new_dead,self.new_buried,self.new_recovering,self.new_injured)
+        display_new_stuff = "newherb: {}, newfuel: {}, newfish: {}, newfood: {}, newpelts: {}\n -- ".format(self.newherbs,self.newfuel,self.newfish,self.newfood,self.newpelts)
+        display_new_change = "moralechange: {}, cohesionchange: {}, coldness: {}, wetness: {}\n   ".format(self.moralechange,self.cohesionchange,self.coldness,self.wetness)
+        display_new = display_stuff+display_new_pops+display_new_stuff+display_new_change
+        return display_new
 
     def initday(self):
         day = self.day
@@ -400,12 +411,15 @@ class Game(object):
                 peasant.injury += 0
             elif random.randint(1,10) < peasant.__dict__[passion]:
                 peasant.injury += 1
+                peasant.currenthealth = self.subLim(peasant.currenthealth, 5, 0)
                 self.new_injured += 1
             elif random.randint(1,10) < peasant.__dict__[passion]:
                 peasant.injury += 2
+                peasant.currenthealth = self.subLim(peasant.currenthealth, 10, 0)
                 self.new_injured += 1
             else:
                 peasant.injury += 3
+                peasant.currenthealth = self.subLim(peasant.currenthealth, 20, 0)
                 self.new_injured += 1
             return
 
@@ -445,7 +459,7 @@ class Game(object):
         self.newfood += 8*huntedsucc
         self.newpelts += 4*huntedsucc
 
-        self.herbs+= self.newherbs
+        self.herbs += self.newherbs
         self.fuel += self.newfuel
         self.food += self.newfish + self.newfood
         self.pelts += self.newpelts
@@ -467,27 +481,89 @@ class Game(object):
 
     def tudortakedamage(self):
         for tudor in self.peasants:
+            if tudor.location == 'inside':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness*0.5)
+            elif tudor.location == 'outside':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness)
+                tudor.wetness = self.addLim(tudor.wetness,self.wetness*0.5)
+            elif tudor.location == 'woods':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness*1.5)
+                tudor.wetness = self.addLim(tudor.wetness,self.wetness)
+            tudor.currenthealth = self.subLim(tudor.currenthealth,damage*0.5)
+            tudor.energy, damage = self.subLimRem(tudor.energy,self.vocationexertion[tudor.occupation])
+            tudor.fedness, damage = self.subLimRem(tudor.fedness,damage)
+            tudor.currenthealth = self.subLim(tudor.currenthealth,damage*0.5)
             tudor.staging_flag = 'take_damage'
+
+    def tudortakedamage2(self):
+        for tudor in self.peasants:
+            if tudor.location == 'inside':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness*0.5)
+            elif tudor.location == 'outside':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness)
+                tudor.wetness = self.addLim(tudor.wetness,self.wetness*0.5)
+            elif tudor.location == 'woods':
+                tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness*1.5)
+                tudor.wetness = self.addLim(tudor.wetness,self.wetness)
+            tudor.currenthealth = self.subLim(tudor.currenthealth,damage*0.5)
+            tudor.staging_flag = 'take_damage2'
         
 
     def internalsystemsbalance(self):
         for tudor in self.peasants:
+            tudor.warmth = self.addLim(tudor.warmth,tudor.energy/2,tudor.maxenergy)
+            tudor.energy = tudor.energy/2
+            tudor.energy, leftover = self.addLimRem(tudor.energy,tudor.fedness,tudor.maxenergy)
+            tudor.fedness = self.addLim(0,leftover,tudor.maxfedness)
             tudor.staging_flag = 'internal_balance'
-        
 
-    def addLim(self, a, b, limit):
+    def internalsystemsbalance2(self):
+        for tudor in self.peasants:
+            tudor.warmth = self.addLim(tudor.warmth,tudor.energy/2,tudor.maxenergy)
+            tudor.energy = tudor.energy/2
+            tudor.energy, leftover = self.addLimRem(tudor.energy,tudor.fedness,tudor.maxenergy)
+            tudor.fedness = self.addLim(0,leftover,tudor.maxfedness)
+            tudor.staging_flag = 'internal_balance2'
+
+    def sickcheck(self):
+        for tudor in self.peasants:
+            tudor.staging_flag = 'sickcheck'
+
+    def newsick(self):
+        for tudor in self.peasants:
+            tudor.staging_flag = 'newsick'
+
+    def consume(self):
+        for tudor in self.peasants:
+            tudor.staging_flag = 'consume'
+
+    def addLim(self, a, b, limit=100):
         c = a+b
         if c>limit:
             return limit
         else:
             return c
 
-    def subLim(self, a, b, limit):
+    def addLimRem(self, a, b, limit=100):
+        c = a+b
+        if c>limit:
+            return limit, (c-limit)
+        else:
+            return c, 0
+
+    def subLim(self, a, b, limit=0):
         d = a-b
         if d<limit:
             return limit
         else:
             return d
+
+    def subLimRem(self, a, b, limit=0):
+        d = a-b
+        if d<limit:
+            return limit, (-d)
+        else:
+            return d, 0
 
     def addsubLim(self,a,b,uplim=100,downlim=0):
         if b>=0:
@@ -511,7 +587,7 @@ def main():
     import sys
     def entry_to_71():
         print(game.peasants[71].display(), file=f)
-
+        print(game.display_new(), file=f)
     print('Tudor 71 report generating...')
 
     with open('tudor71report.txt', 'w') as f:
@@ -519,17 +595,32 @@ def main():
         game = Game()
         
         #print(display(game.peasants), file=f)
-        entry_to_71()
-        game.initday()
-        entry_to_71()
-        game.resetvars()
-        game.vocations()
-        entry_to_71()
-        game.tudortakedamage()
-        entry_to_71()
-        game.internalsystemsbalance()
-        entry_to_71()
-        game.community_change("night")
+        for i in range(30):
+            entry_to_71()
+            game.initday()
+            entry_to_71()
+            game.resetvars()
+            game.vocations()
+            entry_to_71()
+            game.tudortakedamage()
+            entry_to_71()
+            game.internalsystemsbalance()
+            entry_to_71()
+            game.community_change("night")
+            entry_to_71()
+            game.initnight()
+            entry_to_71()
+            game.consume()
+            entry_to_71()
+            game.tudortakedamage2()
+            entry_to_71()
+            game.sickcheck()
+            entry_to_71()
+            game.internalsystemsbalance2()
+            entry_to_71()
+            game.newsick()
+            entry_to_71()
+            game.day += 1
 
 
 
