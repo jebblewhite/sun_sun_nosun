@@ -260,6 +260,9 @@ class Game(object):
         day = self.day
         temp = self.temp
         self.weather_make(day,temp)
+        self.updateFood()
+        self.updateFuel()
+        self.updateHerb()
 
     def weather_make(self, day, temp, time='day'):
         # weather /
@@ -324,6 +327,9 @@ class Game(object):
                 self.moralechange -= 5
             if self.food < self.popAlive:
                 self.cohesionchange -= 5
+        if dayornight == 'night':
+            self.moralechange += self.new_buried - 2*self.new_dead - self.new_injured
+            self.cohesionchange += self.new_recovering - self.new_ill - self.new_injured
         self.popMorale = self.addsubLim(self.popMorale, self.moralechange)
         self.popCohesion = self.addsubLim(self.popCohesion, self.cohesionchange)
 
@@ -471,12 +477,12 @@ class Game(object):
 
     def elders_inspire(self):
         for elder in self.elders:
-            self.cohesionchange += 0.5
+            self.cohesionchange += 0.1*random.randint(-2,4)
             elder.staging_flag = 'inspire'
 
     def children_play(self):
         for child in self.children:
-            self.moralechange += 0.5
+            self.moralechange += 0.1*random.randint(-2,4)
             child.staging_flag = 'play'
 
     def tudortakedamage(self):
@@ -493,6 +499,9 @@ class Game(object):
             tudor.energy, damage = self.subLimRem(tudor.energy,self.vocationexertion[tudor.occupation])
             tudor.fedness, damage = self.subLimRem(tudor.fedness,damage)
             tudor.currenthealth = self.subLim(tudor.currenthealth,damage*0.5)
+            if tudor.currenthealth < 0.1 and tudor.status != "Dead":
+                tudor.status = "Dead"
+                self.new_dead += 1
             tudor.staging_flag = 'take_damage'
 
     def tudortakedamage2(self):
@@ -506,6 +515,9 @@ class Game(object):
                 tudor.warmth, damage = self.subLimRem(tudor.warmth,self.coldness*1.5)
                 tudor.wetness = self.addLim(tudor.wetness,self.wetness)
             tudor.currenthealth = self.subLim(tudor.currenthealth,damage*0.5)
+            if tudor.currenthealth < 0.1 and tudor.status != "Dead":
+                tudor.status = "Dead"
+                self.new_dead += 1
             tudor.staging_flag = 'take_damage2'
         
 
@@ -526,15 +538,136 @@ class Game(object):
             tudor.staging_flag = 'internal_balance2'
 
     def sickcheck(self):
+        def tryTakeMeds(sicko):
+            if sicko.hasMeds > 0:
+                print(sicko.name + " is recovering from sickness after being treated")
+                sicko.status = 'Recovering from Sickness'
+                self.new_recovering += 1
+            else:
+                if random.randint(1,100) > (sicko.currenthealth+sicko.warmth)/2:
+                    print(sicko.name + " has died.")
+                    sicko.status = 'Dead'
+                    self.new_dead += 1
+                else:
+                    sicko.currenthealth = self.addLim(sicko.currenthealth, round(0.1*sicko.currenthealth),sicko.maxhealth)
+                    print(sicko.name + " is recovering from sickness despite the lack of medicine")
+                    sicko.status = 'Recovering from Sickness'
+                    self.new_recovering += 1
+
+        for i in range(len(self.peasants)):
+            if self.peasants[i].currenthealth <= 0 and self.peasants[i].status != 'Dead':
+                self.peasants[i].status = 'Dead'
+                self.new_dead += 1
+            if self.peasants[i].status == 'Dead':
+                self.peasants[i].currenthealth = 0
+            if self.peasants[i].status == 'Sick':
+                tryTakeMeds(self.peasants[i])
+
         for tudor in self.peasants:
             tudor.staging_flag = 'sickcheck'
 
     def newsick(self):
+        for i in range(len(self.peasants)):
+            if self.peasants[i].status == 'Alive and Well' and (self.peasants[i].currenthealth+self.peasants[i].warmth)/2 < 40:
+                if random.randint(1,100) > self.peasants[i].currenthealth:
+                    print(self.peasants[i].name + " (" + self.peasants[i].occupation + ") has taken ill")
+                    self.peasants[i].status = 'Sick'
+                    self.new_ill += 1
+                else:
+                    self.peasants[i].currenthealth = self.addLim(self.peasants[i].currenthealth, round(0.1*self.peasants[i].currenthealth),self.peasants[i].maxhealth)
         for tudor in self.peasants:
             tudor.staging_flag = 'newsick'
 
+    def countAlive(self):
+        return(len([peasant.status!= "Dead" for peasant in self.peasants]))
+
+    def updateFood(self):
+        self.foodpp = 2**(self.foodchoice-2)
+        if self.countAlive()*self.foodpp <= self.food:
+            self.distfood = (self.countAlive()*self.foodpp)
+        else:
+            self.distfood = (self.food)
+        self.food -= self.distfood
+        
+    def updateFuel(self):
+        self.fuelpp = 2**(self.fuelchoice-2)
+        if self.countAlive()*self.fuelpp <= self.fuel:
+            self.distfuel = (self.countAlive()*self.fuelpp)
+        else:
+            self.distfuel = (self.fuel)
+        self.fuel -= self.distfuel
+ 
+
+    def updateHerb(self):
+        if self.herbchoice != 3:
+            product = round(1.1*self.herbs)
+            if self.herbchoice == 1:
+                self.medicine += product
+            else:
+                self.alcohol += product
+        else:
+            product =  round(0.5*self.herbs)
+            self.medicine += product
+            self.alcohol += product
+        self.herbs = 0
+
+    def bigFeast(self):
+        def eatFood(peasant):
+            peasant.hasFood = 0
+            if self.distfood > 0:
+                self.distfood -= self.foodpp
+                peasant.hasFood = (self.foodpp)
+            if peasant.hasFood >= 2:
+                self.popCohesion = self.addLim(self.popCohesion,0.1,100)
+            elif peasant.hasFood < 1 and peasant.hasFood > 0:
+                self.popMorale = self.subLim(self.popMorale,0.1,0)
+            else:
+                self.popMorale = self.subLim(self.popMorale,1,0)
+                self.popCohesion = self.subLim(self.popCohesion,1,0)
+
+        random.shuffle(self.peasants)
+        for peasant in self.peasants:
+            eatFood(peasant)
+        
+
+    def bigBurn(self):
+        def burnLog(peasant):
+            peasant.hasFire = 0
+            if self.distfuel > 0:
+                self.distfuel -= self.fuelpp
+                peasant.hasFire = (self.fuelpp)
+            if peasant.hasFire >= 2:
+                self.popMorale = self.addLim(self.popMorale,0.1,100)
+            elif peasant.hasFire < 1 and peasant.hasFire > 0:
+                self.popCohesion = self.subLim(self.popCohesion,0.1,0)
+            else:
+                self.popMorale = self.subLim(self.popMorale,1,0)
+                self.popCohesion = self.subLim(self.popCohesion,1,0)
+
+        random.shuffle(self.peasants)
+        for peasant in self.peasants:
+            burnLog(peasant)
+
+    def giveMedicine(self):
+        def takeMeds(peasant):
+            if self.medicine > 0:
+                self.medicine -= 1
+                peasant.hasMeds = 1
+
+        random.shuffle(self.peasants)
+        for peasant in self.peasants:
+            peasant.hasMeds = 0
+            if peasant.status == "Sick":
+                takeMeds(peasant)
+
     def consume(self):
+        self.bigFeast()
+        self.bigBurn()
+        self.giveMedicine()
+
         for tudor in self.peasants:
+            tudor.fedness += self.foodeffect*tudor.hasFood
+            tudor.warmth += self.fueleffect*tudor.hasFire
             tudor.staging_flag = 'consume'
 
     def addLim(self, a, b, limit=100):
@@ -609,6 +742,8 @@ def main():
             game.community_change("night")
             entry_to_71()
             game.initnight()
+
+            # sim player choices
             entry_to_71()
             game.consume()
             entry_to_71()
