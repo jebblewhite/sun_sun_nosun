@@ -1,32 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 554, in script call
-    call gameloop
-  File "game/gameloop.rpy", line 9, in script
-    $ game.endofday()
-  File "game/gameloop.rpy", line 9, in <module>
-    $ game.endofday()
-TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
+  File "game/script.rpy", line 47, in script
+    init python:
+  File "game/script.rpy", line 51, in <module>
+    from game2 import Charac
+SyntaxError: invalid syntax (game2.py, line 756)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 554, in script call
-    call gameloop
-  File "game/gameloop.rpy", line 9, in script
-    $ game.endofday()
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 922, in execute
+  File "game/script.rpy", line 47, in script
+    init python:
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/gameloop.rpy", line 9, in <module>
-    $ game.endofday()
-  File "game2.py", line 219, in endofday
-  File "game2.py", line 395, in workers_harvest
-TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 51, in <module>
+    from game2 import Charac
+  File "/Applications/renpy-7.3.5-sdk/renpy/loader.py", line 748, in load_module
+    code = compile(source, filename, 'exec', renpy.python.old_compile_flags, 1)
+SyntaxError: invalid syntax (game2.py, line 756)
 
-Windows-10-10.0.19041
-Ren'Py 7.4.1.1270
+Darwin-19.5.0-x86_64-i386-64bit
+Ren'Py 7.3.5.606
 sunsunsun 1.0
-Wed May  5 19:23:15 2021
+Sat Jun 12 14:16:37 2021

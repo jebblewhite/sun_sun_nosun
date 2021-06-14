@@ -10,11 +10,19 @@ label gameloop:
         $ game.endofday()
         call endoday
         $ game.initnight()
+        call playerChoices
+        $ game.consume()
+        $ game.tudortakedamage2()
+        $ game.sickcheck()
+        $ game.internalsystemsbalance2()
+        $ game.newsick()
         call sleep
+        $ game.day += 1
     
     jump end
 
 
+            
 
 
 label wakeup:

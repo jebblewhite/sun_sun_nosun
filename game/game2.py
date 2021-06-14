@@ -182,7 +182,9 @@ class Game(object):
         self.foodeffect = 40
 
         self.foodchoice = 2
+        self.foodpp = 1
         self.fuelchoice = 2
+        self.fuelpp = 1
         self.herbchoice = 3
         self.peltchoice = 2
 
@@ -205,6 +207,7 @@ class Game(object):
         self.popDead = 0
         self.popRecovering = 0
         self.popBuried = 0
+        self.popInjured = 0
         for peasant in self.peasants:
             if peasant.status == "Alive and Well":
                 self.popHealthy += 1
@@ -216,6 +219,8 @@ class Game(object):
                 self.popDead += 1
             else:
                 self.popBuried += 1
+            if peasant.injury > 0:
+                self.popInjured += 1
         self.popAlive = self.popHealthy+self.popIll+self.popRecovering
 
     def resetvars(self):
@@ -235,9 +240,10 @@ class Game(object):
         self.newpelts = 0
 
     def display_new(self):
-        display_stuff = " --DAY{}|| herb: {}, fuel: {}, food: {}, pelts: {}\n -- ".format(self.day,self.herbs,self.fuel,self.food,self.pelts)
+        self.checkPopStatus()
+        display_stuff = " --DAY{}|| herb/meds/alc: {}/{}/{}, fuel: {}, food: {}, pelts: {}   /// alive: {}, dead: {}, sick: {}, injured: {}, morale: {}, cohesion: {} \n -- ".format(self.day,self.herbs,self.medicine,self.alcohol,self.fuel,self.food,self.pelts,self.popAlive,self.popDead,self.popIll,self.popInjured,self.popMorale,self.popCohesion)
         display_new_pops = "new_ill: {}, new_dead: {}, new_buried: {}, new_recovering: {}, new_injured {}\n -- ".format(self.new_ill,self.new_dead,self.new_buried,self.new_recovering,self.new_injured)
-        display_new_stuff = "newherb: {}, newfuel: {}, newfish: {}, newfood: {}, newpelts: {}\n -- ".format(self.newherbs,self.newfuel,self.newfish,self.newfood,self.newpelts)
+        display_new_stuff = "newherb: {}, newfuel: {}, newfish: {}, newfood: {}, newpelts: {}, foodpp: {}, fuelpp: {}\n -- ".format(self.newherbs,self.newfuel,self.newfish,self.newfood,self.newpelts,self.foodpp,self.fuelpp)
         display_new_change = "moralechange: {}, cohesionchange: {}, coldness: {}, wetness: {}\n   ".format(self.moralechange,self.cohesionchange,self.coldness,self.wetness)
         display_new = display_stuff+display_new_pops+display_new_stuff+display_new_change
         return display_new
@@ -256,13 +262,14 @@ class Game(object):
         self.internalsystemsbalance()
         self.community_change("night")
 
-    def initnight(self):
+    def initnight(self, sim=0):
         day = self.day
         temp = self.temp
         self.weather_make(day,temp)
-        self.updateFood()
-        self.updateFuel()
-        self.updateHerb()
+        if sim==1:
+            self.updateFood()
+            self.updateFuel()
+            self.updateHerb()
 
     def weather_make(self, day, temp, time='day'):
         # weather /
@@ -323,9 +330,9 @@ class Game(object):
         if dayornight == 'day':
             self.moralechange += self.new_buried - 2*self.new_dead
             self.cohesionchange += self.new_recovering - self.new_ill
-            if self.fuel < self.popAlive:
+            if self.fuel < self.countAlive():
                 self.moralechange -= 5
-            if self.food < self.popAlive:
+            if self.food < self.countAlive():
                 self.cohesionchange -= 5
         if dayornight == 'night':
             self.moralechange += self.new_buried - 2*self.new_dead - self.new_injured
@@ -342,7 +349,7 @@ class Game(object):
             while tagged == 0:
                 #print(count)
                 #print(high[count].occupation)
-                if high[count].occupation == 'General Worker':
+                if high[count].occupation == 'General Worker' and high[count].status != "Dead" and high[count].status != "Sick" and high[count].injury == 0:
                     high[count].occupation = occTag
                     high[count].location = "woods"
                     professionlist.append(high[count])
@@ -352,13 +359,16 @@ class Game(object):
                         count += 1
                     else:
                         tagged = 1
+                        self.nonviable = 1
         self.genworkers = []
+        self.sickppl = []
         self.hunters = []
         self.gatherers = []
         self.fishermen = []
         self.foragers = []
+        self.nonviable = 0
         if self.workersorder == 0:
-            while len(self.hunters) < self.workersnum and self.checkforatt('occupation','General Worker') == True:
+            while len(self.hunters) < self.workersnum and self.checkforatt('occupation','General Worker') == True and self.nonviable == 0:
                 order = [1,2,3,4]
                 random.shuffle(order)
                 #print(order)
@@ -374,8 +384,12 @@ class Game(object):
                         topWorker(self.foragers, "Forager", "passionForaging")
         for i in range(len(self.workers)):
             if self.workers[i].occupation == "General Worker":
-                self.genworkers.append(self.workers[i])
-                self.workers[i].location = "outside"
+                if self.workers[i].status == "Sick" or self.workers[i].status == "Recovering from Sickness":
+                    self.sickppl.append(self.workers[i])
+                    self.workers[i].location = "inside"
+                else:
+                    self.genworkers.append(self.workers[i])
+                    self.workers[i].location = "outside"
         for peasant in self.peasants:
             peasant.staging_flag = "work_assignment"
     
@@ -400,6 +414,8 @@ class Game(object):
         self.workers_project()
         self.elders_inspire()
         self.children_play()
+        self.sick_rest()
+        self.unassign_workers()
 
     def workers_harvest(self):
         def getYields(peasant,passion):
@@ -458,12 +474,13 @@ class Game(object):
             fishedsucc += getYields(fisher, 'passionFishing')
             getInjuries(fisher, 'passionFishing')
             fisher.staging_flag = 'fishing'
-
-        self.newherbs += 4*foragedsucc
-        self.newfuel += 24*gatheredsucc
-        self.newfish += 12*fishedsucc
-        self.newfood += 8*huntedsucc
-        self.newpelts += 4*huntedsucc
+        print([peasant.passionForaging for peasant in self.foragers])
+        print("{} / {} / {} / {}".format(foragedsucc,gatheredsucc,fishedsucc,huntedsucc))
+        self.newherbs += 4*foragedsucc*0.5*random.randint(1,4)
+        self.newfuel += 24*gatheredsucc*0.5*random.randint(1,4)
+        self.newfish += 12*fishedsucc*0.5*random.randint(1,4)
+        self.newfood += 8*huntedsucc*0.5*random.randint(1,4)
+        self.newpelts += 4*huntedsucc*0.5*random.randint(1,4)
 
         self.herbs += self.newherbs
         self.fuel += self.newfuel
@@ -484,6 +501,15 @@ class Game(object):
         for child in self.children:
             self.moralechange += 0.1*random.randint(-2,4)
             child.staging_flag = 'play'
+
+    def sick_rest(self):
+        for sick in self.sickppl:
+            sick.energy += 20
+
+    def unassign_workers(self):
+        for peasant in self.peasants:
+            if peasant.occupation != "Child" and peasant.occupation != "Elder":
+                peasant.occupation = "General Worker"
 
     def tudortakedamage(self):
         for tudor in self.peasants:
@@ -535,6 +561,9 @@ class Game(object):
             tudor.energy = tudor.energy/2
             tudor.energy, leftover = self.addLimRem(tudor.energy,tudor.fedness,tudor.maxenergy)
             tudor.fedness = self.addLim(0,leftover,tudor.maxfedness)
+            if tudor.injury > 0:
+                #make this work better
+                tudor.injury = 0
             tudor.staging_flag = 'internal_balance2'
 
     def sickcheck(self):
@@ -579,7 +608,7 @@ class Game(object):
             tudor.staging_flag = 'newsick'
 
     def countAlive(self):
-        return(len([peasant.status!= "Dead" for peasant in self.peasants]))
+        return(len([peasant.status != "Dead" for peasant in self.peasants]))
 
     def updateFood(self):
         self.foodpp = 2**(self.foodchoice-2)
@@ -618,12 +647,14 @@ class Game(object):
                 self.distfood -= self.foodpp
                 peasant.hasFood = (self.foodpp)
             if peasant.hasFood >= 2:
-                self.popCohesion = self.addLim(self.popCohesion,0.1,100)
+                self.cohesionchange += 1
+            elif peasant.hasFood == 1:
+                self.cohesionchange += 0.1
             elif peasant.hasFood < 1 and peasant.hasFood > 0:
-                self.popMorale = self.subLim(self.popMorale,0.1,0)
+                self.moralechange -= 0.1
             else:
-                self.popMorale = self.subLim(self.popMorale,1,0)
-                self.popCohesion = self.subLim(self.popCohesion,1,0)
+                self.moralechange -= 1
+                self.cohesionchange -= 1
 
         random.shuffle(self.peasants)
         for peasant in self.peasants:
@@ -637,12 +668,14 @@ class Game(object):
                 self.distfuel -= self.fuelpp
                 peasant.hasFire = (self.fuelpp)
             if peasant.hasFire >= 2:
-                self.popMorale = self.addLim(self.popMorale,0.1,100)
+                self.moralechange += 1
+            elif peasant.hasFire == 1:
+                self.moralechange += 0.1
             elif peasant.hasFire < 1 and peasant.hasFire > 0:
-                self.popCohesion = self.subLim(self.popCohesion,0.1,0)
+                self.cohesionchange -= 0.1
             else:
-                self.popMorale = self.subLim(self.popMorale,1,0)
-                self.popCohesion = self.subLim(self.popCohesion,1,0)
+                self.moralechange -= 1
+                self.cohesionchange -= 1
 
         random.shuffle(self.peasants)
         for peasant in self.peasants:
@@ -715,11 +748,13 @@ def display(x,occ=False):
             print(" __ __ __ Workers __ __ __")
         for i in range(len(x)):
             print(x[i].display())
-
+"""
 def main():
     import sys
     def entry_to_71():
-        print(game.peasants[71].display(), file=f)
+        for peasant in game.peasants:
+            if peasant.name == "Tudor 71":
+                print(peasant.display(), file=f)
         print(game.display_new(), file=f)
     print('Tudor 71 report generating...')
 
@@ -760,3 +795,4 @@ def main():
 
 
 main()
+"""
