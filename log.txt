@@ -1,17 +1,17 @@
-Sat Jun 12 14:48:12 2021
-Darwin-19.5.0-x86_64-i386-64bit
+Wed Jul  7 16:25:24 2021
+Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
 Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.03s
+Loader init took 0.04s
 Loading error handling took 0.02s
 Loading script took 0.08s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
+Running init code took 0.06s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -20,16 +20,16 @@ Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.11s
+Creating interface object took 0.08s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
+Load screen analysis took 0.10s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -40,7 +40,7 @@ Windowed mode.
 Screen sizes: virtual=(3072, 1920) physical=(1629, 1018) drawable=(3258, 2036)
 Vendor: 'ATI Technologies Inc.'
 Renderer: 'AMD Radeon Pro 5500M OpenGL Engine'
-Version: '2.1 ATI-3.9.15'
+Version: '2.1 ATI-3.10.18'
 Display Info: None
 Extensions:
     
@@ -196,13 +196,51 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.808057069778s
+Total time until interface ready: 0.898478031158s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016337 seconds.
-- Frame drawn at 0.032385 seconds.
-- Frame drawn at 0.048526 seconds.
-- Frame drawn at 0.065231 seconds.
-- 0.065231 seconds to render 5 frames.
-[10, 8, 8, 8, 8]
-3.5 / 4 / 5 / 4.5
+- Frame drawn at 0.017102 seconds.
+- Frame drawn at 0.032981 seconds.
+- Frame drawn at 0.048951 seconds.
+- Frame drawn at 0.065818 seconds.
+- 0.065818 seconds to render 5 frames.
+
+Full traceback:
+  File "game/script.rpy", line 554, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 580, in script call
+    call herbs
+  File "game/script.rpy", line 684, in script call
+    call maploop
+  File "game/script.rpy", line 582, in script call
+    call river
+  File "game/script.rpy", line 704, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2059, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 704, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+While running game code:
+  File "game/script.rpy", line 554, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 580, in script call
+    call herbs
+  File "game/script.rpy", line 684, in script call
+    call maploop
+  File "game/script.rpy", line 582, in script call
+    call river
+  File "game/script.rpy", line 704, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "game/script.rpy", line 704, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'

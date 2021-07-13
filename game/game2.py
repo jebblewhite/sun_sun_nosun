@@ -406,8 +406,39 @@ class Game(object):
     def check_for_event(self):
         pass
 
-    def harvest_action(self):
-        pass
+    def playerHarvest(self,harvesttype,actioncost):
+        
+        gatheredsucc = 0
+
+        foragedsucc = 0
+
+        huntedsucc = 0
+
+        fishedsucc = 0
+
+        self.playersuccess = 4*actioncost
+        if harvesttype == "hunt":
+            huntedsucc = (self.playersuccess)
+        elif harvesttype == "fish":
+            fishedsucc = (self.playersuccess)
+        elif harvesttype == "gather":
+            gatheredsucc = (self.playersuccess)
+        else:
+            foragedsucc = (self.playersuccess)
+            
+
+        self.newherbs += 4*foragedsucc*0.5*random.randint(1,4)
+        self.newfuel += 24*gatheredsucc*0.5*random.randint(1,4)
+        self.newfish += 12*fishedsucc*0.5*random.randint(1,4)
+        self.newfood += 8*huntedsucc*0.5*random.randint(1,4)
+        self.newpelts += 4*huntedsucc*0.5*random.randint(1,4)
+
+        self.herbs += self.newherbs
+        self.fuel += self.newfuel
+        self.food += self.newfish + self.newfood
+        self.pelts += self.newpelts
+
+        self.actions -= (actioncost)
     
     def vocations(self):
         self.workers_harvest()
