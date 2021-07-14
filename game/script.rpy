@@ -885,6 +885,8 @@ label woods:
                 "get meat n pelts"
         "(debug) the stag event":
             call thestag
+        "(debug) the ghouls event":
+            call theghouls
         "Go back":
             call maploop
     return

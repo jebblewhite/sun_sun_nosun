@@ -148,6 +148,7 @@ class Game(object):
         self.elders = []
         self.children = []
 
+        self.player_name = "Jim"
         self.actions = 5
         self.playerFuel, self.playerHerb, self.playerhuntedFood, self.playerPelts, self.playerfishedFood = 0,0,0,0,0
         """
@@ -767,6 +768,12 @@ class Game(object):
             return self.addLim(a,b,uplim)
         else:
             return self.subLim(a, -b, downlim)
+
+    def returnRandomDeadName(self):
+        deadpeasants = [peasant for peasant in self.peasants if peasant.status == "Dead"]
+        lengthdead = len(deadpeasants)
+        randomdead = deadpeasants[random.randint(0,lengthdead-1)]
+        return randomdead.name
 
 """
 --------------------------- END OF CLASS -   - -- -  -- - -
