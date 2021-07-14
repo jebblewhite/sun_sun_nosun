@@ -17,12 +17,12 @@ label theghouls:
 
     It’s not a voice you recognise, of that you are instantly certain.  Not only is it unfamiliar, but it is also too high pitched, too strained to be entirely comfortable, entirely healthy.  
 
-    The second voice you hear, also coming to you from the direction of the graveyard, is also unknown and unnatural, but this one is deep, phlegmy and slow.
+    The second voice you hear, also coming to you from the direction of the graveyard, is equally unknown and unnatural, but this one is deep, phlegmy and slow.
     """
 
     "???"  "I’m tryn’ to look Inky but there’s so little of it there’s nothing to see!"
 
-    "The voice laughs at its own comment and is joined by another sound, an inorganic dry rasping.  The fist voice, the high pitched one, joins in with a light chuckle, and then continues:"
+    "The voice laughs at its own comment and is joined by another sound, an inorganic dry rasping.  The first voice, the high pitched one, joins in with a light chuckle, and then continues:"
 
     "???"  "In all fucking seriousness, eh, it’s better than the nothin’ we’ll be having soon, so we better enjoy the poor cunt."
 
@@ -48,7 +48,7 @@ label theghouls:
 
     "Fuckface"  "It’s even more skinny than it looked in the ‘ole!"
 
-    "Inky"  "Lookin’ for something your size fatso?  Now shut up, my stomach’s rumbling."
+    "Inky"  "Lookin’ for something your size fatso?  Now shut up, my stomach’s rumblin'."
 
     menu:
         "*Attack.  These creatures cannot be allowed to eat [deadcitizen]’s body!*":
@@ -67,7 +67,7 @@ label theghouls:
 
         "'Hello there'":
             $ c=2
-            "All three creatures turn towards you as you step out of the undergrowth, Fuckface with surprise, Inky with an air of cool nonchalance that shows that he knew you were there all along, and Slimey simply by rotation its rotten doll’s head one hundred and eighty degrees."
+            "All three creatures turn towards you as you step out of the undergrowth, Fuckface with surprise, Inky with an air of cool nonchalance that shows that he knew you were there all along, and Slimey simply by rotating its rotten doll’s head one hundred and eighty degrees."
 
             $ c=4
 
@@ -76,11 +76,11 @@ label theghouls:
             $ c=1
             "Feeling disgusted, whether with yourself or with the scene acting itself out behind you, you leave the creatures to their food and return to your own work."
 
-            $ game.eventyieldmod = 0.8
+            $ game.eventyieldmod = 0.8 #temp
     if c == 4:
         "Fuckface"  "Where the fuck did that come from!"
 
-        "Inky"  "It’s been watchin’ us from the bushes over there, hasn’t it?  Seen it plain as day from that eyeball I stuck up your areshole."
+        "Inky"  "It’s been watchin’ us from the bushes over there, hasn’t it?  Seen it plain as day from that eyeball I stuck up your arsehole."
 
         "From the lack of laughter at this remark, and the fact that ‘Fuckface’ self consciously pats his behind, you are sickeningly conscious that this is probably not a joke."
 
@@ -133,7 +133,7 @@ label theghouls:
 
                 """
 
-                The three creatures laugh, but Inky doesn’t take its eyes off you while it does, casually hefting the space in its hand while it does so.  Slimey picks up on this first, taking a step forward and fixing you with the dull, unpainted pits that used to contain the doll's marble eyes.  
+                The three creatures laugh, but Inky doesn’t take its eyes off you while it does, casually hefting the spade in its hand while it does so.  Slimey picks up on this first, taking a step forward and fixing you with the dull, unpainted pits that used to contain the doll's marble eyes.  
 
                 Only after the laughter has died down, and the brandishing of makeshift weapons has gone beyond obvious, does Fuckface realise what is happening.  
 

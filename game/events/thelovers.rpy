@@ -25,7 +25,7 @@ label thelovers:
 
     Not that it would have mattered much if the fabric had stayed in place.  It would only have delayed the rain from reaching anything inside, and if the snow had landed on top it would have been liable to grow so heavy the entire structure collapsed.
 
-    Not that the shelter was wholly spared that fate.  A section, almost in the dead centre, has collapsed, leaving the inside of the shelter more or less completely open to the elements.
+    Not that the shelter was wholly spared that fate.  A section, almost in the dead centre, {i}has{/i} collapsed, leaving the inside of the shelter more or less completely open to the elements.
 
     The hole also allows the smell to escape.
 
@@ -33,13 +33,13 @@ label thelovers:
 
     The bodies are, of course, corpses.  Corpses still well preserved enough that you recognise them.[textinsert2]
 
-    They lie in each other’s arms, Dagmer’s limbs draped loosely around Kristopher, her head turned up and away, while Kristopher’s fingers are locked, digging desperately into the fabric of her clothes, his face pressed hard into her chest.
+    They lie in each other’s arms, Dagmar’s limbs draped loosely around Kristopher, her head turned up and away, while Kristopher’s fingers are locked, digging desperately into the fabric of her clothes, his face pressed hard into her chest.
 
-    Dagmer looks at peace.  Kristopher, on the other hand, is missing clumps of hair, his head a patchwork of bloody scalp.  His knuckles are bloody and it appears as if the bones in the fingers of his left hand are broken.  
+    Dagmar looks at peace.  Kristopher, on the other hand, is missing clumps of hair, his head a patchwork of bloody scalp.  His knuckles are bloody and it appears as if the bones in the fingers of his left hand are broken.  
 
     In the corner of the shelter you see a rock spattered with blood.
 
-    A piece of paper, the corner destroyed by rain and snow, pokes out of a pocket on the front of Dagmer’s coat, pinned in place by Kristopher’s head as if he is still trying to protect it, even in death.
+    A piece of paper, the corner destroyed by rain and snow, pokes out of a pocket on the front of Dagmar’s coat, pinned in place by Kristopher’s head as if he is still trying to protect it, even in death.
     """
     menu:
 
@@ -49,7 +49,7 @@ label thelovers:
         "*Take the remaining food*":
             $ c=2
 
-        "*Examine the piece of paper poking out of Dagmer’s pocket*":
+        "*Examine the piece of paper poking out of Dagmar’s pocket*":
             $ c=1
             """
 
@@ -93,7 +93,7 @@ label thelovers:
     if c == 3:
         """
 
-        You stand up and look at the bodies one last time: Dagmer so calm, Kristopher twisted and hunched and bloody.
+        You stand up and look at the bodies one last time: Dagmar so calm, Kristopher twisted and hunched and bloody.
 
         Both, now, at peace.
 
