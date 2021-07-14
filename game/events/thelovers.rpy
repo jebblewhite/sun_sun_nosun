@@ -57,7 +57,7 @@ label thelovers:
 
             The handwriting is shaky, and gets progressively worse as the letter goes on.  A few small drops of blood also stain the paper, although the way they are smudged shows that they fell there while the letter was still being written.
 
-            "-coming here.  Don’t ever doubt that.  Because we chose each-other.  And that can’t have been wrong.  We had as much time together as the Pantheon would allow, and that is all I ever wanted.
+            \"-coming here.  Don’t ever doubt that.  Because we chose each-other.  And that can’t have been wrong.  We had as much time together as the Pantheon would allow, and that is all I ever wanted.
 
             I’m staying with you.  I know that you know that, but I write it just in case you can’t feel my arms around you, or aren’t watching me.  
 
@@ -79,7 +79,7 @@ label thelovers:
 
             I’ll never let go of you.
 
-            My love, my love my love I love I love I love"
+            My love, my love my love I love I love I love\"
 
             The bottom line of the paper has been, clumsily but probably intentionally, blotted out.
             """
@@ -111,7 +111,7 @@ label thelovers:
 
         You leave the bodies where they are.  You have the feeling that it does not matter where these two rest, as long as it is together.
         """
-        $ self.food += 12
+        $ game.food += 12
         "get 12 food lol" #temp
 
 

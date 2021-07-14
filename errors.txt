@@ -2,17 +2,41 @@
 errors listed below, and try again.
 
 
-File "game/events/thestag.rpy", line 84: expected menuitem
-    menu:
-    ^
+File "game/events/thelovers.rpy", line 54: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    """
+    
+                You carefully pull the paper, some of it wet, some of it merely moist, from the dead woman’s pocket and unfold it carefully enough that only the most sodden pieces disintegrate in your hand, leaving only the beginning of the letter destroyed.
+    
+                The handwriting is shaky, and gets progressively worse as the letter goes on.  A few small drops of blood also stain the paper, although the way they are smudged shows that they fell there while the letter was still being written.
+    
+                "-coming here.  Don’t ever doubt that.  Because we chose each-other.  And that can’t have been wrong.  We had as much time together as the Pantheon would allow, and that is all I ever wanted.
+                       ^
+    
+                I’m staying with you.  I know that you know that, but I write it just in case you can’t feel my arms around you, or aren’t watching me.  
+    
+                But just in case, I need you to know how much I love you.  How there is nothing that has ever glowed as bright in my life.  In your brightness I hardly notice the sun has gone.  You are all the light I will ever need.
+    
+                I believe that the gods have taken you only because they have taken you somewhere better.  They must feel my love and know you are something worth saving.  And I know that if they felt my love for you, then they will feel your love for me.
+    
+                I have never felt pain like how I feel pain now.  But I know you do not want to hear about, that my love.
+    
+                Oh my god my love, I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you love you I love you I love you I love you
+    
+                I LOVE YOU!!
+    
+                I don’t know any other way of putting it my love.  I’ve screamed it and I hope you’ve heard.  I screamed it till my throat bled.
+    
+                I’m so happy those were my last words.
+    
+                Oh gods, my hands are freezing.  I can’t write more.  I don’t know what more to write, but I feel like I should never stop writing, I need to tell you so much, I hope you will always know my love.
+    
+                I’ll never let go of you.
+    
+                My love, my love my love I love I love I love"
+    
+                The bottom line of the paper has been, clumsily but probably intentionally, blotted out.
+                """
 
-File "game/gameloop.rpy", line 109: expected statement.
-    game.eventstagnight = True
-                        ^
-
-File "game/script.rpy", line 248: choice menuitem expects a non-empty block.
-    "marked":
-             ^
-
-Ren'Py Version: Ren'Py 7.4.1.1270
-Sat Apr  3 18:31:48 2021
+Ren'Py Version: Ren'Py 7.3.5.606
+Wed Jul 14 17:31:31 2021

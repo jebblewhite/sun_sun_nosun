@@ -7,13 +7,13 @@ While running game code:
     call maploop
   File "game/script.rpy", line 584, in script call
     call woods
-  File "game/script.rpy", line 889, in script call
-    call theghouls
-  File "game/events/theghouls.rpy", line 29, in script
-    $ deadcitizen = game.returnRandomDeadName()
-  File "game/events/theghouls.rpy", line 29, in <module>
-    $ deadcitizen = game.returnRandomDeadName()
-ValueError: empty range for randrange() (0,0, 0)
+  File "game/script.rpy", line 891, in script call
+    call thelovers
+  File "game/events/thelovers.rpy", line 114, in script
+    $ self.food += 12
+  File "game/events/thelovers.rpy", line 114, in <module>
+    $ self.food += 12
+NameError: name 'self' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -24,22 +24,19 @@ Full traceback:
     call maploop
   File "game/script.rpy", line 584, in script call
     call woods
-  File "game/script.rpy", line 889, in script call
-    call theghouls
-  File "game/events/theghouls.rpy", line 29, in script
-    $ deadcitizen = game.returnRandomDeadName()
+  File "game/script.rpy", line 891, in script call
+    call thelovers
+  File "game/events/thelovers.rpy", line 114, in script
+    $ self.food += 12
   File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/events/theghouls.rpy", line 29, in <module>
-    $ deadcitizen = game.returnRandomDeadName()
-  File "game2.py", line 774, in returnRandomDeadName
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/random.py", line 242, in randint
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/random.py", line 218, in randrange
-ValueError: empty range for randrange() (0,0, 0)
+  File "game/events/thelovers.rpy", line 114, in <module>
+    $ self.food += 12
+NameError: name 'self' is not defined
 
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
 sunsunsun 1.0
-Tue Jul 13 16:32:17 2021
+Wed Jul 14 17:33:27 2021
