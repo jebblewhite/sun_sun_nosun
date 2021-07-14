@@ -887,6 +887,8 @@ label woods:
             call thestag
         "(debug) the ghouls event":
             call theghouls
+        "(debug) the lovers event":
+            call thelovers
         "Go back":
             call maploop
     return

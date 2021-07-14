@@ -1,36 +1,35 @@
-Wed Jul 14 16:46:03 2021
+Wed Jul 14 16:58:27 2021
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
 Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.03s
+Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.12s
+Loading script took 0.18s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
+Running init code took 0.08s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to '/Users/jason/Library/RenPy/backups/sun_sun_nosun':
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.08s
+Creating interface object took 0.10s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.05s
-Prepare screens took 0.05s
+Load screen analysis took 0.10s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.06s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -197,86 +196,18 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.875682830811s
+Total time until interface ready: 1.14485001564s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016653 seconds.
-- Frame drawn at 0.032460 seconds.
-- Frame drawn at 0.048836 seconds.
-- Frame drawn at 0.065615 seconds.
-- 0.065615 seconds to render 5 frames.
-[10, 10, 10, 10, 9]
-5 / 5 / 5 / 4.5
-[10, 10, 10, 10, 9]
-4.0 / 5 / 5 / 5
-[10, 10, 10, 10, 9]
-4.5 / 5 / 4.5 / 5
-Tudor 51 (General Worker) has taken ill
-Tudor 84 (General Worker) has taken ill
-Tudor 37 (General Worker) has taken ill
-Tudor 36 (General Worker) has taken ill
-Tudor 67 (General Worker) has taken ill
-Tudor 20 (General Worker) has taken ill
-Tudor 62 (General Worker) has taken ill
-Tudor 32 (General Worker) has taken ill
-Tudor 1 (General Worker) has taken ill
-Tudor 46 (General Worker) has taken ill
-Tudor 16 (General Worker) has taken ill
-Tudor 19 (General Worker) has taken ill
-Tudor 80 (General Worker) has taken ill
-Tudor 97 (General Worker) has taken ill
-Tudor 99 (General Worker) has taken ill
-Tudor 72 (General Worker) has taken ill
-Tudor 12 (General Worker) has taken ill
-Tudor 68 (General Worker) has taken ill
-Tudor 38 (General Worker) has taken ill
-Tudor 6 (General Worker) has taken ill
-Tudor 63 (General Worker) has taken ill
-[9, 9, 9, 8, 8]
-3.75 / 4.5 / 5 / 4.25
-Tudor 19 is recovering from sickness despite the lack of medicine
-Tudor 12 has died.
-Tudor 1 has died.
-Tudor 99 has died.
-Tudor 80 has died.
-Tudor 6 has died.
-Tudor 38 has died.
-Tudor 51 has died.
-Tudor 46 is recovering from sickness despite the lack of medicine
-Tudor 97 is recovering from sickness despite the lack of medicine
-Tudor 72 has died.
-Tudor 20 has died.
-Tudor 16 is recovering from sickness despite the lack of medicine
-Tudor 63 is recovering from sickness despite the lack of medicine
-Tudor 32 has died.
-Tudor 67 is recovering from sickness despite the lack of medicine
-Tudor 68 has died.
-Tudor 62 is recovering from sickness despite the lack of medicine
-Tudor 36 has died.
-Tudor 84 has died.
-Tudor 8 (General Worker) has taken ill
-Tudor 54 (General Worker) has taken ill
-Tudor 27 (General Worker) has taken ill
-Tudor 77 (General Worker) has taken ill
-Tudor 83 (General Worker) has taken ill
-Tudor 82 (General Worker) has taken ill
-Tudor 39 (General Worker) has taken ill
-Tudor 87 (General Worker) has taken ill
-Tudor 41 (General Worker) has taken ill
-Tudor 4 (General Worker) has taken ill
-Tudor 75 (General Worker) has taken ill
-Tudor 85 (General Worker) has taken ill
-Tudor 81 (General Worker) has taken ill
-Tudor 98 (General Worker) has taken ill
-Tudor 3 (General Worker) has taken ill
-Tudor 47 (General Worker) has taken ill
-Tudor 7 (General Worker) has taken ill
-Tudor 0 (General Worker) has taken ill
-Tudor 34 (General Worker) has taken ill
-Tudor 40 (General Worker) has taken ill
-Tudor 59 (General Worker) has taken ill
-Tudor 94 (General Worker) has taken ill
-Tudor 93 (General Worker) has taken ill
-Tudor 31 (General Worker) has taken ill
-Tudor 86 (General Worker) has taken ill
-Tudor 9 (General Worker) has taken ill
+- Frame drawn at 0.016735 seconds.
+- Frame drawn at 0.032394 seconds.
+- Frame drawn at 0.049354 seconds.
+- Frame drawn at 0.066289 seconds.
+- 0.066289 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
