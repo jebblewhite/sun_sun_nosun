@@ -224,11 +224,13 @@ return
 
 #define game.char.name = Character(game._dict_[char].ide)
 define crier = Character(game.__dict__['crier'].name)
-
-
-
-
-    
+define alderman = Character(game.__dict__['alderman'].name)
+define innkeeper = Character(game.__dict__['innkeeper'].name)
+define landowner = Character(game.__dict__['landowner'].name)
+define herbalist = Character(game.__dict__['herbalist'].name)
+define doctor = Character(game.__dict__['doctor'].name)
+define butcher = Character(game.__dict__['butcher'].name)
+define widow = Character(game.__dict__['widow'].name)    
 
 """ CHANGE THIS """
 label start:
@@ -640,6 +642,10 @@ label hall:
     scene hall_intr
     show screen Mapscreen
     menu:
+        "Look for the Alderman" if game.alderman.scene == 1:
+            call aldermanscene1
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
         "Go back":
             call maptown
     return
