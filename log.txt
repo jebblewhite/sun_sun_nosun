@@ -1,13 +1,13 @@
-Wed Jul 14 20:17:48 2021
+Sat Jul 24 02:40:56 2021
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
-Loader init took 0.05s
+Loader init took 0.04s
 Loading error handling took 0.03s
-Loading script took 0.23s
+Loading script took 0.25s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -15,22 +15,21 @@ Running init code took 0.08s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to '/Users/jason/Library/RenPy/backups/sun_sun_nosun':
 Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.11s
+Creating interface object took 0.09s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.05s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -197,69 +196,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.189909935s
+Total time until interface ready: 1.04677891731s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016753 seconds.
-- Frame drawn at 0.032829 seconds.
-- Frame drawn at 0.049117 seconds.
-- Frame drawn at 0.065702 seconds.
-- 0.065702 seconds to render 5 frames.
-[10, 10, 10, 10, 9]
-5 / 5 / 4.0 / 4.5
-[10, 10, 10, 10, 9]
-5 / 5 / 5 / 3.75
-[10, 10, 10, 10, 9]
-4.5 / 4.5 / 4.0 / 4.5
-Tudor 32 (General Worker) has taken ill
-Tudor 39 (General Worker) has taken ill
-Tudor 8 (General Worker) has taken ill
-Tudor 79 (General Worker) has taken ill
-Tudor 1 (General Worker) has taken ill
-Tudor 75 (General Worker) has taken ill
-Tudor 83 (General Worker) has taken ill
-Tudor 55 (General Worker) has taken ill
-Tudor 27 (General Worker) has taken ill
-Tudor 23 (General Worker) has taken ill
-Tudor 59 (General Worker) has taken ill
-Tudor 47 (General Worker) has taken ill
-Tudor 81 (General Worker) has taken ill
-Tudor 72 (General Worker) has taken ill
-Tudor 92 (General Worker) has taken ill
-[10, 9, 8, 8, 7]
-5 / 3.5 / 5 / 4.0
-Tudor 1 is recovering from sickness despite the lack of medicine
-Tudor 55 is recovering from sickness despite the lack of medicine
-Tudor 39 has died.
-Tudor 72 has died.
-Tudor 75 has died.
-Tudor 92 has died.
-Tudor 81 has died.
-Tudor 59 has died.
-Tudor 47 is recovering from sickness despite the lack of medicine
-Tudor 79 has died.
-Tudor 8 is recovering from sickness despite the lack of medicine
-Tudor 27 has died.
-Tudor 23 has died.
-Tudor 83 is recovering from sickness despite the lack of medicine
-Tudor 32 is recovering from sickness despite the lack of medicine
-Tudor 7 (General Worker) has taken ill
-Tudor 19 (General Worker) has taken ill
-Tudor 85 (General Worker) has taken ill
-Tudor 46 (General Worker) has taken ill
-Tudor 53 (General Worker) has taken ill
-Tudor 34 (General Worker) has taken ill
-Tudor 5 (General Worker) has taken ill
-Tudor 66 (General Worker) has taken ill
-Tudor 14 (General Worker) has taken ill
-Tudor 70 (General Worker) has taken ill
-Tudor 93 (General Worker) has taken ill
-Tudor 11 (General Worker) has taken ill
-Tudor 18 (General Worker) has taken ill
-Tudor 52 (General Worker) has taken ill
-Tudor 82 (General Worker) has taken ill
-Tudor 31 (General Worker) has taken ill
-Tudor 60 (General Worker) has taken ill
-Tudor 37 (General Worker) has taken ill
-Tudor 56 (General Worker) has taken ill
-Tudor 90 (General Worker) has taken ill
+- Frame drawn at 0.016568 seconds.
+- Frame drawn at 0.032318 seconds.
+- Frame drawn at 0.049186 seconds.
+- Frame drawn at 0.066017 seconds.
+- 0.066017 seconds to render 5 frames.
