@@ -153,8 +153,8 @@ menu:
         Some positivity could very well be a good thing.
         """
 
-        #{Relationship gain between the Alderman and Elisabetta}  
-        #{Set $Advisor = "Elisabetta"}
+        $ game.relchange(alderman, landowner, 1)#{Relationship gain between the Alderman and Elisabetta}  
+        $ game.aldermanadvisor = "Elisabeta"#{Set $Advisor = "Elisabetta"}
 
         $c= 11
 
@@ -167,8 +167,8 @@ menu:
         It will be good having another critical mind thinking through the problems I face.
         """
 
-        #{Relationship gain between the Alderman and Elena}  
-        #{Set $Advisor = "Elena"}
+        $ game.relchange(alderman, widow, 1) #{Relationship gain between the Alderman and Elena}  
+        $ game.aldermanadvisor = "Elena" #{Set $Advisor = "Elena"}
 
         $c= 11
 
@@ -184,8 +184,8 @@ menu:
         Besides, they’re city name through and through.  It will be good to have someone around to remind me of the little time I spent in the Senate.
         """
 
-        #{Relationship gain between the Alderman and Mik}  
-        #{Set $Advisor = "Mik"}
+        $ game.relchange(alderman, butcher, 1) #{Relationship gain between the Alderman and Mik}  
+        $ game.aldermanadvisor = "Mik" #{Set $Advisor = "Mik"}
 
         $c= 11
 
