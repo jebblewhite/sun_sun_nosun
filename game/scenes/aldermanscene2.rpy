@@ -34,17 +34,19 @@ alderman  "Before this awful cold I never thought such happiness could be found 
 menu:
     "*Stay silent*":
         $c=6
+        pass
 
     "I sense there’s something wrong":
         $c=5
+        pass
 
     "How’s work going?":
         $c=4
         if game.aldermanplan == "Love":
             $ textinsert = "I’ve been speaking to people, going around town, helping with the little things that I can.  Calling on the old and weak.  I haven’t run the numbers on it yet, but it feels like people are listening.  Like it matters to them, and it is helping.  With some things, at least."
-        else if game.aldermanplan == "Cunning":
+        elif game.aldermanplan == "Cunning":
             $ textinsert = "I’ve been talking to the business owners around town, and those more involved with organising the work.  They seem convinced of my ideas.  But I haven’t actually run the numbers yet."
-        else if game.aldermanplan == "Pride":
+        elif game.aldermanplan == "Pride":
             $ textinsert = "I talked to some veterans in town as well as the priest and Samuel the sculptor.  We’re going to put up a small statue of Krasov, you know, the town’s founder, in the town square, with a plaque of some kind."
         else:
             $ textinsert = ""
@@ -55,11 +57,13 @@ menu:
         $ game.character.statchange("resp", 2) #{Slight respect increase with the Alderman}  
         $ game.character.statchange("like", -1) #{Very slight like decrease with the Alderman}
         menu:
-        "*Stay silent*":
-            $c=6
+            "*Stay silent*":
+                $c=6
+                pass
 
-        "I sense there’s something wrong":
-            $c=5
+            "I sense there’s something wrong":
+                $c=5
+                pass
 
 if c==5:
 

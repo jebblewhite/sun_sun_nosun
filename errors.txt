@@ -2,9 +2,24 @@
 errors listed below, and try again.
 
 
-File "game/scenes/aldermanscene1.rpy", line 90: expected statement.
-    game.alderman.statchange("resp",-4) 
-                                        ^
+File "game/scenes/aldermanscene3.rpy", line 9: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    alderman  "Quite, well, I’m sorry.  I just don’t really have anyone else to talk to about this kind of thing, no-one unbiased that is.  I am sorry.  But hopefully that will change after today.
+    
+            Anyway, if you want to get on with it, we should just get on with it, shouldn’t we?
+            """
+
+File "game/scenes/aldermanscene3.rpy", line 178: end of line expected.
+    if :$c= 10:
+        ^
+
+File "game/scenes/aldermanscene3.rpy", line 193: expected statement.
+    textinsert = "And I’m so glad I can speak openly around you."
+               ^
+
+File "game/scenes/aldermanscene3.rpy", line 195: expected statement.
+    textinsert = ""
+               ^
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Fri Jul 30 20:46:04 2021
+Mon Sep  6 14:50:41 2021

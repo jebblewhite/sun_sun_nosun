@@ -740,7 +740,8 @@ label river:
             else:
                 "get fish"
                 
-
+        "(debug) the threesome event":
+            call thethreesome
         "Go back":
             call maploop
     return
@@ -895,6 +896,7 @@ label woods:
             call theghouls
         "(debug) the lovers event":
             call thelovers
+        
         "Go back":
             call maploop
     return

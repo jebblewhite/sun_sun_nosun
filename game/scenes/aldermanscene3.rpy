@@ -6,7 +6,9 @@ alderman  "It’s good to see you [game.player_name].  You don’t mind that I a
 menu:
     "I’d prefer to just get on with my own life....":
         $c= 1
-        alderman  "Quite, well, I’m sorry.  I just don’t really have anyone else to talk to about this kind of thing, no-one unbiased that is.  I am sorry.  But hopefully that will change after today.
+        alderman  """
+        
+        Quite, well, I’m sorry.  I just don’t really have anyone else to talk to about this kind of thing, no-one unbiased that is.  I am sorry.  But hopefully that will change after today.
 
         Anyway, if you want to get on with it, we should just get on with it, shouldn’t we?
         """
@@ -46,9 +48,9 @@ menu:
         $c= 4
         if game.aldermanplan == "Love":
             $ textinsert = "Fyodora’s compassion to others deserves compassion in return, after all."
-        else if game.aldermanplan == "Cunning":
+        elif game.aldermanplan == "Cunning":
             $ textinsert = "Not only will this be good for Fyodora, but her patients will also be aware that they, in part, also owe their lives to us."
-        else if game.aldermanplan == "Pride":
+        elif game.aldermanplan == "Pride":
             $ textinsert = "After all, is there any greater Lotoskan than our doctor, who fights for our lives every single day?"
         else:
             $ textinsert = ""
@@ -72,9 +74,9 @@ menu:
         $c= 5
         if game.aldermanplan == "Love":
             $ textinsert = "Joan has shown great care to those who need it most.  It is only fitting that we help her."
-        else if game.aldermanplan == "Cunning":
+        elif game.aldermanplan == "Cunning":
             $ textinsert = "Giving the space over to the tea club, it’s actually ingenious, now that I think about it, because of how many people it benefits.  We’ll have the thanks of not just Joan’s group, but Henryk’s rowdier regulars as well."
-        else if game.aldermanplan == "Pride":
+        elif game.aldermanplan == "Pride":
             $ textinsert = "Giving the space over as a social landmark, it is the kind of thing that can bring all Lotoskans together."
         else:
             $ textinsert = ""
@@ -98,9 +100,9 @@ menu:
         $c= 6
         if game.aldermanplan == "Love":
             $ textinsert = "Nat has given so much to this town, and to me.  This really is the least we can do."
-        else if game.aldermanplan == "Cunning":
+        elif game.aldermanplan == "Cunning":
             $ textinsert = "Nat is a model citizen, in many ways.  Yes, this will set a good example."
-        else if game.aldermanplan == "Pride":
+        elif game.aldermanplan == "Pride":
             $ textinsert = "Nat is the mouthpiece of Lotosk.  He deserves his own offices."
         else:
             $ textinsert = ""
@@ -119,11 +121,11 @@ menu:
 
         $c= 7
 
-if game.aldermanplan == "Love":
+        if game.aldermanplan == "Love":
             $ textinsert = "I worry that I, as a leader, do not reflect all of these beliefs.  I think that it would be good if I appointed an advisor, of sorts, who could help put me in the shoes, as it were, of those in town I do not know so well."
-        else if game.aldermanplan == "Cunning":
+        elif game.aldermanplan == "Cunning":
             $ textinsert = "I think it would look good if I were to choose an advisor, of sorts, but someone who could otherwise be ideologically problematic.  A way to throw any dissenters a bone, as it were."
-        else if game.aldermanplan == "Pride":
+        elif game.aldermanplan == "Pride":
             $ textinsert = "I think it would be a good show of town unity if I were to choose an advisor, of sorts, but choose someone who represents a different way of thinking."
         else:
             $ textinsert = ""
@@ -175,7 +177,6 @@ menu:
 
     "Choose Mik.  Everyone would be better off if more people listened to their ideas.":
         $c= 10
-        if :$c= 10:
 
         alderman  """
 
@@ -190,9 +191,9 @@ menu:
         $c= 11
 
 if game.alderman.resp >= placeholder3:
-    textinsert = "And I’m so glad I can speak openly around you."
+    $ textinsert = "And I’m so glad I can speak openly around you."
 else:
-    textinsert = ""
+    $ textinsert = ""
 alderman  """
 
 Well [game.player_name], that’s all I wanted to discuss with you.  Thank you so much for coming.  I know that you’re very busy, and I know that much of that is my fault.
