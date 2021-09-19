@@ -742,6 +742,8 @@ label river:
                 
         "(debug) the threesome event":
             call thethreesome
+        "(debug) the leviathan event":
+            call theleviathan
         "Go back":
             call maploop
     return
