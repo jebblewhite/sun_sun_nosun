@@ -12,12 +12,24 @@ show woodsdeep onlayer back
 
 if game.playerbackground == "woodsman":
     $ textinsert = "From your experience with terrestrial animals, you would say that it is hunting.  Maybe that is why it has made its way up from the ocean?"
+    $ textinsert2 = ""
 elif game.playerbackground == "merchant":
-    $ textinsert = "You feel you have heard tell of these things, that in generations past the villagers would find a fish so large that they could eat for weeks.  So impressive was the kill that they would host a festival in honour of the hunters who brought it down."
+    $ textinsert = ""
+    $ textinsert2 = "You feel you have heard tell of these things, that in generations past the villagers would find a fish so large that they could eat for weeks.  So impressive was the kill that they would host a festival in honour of the hunters who brought it down."
 elif game.playerbackground == "marked":
-    $ textinsert = "One thing you can say, however, is that the appearance of this thing is not like the other strange events that have occurred since the night began.  This is a thing of the world of the light.  You can feel it.  A beast this may be, but it is a mundane one."
+    $ textinsert = ""
+    $ textinsert2 = "One thing you can say, however, is that the appearance of this thing is not like the other strange events that have occurred since the night began.  This is a thing of the world of the light.  You can feel it.  A beast this may be, but it is a mundane one."
 else:
     $ textinsert = ""
+    $ textinsert2 = ""
+
+python:
+    def textIn(insert, background):
+        condition = False
+        if game.playerbackground == background:
+            condition = True
+        
+        return insert*condition
 
 """
 
@@ -27,7 +39,9 @@ Well, regardless of its provenance, it is here now, a shape so large that it is 
 
 This moment it simply looks like a giant fish, oblong with blank dumb eyes, but now that little shiver of scales, caught by the light of the stars, looks like a neck, long and thin.  There, a talon, or is it the edge of a gill?  And how can it look like both of those things at once?
 
-And why is it moving that way?  Quick movements back and forth, slowly turning in an eddy before shooting forward, twisting wildly. [textinsert] 
+And why is it moving that way?  Quick movements back and forth, slowly turning in an eddy before shooting forward, twisting wildly. [textinsert]
+
+[textinsert2]
 
 Still, the question remains: what are you going to do about it?
 """

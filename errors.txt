@@ -2,24 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/scenes/aldermanscene3.rpy", line 9: end of line expected.
+File "game/events/theleviathan.rpy", line 30: end of line expected.
 (Perhaps you left out a " at the end of the first line.)
-    alderman  "Quite, well, I’m sorry.  I just don’t really have anyone else to talk to about this kind of thing, no-one unbiased that is.  I am sorry.  But hopefully that will change after today.
+    """
     
-            Anyway, if you want to get on with it, we should just get on with it, shouldn’t we?
-            """
-
-File "game/scenes/aldermanscene3.rpy", line 178: end of line expected.
-    if :$c= 10:
-        ^
-
-File "game/scenes/aldermanscene3.rpy", line 193: expected statement.
-    textinsert = "And I’m so glad I can speak openly around you."
-               ^
-
-File "game/scenes/aldermanscene3.rpy", line 195: expected statement.
-    textinsert = ""
-               ^
+    You will never know how it got there.  It cannot have come from upstream, but why would it have come up from the ocean?
+    
+    Well, regardless of its provenance, it is here now, a shape so large that it is simultaneously unmissable, as a huge black shadow in the water, and indescribable as, from any angle from which you can view it, you do not get a wide enough view to see all of its mass at once.
+    
+    This moment it simply looks like a giant fish, oblong with blank dumb eyes, but now that little shiver of scales, caught by the light of the stars, looks like a neck, long and thin.  There, a talon, or is it the edge of a gill?  And how can it look like both of those things at once?
+    
+    And why is it moving that way?  Quick movements back and forth, slowly turning in an eddy before shooting forward, twisting wildly. [textIn("From your experience with terrestrial animals, you would say that it is hunting.  Maybe that is why it has made its way up from the ocean?", "woodsman")] 
+                                                                                                                                                         ^
+    
+    Still, the question remains: what are you going to do about it?
+    """
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Mon Sep  6 14:50:41 2021
+Wed Sep 22 22:17:18 2021

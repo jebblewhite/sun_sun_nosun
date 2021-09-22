@@ -5,15 +5,17 @@ While running game code:
     call gameloop
   File "game/gameloop.rpy", line 9, in script call
     call maploop
-  File "game/script.rpy", line 592, in script call
-    call maptown
-  File "game/script.rpy", line 603, in script call
-    call hall
-  File "game/script.rpy", line 646, in script call
-    call aldermanscene1
-  File "game/scenes/aldermanscene1.rpy", line 74, in script
-    if c=3:
-SyntaxError: invalid syntax (aldermanscene1.rpy, line 74)
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 903, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 746, in script call
+    call theleviathan
+  File "game/events/theleviathan.rpy", line 30, in script
+    """
+KeyError: u"textIn('From your experience with terrestrial animals, you would say that it is hunting"
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -22,23 +24,33 @@ Full traceback:
     call gameloop
   File "game/gameloop.rpy", line 9, in script call
     call maploop
-  File "game/script.rpy", line 592, in script call
-    call maptown
-  File "game/script.rpy", line 603, in script call
-    call hall
-  File "game/script.rpy", line 646, in script call
-    call aldermanscene1
-  File "game/scenes/aldermanscene1.rpy", line 74, in script
-    if c=3:
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1852, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2247, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (aldermanscene1.rpy, line 74)
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 903, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 746, in script call
+    call theleviathan
+  File "game/events/theleviathan.rpy", line 30, in script
+    """
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 715, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/exports.py", line 1384, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/character.py", line 1164, in __call__
+    what = what_pattern.replace("[what]", sub(what, translate=True))
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/character.py", line 1153, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/substitutions.py", line 270, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 605, in get_value
+KeyError: u"textIn('From your experience with terrestrial animals, you would say that it is hunting"
 
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
 sunsunsun 1.0
-Fri Jul 30 19:52:19 2021
+Wed Sep 22 22:24:03 2021
