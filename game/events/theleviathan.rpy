@@ -178,7 +178,7 @@ if c==8:
 
         ...you're coughing, blood, yours or the fishes you cannot tell, your vision mostly sharp points of light, all of your muscles concentrated on nothing but expelling all of the water from inside your body.
 
-        You retch, fish scales and sediment from the river bed coming up with your breakfast.  Your vision starts to clarify and your spasms turns to shaking.
+        You retch, fish scales and sediment from the river bed coming up with your breakfast.  Your vision starts to clarify and your spasms turn to shaking.
 
         And then the bulk of the fish slams into you, and you are dragged back into the water.
 
@@ -195,7 +195,7 @@ if c==8:
 
     You are exhausted, but you join them as a cart is called and the kill is paraded through town, people peering out of doors and windows to see what all the noise is about.
 
-    Soon half of Lotosk is gathered around the central fire while Mik prepares the meat, stripping out large, thick bones and throwing them, disgustedly, to a small pack of dogs.
+    Soon half of Lotosk is gathered around the central fire while Mik prepares the meat, stripping out large, thick bones and throwing them to a small pack of dogs.
 
     The celebrations go on for some time, but you leave early.  Simply put, all you want right now is rest.
     """
