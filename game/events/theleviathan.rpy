@@ -35,7 +35,7 @@ python:
 
 You will never know how it got there.  It cannot have come from upstream, but why would it have come up from the ocean?
 
-Well, regardless of its provenance, it is here now, a shape so large that it is simultaneously unmissable, as a huge black shadow in the water, and indescribable as, from any angle from which you can view it, you do not get a wide enough view to see all of its mass at once.
+Well, regardless of its provenance, it is here now, a shape so large that it is simultaneously unmissable, a huge black shadow in the water, and indescribable as, from any angle from which you can view it, you do not get a wide enough view to see all of its mass at once.
 
 This moment it simply looks like a giant fish, oblong with blank dumb eyes, but now that little shiver of scales, caught by the light of the stars, looks like a neck, long and thin.  There, a talon, or is it the edge of a gill?  And how can it look like both of those things at once?
 
