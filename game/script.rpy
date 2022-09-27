@@ -258,6 +258,8 @@ label start:
                 
                 "deserter":
                     $ game.playerbackground = "deserter"
+        "Debug":
+            jump debugScenes
                 
     jump prolog_run
 

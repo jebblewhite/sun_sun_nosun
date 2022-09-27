@@ -174,6 +174,7 @@ if c==6:
 
     $c=7
 
+label cequals7:
 if c==7:
 
     alderman  "So, you've come from the city?  What are things like there?"
@@ -226,6 +227,7 @@ if c==8:
     #{Respect increase with the Alderman}
 
     $c=7
+    jump cequals7
 
 
 return
