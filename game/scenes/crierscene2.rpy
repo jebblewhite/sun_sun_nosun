@@ -87,7 +87,7 @@ if c==5:
 
     It's odd that it makes me sad, isn't it?
 
-    But I think it does. I've been thinking, much of it when I've been looking at this here river, and I think that I've figured out something."
+    But I think it does. I've been thinking, much of it when I've been looking at this here river, and I think that I've figured out something.
     """
 
     #{Slight attraction loss with Nat}#{Slight respect gain with Nat}
@@ -124,7 +124,7 @@ if c==7:
 
     Because with no sun, and this cold just getting worse, its dying.
 
-    But this river, that's okay, because that's moving, flowing, changing. It still rains so the waterline still goes up and down, and I heard once that some man from one of those cities, where they pay people just to think, said "You can't step in the same river twice."
+    But this river, that's okay, because that's moving, flowing, changing. It still rains so the waterline still goes up and down, and I heard once that some man from one of those cities, where they pay people just to think, said \"You can't step in the same river twice.\"
 
     I think that was supposed to make a clever point about something, but I can still see truth in it. But on the other hand, it is the same river and that's perfectly clear. It's always in the same place, water always flowing in the same direction.
 
@@ -153,10 +153,14 @@ if c==7:
 
 
 if c==8:
-
+    #COME BACK TO THIS!
+    if game.crier.respect > 0:
+        $textinsert = ", especially someone I respect as much as you"
+    else:
+        $textinsert = ""
     crier """
 
-    You see, I've thought about this, and I hate to contradict anyone(if reputation with Nat is beyond a certain threshold then: ", especially someone I respect as much as you") , but I'm afraid that isn't true.
+    You see, I've thought about this, and I hate to contradict anyone[textinsert], but I'm afraid that isn't true.
 
     I thought about it with a field, you see? Like after you've ploughed it and seeded and fertilised it, and then reaped it, it's still the same field, but it's all different stuff, right?
 
