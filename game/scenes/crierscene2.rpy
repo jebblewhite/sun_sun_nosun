@@ -154,7 +154,7 @@ if c==7:
 
 if c==8:
     #COME BACK TO THIS!
-    if game.crier.respect > 0:
+    if game.crier.resp > 0:
         $textinsert = ", especially someone I respect as much as you"
     else:
         $textinsert = ""

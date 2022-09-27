@@ -15,7 +15,7 @@ menu:
         $c=-1
 
     "Don't worry, I've had practice at the number stuff.  But thanks" if game.playerbackground == "merchant":
-        $game.crier.respect += 1
+        $game.crier.resp += 1
         $c=-2
 
     "Thanks, that's kind of you, but I'll be okay" if game.playerbackground != "merchant":
@@ -63,7 +63,7 @@ if c==7:
 
     crier  "You see, the thing is, all I can think about right at this moment is the count.  Those people leaving recently has kind of thrown me.  So actually I think that's what I want to talk about, nice and familiar.  Have I told you about it?"
 
-    $game.crier.attraction += 4
+    $game.crier.att += 4
     $game.crier.like += 4
 
     $c=4
@@ -97,7 +97,7 @@ if c==4:
             It was very nice of you to come and chat.
 
             """
-            $game.crier.attraction += 4
+            $game.crier.att += 4
             $game.crier.like += 4
 
         "I could keep the rhythm, but I have better things to do than count up all those seconds.":
@@ -115,6 +115,6 @@ if c==4:
             """
 
             $game.crier.like -= 2
-            $game.crier.respect += 1
+            $game.crier.resp += 1
 
 return
