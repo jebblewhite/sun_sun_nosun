@@ -1,39 +1,38 @@
-Wed Sep 29 21:51:10 2021
+Mon May 30 23:53:35 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.1.1270
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.35s
-Loading error handling took 0.06s
-Loading script took 1.47s
-Loading save slot metadata. took 0.11s
+Loader init took 0.31s
+Loading error handling took 0.05s
+Loading script took 1.38s
+Loading save slot metadata. took 0.09s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.26s
+Running init code took 0.12s
 Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\theja\\AppData\\Roaming/RenPy/backups\\sun_sun_nosun':
-Dump and make backups. took 0.10s
+Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.06s
+Load screen analysis took 0.09s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.07s
+Interface start took 0.35s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -461,6 +460,153 @@ Texture testing:
 Screen sizes: virtual=(3072, 1920) physical=(1565, 978) drawable=(1565, 978)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 4.13609409332s
-controller: '030000007e0500000920000000000000' 'Nintendo Switch Pro Controller' 1L
-Controller found in blocklist, not using.
+Total time until interface ready: 3.02485203743s
+Alexi's resp stat changed by 1
+Alexi's resp stat changed by -4
+Alexi's resp stat changed by -2
+Alexi's like stat changed by 1
+Alexi's resp stat changed by 4
+
+Full traceback:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1852, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+While running game code:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+Full traceback:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1852, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+While running game code:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+Full traceback:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/ast.py", line 1852, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\theja\OneDrive\Documents\GitHub/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
+
+While running game code:
+  File "game/script.rpy", line 556, in script call
+    call gameloop
+  File "game/gameloop.rpy", line 9, in script call
+    call maploop
+  File "game/script.rpy", line 588, in script call
+    call inn
+  File "game/script.rpy", line 759, in script call
+    call maploop
+  File "game/script.rpy", line 586, in script call
+    call woods
+  File "game/script.rpy", line 905, in script call
+    call maploop
+  File "game/script.rpy", line 584, in script call
+    call river
+  File "game/script.rpy", line 710, in script
+    if game.rollevent == 1: # 1 of the 4 actions
+  File "game/script.rpy", line 710, in <module>
+    if game.rollevent == 1: # 1 of the 4 actions
+AttributeError: 'Game' object has no attribute 'rollevent'
