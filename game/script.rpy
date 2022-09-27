@@ -240,6 +240,7 @@ label start:
     #call hintcheck
     #call intro_sequence
     #show bachnight with dissolve
+    $ game.playerbackground = "woodsman"
     "Jason or Angus?"
     menu:
         "Angus":
