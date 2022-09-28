@@ -21,7 +21,7 @@ if c==1:
 
     crier "Out for a walk you say? Why, I was doing a very similar thing. I've always liked going for walks all about, but now I'm usually going to this river."
 
-    #{slight attraction increase with Nat}
+    $game.crier.att += 2
 
     menu:
 
@@ -63,7 +63,8 @@ if c==3:
 
     crier "Still, that's not the whole reason for why I come here. I used to go all around the safe parts, the fields and crags and such, and I've been doing some thinking about why that isn't so much true any more, you see?"
 
-    #{very slight respect loss with Nat}#{slight attraction increase with Nat}
+    $game.crier.resp -= 1#
+    $game.crier.att += 1
 
     $c=7
 
@@ -73,7 +74,7 @@ if c==4:
 
     crier "Ah yes, there is that, isn't there. I suppose that's part of the reason why I come out here. But I've been thinking, much of it when I've been looking at this here river, that that's not really why I've been walking here more."
 
-    #{Very slight attraction increase with Nat}
+    $game.crier.att += 1
 
     $c=7
 
@@ -90,7 +91,8 @@ if c==5:
     But I think it does. I've been thinking, much of it when I've been looking at this here river, and I think that I've figured out something.
     """
 
-    #{Slight attraction loss with Nat}#{Slight respect gain with Nat}
+    $game.crier.att -= 1
+    $game.crier.resp += 2
 
     $c=7
 
@@ -100,7 +102,8 @@ if c==6:
 
     crier "Oh, well isn't that a difficult question? But you've asked, so I won't feel guilty about giving you the answer, but I will warn you that it's not particularly clear, even to me. I've been thinking, much of it when I've been looking at this here river, and I think that I've figured out something."
 
-    #{like increase with Nat}#{slight attraction increase with Nat}
+    $game.crier.like += 4
+    $game.crier.att += 2
 
     $c=7
 
@@ -153,8 +156,7 @@ if c==7:
 
 
 if c==8:
-    #COME BACK TO THIS!
-    if game.crier.resp > 0:
+    if game.crier.resp > 1:
         $textinsert = ", especially someone I respect as much as you"
     else:
         $textinsert = ""
@@ -173,7 +175,7 @@ if c==8:
 
     "Nat ponders the water in silence for a moment, and then his head snaps up."
 
-    #{Slight reputation loss with Nat}
+    $game.crier.resp -= 1
 
     $c=20
 
@@ -210,7 +212,8 @@ if c==9:
 
     "Nat ponders the water in silence for a moment, and then his head snaps up."
 
-    #{slight reputation and like loss with Nat}
+    $game.crier.resp -= 1
+    $game.crier.like -= 1
     
     $c=20
 
@@ -247,7 +250,9 @@ if c==11:
 
     "He looks at you for a moment, then suddenly his eyes widen with surprise."
 
-    #{Slight like increase with Nat}#{very slight respect and attraction decrease with Nat}
+    $game.crier.like += 2
+    $game.crier.resp -= 1
+    $game.crier.att -= 1
 
     $c=20
 
@@ -261,7 +266,9 @@ if c==12:
 
     "He stares at you for a minute, a small, sad, almost embarrassed smile on his lips. It looks like he is about to say more when suddenly his eyes widen with surprise."
 
-    #{Attraction, like and respect increase with Nat}
+    $game.crier.resp += 4
+    $game.crier.like += 4
+    $game.crier.att += 4
 
     $c=20
 
@@ -278,7 +285,8 @@ if c==13:
 
     "Nat nods thoughtfully to himself, then suddenly turns to you, eyes wide with surprise."
 
-    #{respect and like increase with Nat}
+    $game.crier.resp += 4
+    $game.crier.like += 4
 
     $c=20
 
@@ -301,7 +309,7 @@ if c==14:
 
     "And with that he lopes off, back down the trail and towards town."
 
-    #{very slight like loss with Nat}
+    $game.crier.like -= 1
 
 
 
@@ -318,7 +326,8 @@ if c==15:
 
     "Nat nods thoughtfully to himself, then suddenly turns to you, eyes wide with surprise."
 
-    #{respect and like increase with Nat}
+    $game.crier.resp += 4
+    $game.crier.like += 4
 
     $c=20
 
@@ -341,7 +350,7 @@ if c==17:
 
     crier "Oh that's lovely. I was just looking at the river, thinking about the river. I'm spending a lot of time down here since the sun went away."
 
-    #{Slight like increase with Nat}
+    $game.crier.like += 2
 
     menu:
 
@@ -364,7 +373,8 @@ if c==18:
 
     "Nat turns, taking a last look at the river, before beginning to move off down the path."
 
-    #{attraction loss with Nat}#{Slight respect gain with Nat}
+    $game.crier.like -= 4
+    $game.crier.resp += 2
 
     menu:
 
@@ -394,6 +404,6 @@ if c==20:
 
     "And with that he lopes off, back down the trail and towards town."
 
-    #{Slight like increase with Nat}
+    $game.crier.like += 2
 
 return
