@@ -16,7 +16,7 @@ menu:
 
 
 
-label reevaluate:
+label reevaluatecrier2:
 if c==1:
 
     crier "Out for a walk you say? Why, I was doing a very similar thing. I've always liked going for walks all about, but now I'm usually going to this river."
@@ -359,7 +359,7 @@ if c==17:
 
         "I like the river too.":
             $c=2
-    jump reevaluate
+    jump reevaluatecrier2
 
 
 
@@ -383,7 +383,7 @@ if c==18:
 
         "Wait, I wanted to talk to yo first.":
             $c=16
-    jump reevaluate
+    jump reevaluatecrier2
 
 
 
