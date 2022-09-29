@@ -42,7 +42,7 @@ menu:
         $c=1
 
 
-label reevaluate:
+label reevaluatecrier4:
 if c==1:
 
     crier """
@@ -519,7 +519,7 @@ if c==20:
         "Only if you're sure Nat.":
             $c=17
 
-    jump reevaluate
+    jump reevaluatecrier4
 
 
 
@@ -555,7 +555,7 @@ if c==21:
         "Only if you're sure Nat.":
             $c=17
 
-    jump reevaluate
+    jump reevaluatecrier4
 
 
 
@@ -570,7 +570,7 @@ if c==22:
     You open your eyes to see Fyodora standing above you.
     """
 
-    Fyodora "Oh good, you're awake. And within the time frame I was hoping for. That's a good sign, it probably means you've only got mind concussion."
+    doctor "Oh good, you're awake. And within the time frame I was hoping for. That's a good sign, it probably means you've only got mind concussion."
 
     """
 
