@@ -415,6 +415,7 @@ if c==16:
 
         "Nat, I'm not leaving you behind *grab your bow*.":
             $c=15
+            jump reevaluatecrier4
 
         "Only if you're sure Nat.":
             $c=17

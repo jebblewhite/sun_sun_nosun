@@ -23,7 +23,7 @@ menu:
         $c=2
 
 
-
+label reevaluatecrier5:
 if c==1:
 
     """
@@ -187,6 +187,8 @@ if c==8:
 
         "Wait, how did you tell it you couldn't eat the mushrooms?" if Nat5Tell == False:
             $c=7
+            jump reevaluatecrier2
+
 
         "There's something you're not telling me Nat....":
             $c=9
