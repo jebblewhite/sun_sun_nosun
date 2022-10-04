@@ -88,9 +88,9 @@ if c==3:
 if c==4:
     #VERY IMPORTANT!!!!  THIS SHOULDN'T BE LIKE, IT SHOULD BE ABOVE A THRESHOLD OF FOOD SUPPLIES!!!!!!!!!!!!!!!!!  ALSO WHEN FIX DELETE POOPOO...
     if game.crier.like > 4:
-        $textinsert = "up, and they'll ask if it wouldn't be wiser to stockpile it for the hard times PooPoo"
+        $textinsert = "up, and they'll ask if it wouldn't be wiser to stockpile it for the hard times"
     else:
-        $textinsert = "down, and they'll ask what they are supposed to do to feed themselves PooPoo"
+        $textinsert = "down, and they'll ask what they are supposed to do to feed themselves"
 
     crier """
 
