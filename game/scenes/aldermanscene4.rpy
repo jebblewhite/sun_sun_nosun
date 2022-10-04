@@ -4,6 +4,9 @@ label aldermanscene4:
 # if at least one resource is under what it would be expected to be textinsert2 = "...but yes, I suppose that is all a long way of saying that I feel we should be focussing on [textinsert].  Would it be possible for you to speak to-"
 # else textinsert2 = "...but yes, I suppose that is all a long way of saying that I think we are doing quite well, all things considered, but you never can be too careful.  With that in mind, would it be possible for you to speak to-" 
 
+$ Alderman4WhySent = False
+$ Alderman4HowCity = False
+
 alderman  " "
 
 "You are talking to the Alderman in his meeting room, when suddenly the door bursts open and his maid steps breathless into the room."
@@ -61,7 +64,7 @@ menu:
 
     "*Wait*":
         $c=2
-
+label reevaluatealderman4:
 if c == 1:
     "The Alderman looks up guiltily from his reading."
 
@@ -174,7 +177,7 @@ if c==6:
 
     $c=7
 
-label cequals7:
+
 if c==7:
 
     alderman  "So, you've come from the city?  What are things like there?"
@@ -227,7 +230,158 @@ if c==8:
     #{Respect increase with the Alderman}
 
     $c=7
-    jump cequals7
+    jump reevaluatealderman4
+
+if c==9:
+
+    alina  """
+
+    There were a number of missions sent north to the outlands.  There were three people in mine.
+
+    We had a single horse carriage.  The horse broke its foot in the dark two days after the sun did not rise.  After that we walked.  The other two did not make it.  
+    """
+
+    $ Alderman4Contingent = True
+    menu:
+        "Oh, I'm so sorry.":
+            $c=10
+
+        "Wait, why have you really come here?" if !Alderman4WhySent:
+            $c=11
+
+        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+            $c=12
+
+        "*Let Alina and the Alderman continue*":
+            $c=13
+
+if c==10:
+
+    alina  "I have not had time to mourn them.  I had to focus on my own survival.  Perhaps I will start soon, although I had only met them both a few days before."
+
+    #{Slight like increase with the Alderman} 
+    #{Very slight attraction increase with the Alderman} 
+    #{Very slight respect increase with Alina}
+    menu:
+        "Wait, why have you really come here?" if !Alderman4WhySent:
+            $c=11
+
+        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+            $c=12
+
+        "*Let Alina and the Alderman continue*":
+            $c=13
+
+if c==11:
+
+    alina  "I was sent here to write a report for the census and conduct a survey on behalf of the Outlands Select Committee."
+    $textinsert = ""
+    if game.playerbackground == 'merchant':
+        $textinsert = "She's good, well practised. "
+    "[textinsert]She gives you a look that makes it clear that she knows that you know that there is more to it, but that she also isn't going to give you any more."
+
+    #{Set £Alderman4WhySent = "True"} 
+    $ Alderman4WhySent = True 
+    #{Very slight respect increase with the Alderman}
+    menu:
+        "Wait, what do you mean by 'contingent'?" if !Alderman4Contingent:
+            $c=9
+            jump reevaluatealderman4
+
+        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+            $c=12
+
+        "*Let Alina and the Alderman continue*":
+            $c=13
+
+if c==12:
+
+    "Alina hesitates before replying."
+
+    alina  """
+
+    Tense.
+
+    But I am not here to talk about Alexisgrad.  I am here to talk about Lotosk.
+    """
+
+    $Alderman4HowCity = True
+    #{Very slight like increase with the Alderman}
+    menu:
+        "Wait, what do you mean by 'contingent'?" if !Alderman4Contingent:
+            $c=9
+            jump reevaluatealderman4
+
+        "Wait, why have you really come here?" if !Alderman4WhySent:
+            $c=11
+            jump reevaluatealderman4
+            
+        "*Let Alina and the Alderman continue*":
+            $c=13
+
+if c==13:
+
+    alina  "As I have stated, and as the writ confirms, I will be carrying out a survey of your town, and how you are running it, Alexi.  I will require full access to all of your records.  Are you willing to comply?"
+
+    alderman  "Of course, absolutely, anything for an Officer of the senate."
+
+    alina  "Good.  Then I would like to request that you begin preparing for that process.  In the meantime, I would appreciate medical assistance."
+
+    """
+
+    As she says the last words, Alina seems to let go of something.  It is suddenly clear, as she slumps forward and lets out a sharp breath, that she had been attempting to hold herself upright in her chair and had been keeping the pain out of her voice.
+
+    The Alderman rushes from the room, but is gone less than ten seconds before he re-enters with Fyodora and a man who used to be a farm hand.  Together you help Alina out of the Town Hall and to Fyodora's hospital, where, after efficiently explaining her condition to Fyodora, Alina passes out.
+
+    The Alderman and you walk back to the Town Hall together.
+    """
+    # cahnge thissss
+    $ texty = ""
+    if game.alderman.att > 3:
+        $ texty = "And it's always good to have you near in general, of course."
+    alderman  """
+
+    It was good having you around for that, [game.player_name].  Always good to have support for something like that. [texty]
+
+    I am going to be honest [game.player_name], I am not sure that this doesn't mean trouble.  But then again, it may only mean trouble for me.
+    """
+
+    "He sighs, deeply."
+
+    $ advisor = ""
+    if game.aldermanadvisor == "Elisabetta":
+        $advisor = "Elisabetta.  She told me that her first priority is to 'the Night-Black', but that she would be honoured to help in any way that she can."
+    elif game.aldermanadvisor == "Elena":
+        $advisor = "Elena.  She did not seem pleased to see me, but grudgingly, I think, accepted.  She said something about needing someone who actually understands logistics."
+    elif game.aldermanadvisor == "Mik":  
+        $advisor = "Mik.  They said that they appreciate the gesture but that \"the revolution must be social, not political, so I think I'll pass on legitimising your reign.\"  They did, however, then spend quite some time telling me all their theories about how to run a collective, so I'm not quite sure where that leaves us."
+
+    $ tower = ""
+    if game.aldermantower == "Fyodora":
+        $tower = "Fyodora about using the tower, but she said it would be too draughty, so I'm leaving it how it is."
+    elif game.aldermantower == "Joan":
+        $tower = "Joan, but she said she likes that having her meetings in the inn brings everyone together, so I'm leaving it how it is."
+    elif game.aldermantower == "Nat":
+        $tower = "Nat.  He seemed incredibly appreciative."
+
+    alderman  """
+
+    Either way, thank you, even if you were just in the right place at the right time.
+
+    I should go and prepare all those records for her.  It wouldn't do to keep an Officer of the senate waiting.
+
+    Oh, just before you go, I should let you know that I talked to [advisor]
+
+    I also spoke to [tower]
+
+    Regardless, thank you for your advice.  But now I really must be off.  
+
+    I already had so much to do…
+    """
+
+
+
+#(if $Advisor = "Elisabetta")[#{Very slight morale buff}](else if $Advisor = "Elena")[#{Very very slight morale and cohesion debuff}  #{Very slight worker buff}](else if $Advisor = "Mik")[#{Very slight cohesion buff}]
 
 
 return
