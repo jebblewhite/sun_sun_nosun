@@ -58,9 +58,9 @@ if c==1:
 if c==2:
 
     if game.crier.like > 4:
-        $textinsert = "Actually that's one of those lies I'm afraid [game.player_name]. One of the white ones."
+        $textinsert = "Actually that's one of those lies I'm afraid {}. One of the white ones.".format(game.player_name)
     else:
-        $textinsert = "Actually [game.player_name], you're an important person, so I should tell you the truth."
+        $textinsert = "Actually {}, you're an important person, so I should tell you the truth.".format(game.player_name)
 
     crier "Oh I'm alright [game.player_name], I'm alright."
 
@@ -348,9 +348,9 @@ if c==16:
 if c==17:
 
     if game.crier.like > 4:
-        $textinsert = "It's been very nice talking to you though [game.player_name]. I do hope you come and find me again some time."
+        $textinsert = "It's been very nice talking to you though {}. I do hope you come and find me again some time.".format(game.player_name)
     else:
-        $textinsert = "Look forward to seeing you again next time though [game.player_name]."
+        $textinsert = "Look forward to seeing you again next time though {}.".format(game.player_name)
 
     "Suddenly the shadowy outline of Nat, which is all that your eyes can give you in the gloom, springs up from its slouch."
 
