@@ -46,11 +46,7 @@ init 800 python:
 # name of the character.
 init python:
     import random
-    
     random.seed()
-    from game2 import Charac
-    from game2 import Game
-    game = Game()
     
     # ----------------
     def Snow(image, max_particles=50, speed=150, wind=100, xborder=(0,100), yborder=(50,400), **kwargs):
@@ -223,17 +219,23 @@ return
 #image landownerimg = "landowner.png"
 
 #define game.char.name = Character(game._dict_[char].ide)
-define crier = Character(game.__dict__['crier'].name)
-define alderman = Character(game.__dict__['alderman'].name)
-define innkeeper = Character(game.__dict__['innkeeper'].name)
-define landowner = Character(game.__dict__['landowner'].name)
-define herbalist = Character(game.__dict__['herbalist'].name)
-define doctor = Character(game.__dict__['doctor'].name)
-define butcher = Character(game.__dict__['butcher'].name)
-define widow = Character(game.__dict__['widow'].name)    
+ 
 
 """ CHANGE THIS """
 label start:
+    init python:
+        from game2 import Charac
+        from game2 import Game
+        game = Game()
+        
+    define crier = Character(game.__dict__['crier'].name)
+    define alderman = Character(game.__dict__['alderman'].name)
+    define innkeeper = Character(game.__dict__['innkeeper'].name)
+    define landowner = Character(game.__dict__['landowner'].name)
+    define herbalist = Character(game.__dict__['herbalist'].name)
+    define doctor = Character(game.__dict__['doctor'].name)
+    define butcher = Character(game.__dict__['butcher'].name)
+    define widow = Character(game.__dict__['widow'].name)   
     #play music "automato.ogg" fadein 1.0
     #$ renpy.block_rollback()
     #call nameask
