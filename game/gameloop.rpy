@@ -27,7 +27,7 @@ label gameloop:
 
 label wakeup:
     scene home_intr
-     # place holder stuff VVV
+    # place holder stuff VVV
     #call wakemessage
     "You wake up"
     "The weather is shit"
