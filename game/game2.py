@@ -141,6 +141,7 @@ class Game(object):
         self.innkeeper = Charac(0,0,0,'Henryk',"image!!!","innkeeper",self.characters)
         self.doctor = Charac(0,0,0,'Fyodora',"image!!!","doctor",self.characters)
         self.alderman = Charac(0,0,0,'Alexi',"image!!!","alderman",self.characters)
+        self.nazi = Charac(0,0,0,'Alina',"image!!!","alina",self.characters)
         self.initrels(self.characters)
 
         self.peasants = []

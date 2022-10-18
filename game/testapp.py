@@ -26,6 +26,8 @@ def choose_random_peasant():
 
 
 def main():
+    thistext = "braces"
+    print(f"{{{{{{{{thistext}}}}}}}}")
     """
     foodinworld = 10000
     foodstocks = 100
@@ -44,7 +46,9 @@ def main():
         print('')
 
     """
+    """
     choose_random_peasant()
+    """
 
 
 

@@ -380,8 +380,21 @@ if c==13:
     """
 
 
-
-#(if $Advisor = "Elisabetta")[#{Very slight morale buff}](else if $Advisor = "Elena")[#{Very very slight morale and cohesion debuff}  #{Very slight worker buff}](else if $Advisor = "Mik")[#{Very slight cohesion buff}]
+if game.aldermanadvisor == "Elisabetta":
+    $ game.popMorale = game.addSubLim(game.popMorale, 10)
+    "{i}Morale Increased Slightly{/i}"
+elif game.aldermanadvisor == "Elena":
+    $ game.popMorale = game.addSubLim(game.popMorale, 5)
+    $ game.popCohesion = game.addSubLim(game.popCohesion, 5)
+    "{i}Morale and Cohesion Increased Very Slightly{/i}"
+elif game.aldermanadvisor == "Mik":  
+    $ game.popCohesion = game.addSubLim(game.popCohesion, 10)
+    "{i}Cohesion Increased Slightly{/i}"
+    
+#MM 
+#(else if $Advisor = "Elena")[#{Very very slight morale and cohesion debuff}  #{Very slight worker buff}]
+#(if $Advisor = "Elisabetta")[#{Very slight morale buff}]
+#(else if $Advisor = "Mik")[#{Very slight cohesion buff}]
 
 
 return
