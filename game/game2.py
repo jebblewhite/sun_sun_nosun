@@ -137,7 +137,7 @@ class Game(object):
         self.butcher = Charac(0,0,0,'Mik',"image!!!","butcher",self.characters)
         self.herbalist = Charac(0,0,0,'Joan',"image!!!","herbalist",self.characters)
         self.widow = Charac(0,0,0,'Elena',"image!!!","widow",self.characters)
-        self.landowner = Charac(0,0,0,'Elisabeta',"image!!!","landowner",self.characters)
+        self.landowner = Charac(0,0,0,'Elisabetta',"image!!!","landowner",self.characters)
         self.innkeeper = Charac(0,0,0,'Henryk',"image!!!","innkeeper",self.characters)
         self.doctor = Charac(0,0,0,'Fyodora',"image!!!","doctor",self.characters)
         self.alderman = Charac(0,0,0,'Alexi',"image!!!","alderman",self.characters)

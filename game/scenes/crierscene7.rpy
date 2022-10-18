@@ -212,7 +212,7 @@ if c==8:
         "You're the first person to be friends with something like [game.creature_name]. Why don't you write about it?":
             $c=10
 
-        "You could join Elisabeta's group." if game.landowner.scene > 4:
+        "You could join Elisabetta's group." if game.landowner.scene > 4:
             $c=11
 
         "I think the important thing is to try to learn to be happy within your own mind, rather than feeling you have to distract yourself. Maybe speak to Henryk?":
@@ -254,7 +254,7 @@ if c==10:
 
     But I don't think this is right. I don't think I'm good enough with words, especially written words. I'm not sure I'd be able to write the kind of thing that other people could learn from, or use.
 
-    There are all sorts of rules for what you can write for science aren't there? Elisabeta's always talking about the ‘scientific method', and I don't think I'll be able to learn all that, as well as doing all of the writing stuff.
+    There are all sorts of rules for what you can write for science aren't there? Elisabetta's always talking about the ‘scientific method', and I don't think I'll be able to learn all that, as well as doing all of the writing stuff.
 
     It's a very clever suggestion though [game.player_name].
     """
@@ -273,12 +273,12 @@ if c==11:
 
     No [game.player_name], I shan't be doing that.
 
-    Elisabeta is a very nice young woman, and I think she's very smart, but I don't think I want to get involved with a new god and all that.
+    Elisabetta is a very nice young woman, and I think she's very smart, but I don't think I want to get involved with a new god and all that.
 
     Like I heard that she said that we need to teach it things about who we are and our history and all and I'm barely able to teach myself all those things. I don't think I want the responsibility of teaching a god all of that. Smile
     """
 
-    #JE{Very slight relationship gain between Nat and Elisabeta}
+    #JE{Very slight relationship gain between Nat and Elisabetta}
     $game.crier.resp += 2
 
     $c=13

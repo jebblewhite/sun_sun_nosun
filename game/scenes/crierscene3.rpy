@@ -173,7 +173,7 @@ if c==6:
 
     crier """
 
-    But you're probably right, someone better would be better. Do you think Elisabeta? She's intelligent, and she's always liked talking to people more than me. Do you think you'd pick her?
+    But you're probably right, someone better would be better. Do you think Elisabetta? She's intelligent, and she's always liked talking to people more than me. Do you think you'd pick her?
     """
 
     $game.crier.like -= 4 
@@ -276,7 +276,7 @@ if c==11:
     But, sorry, I suppose you were more talking about the job, and how you have to be able to really concentrate on it.
     """
 
-    #{Slight relationship loss between Elisabeta and Nat}
+    #{Slight relationship loss between Elisabetta and Nat}
 
     $c=17
 
@@ -289,7 +289,7 @@ if c==12:
     Yes, that's what I thought too. I don't quite understand all she's been saying since the sun disappeared, but she's certainly putting a lot of effort into making people feel like this is a beginning instead of an ending.
     """
 
-    #{Slight relationship gain between Elisabeta and Nat}
+    #{Slight relationship gain between Elisabetta and Nat}
 
     $c=17
 

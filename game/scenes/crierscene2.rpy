@@ -319,7 +319,7 @@ if c==15:
 
     Yeah, that's exactly the way I think about it. We've all got our things, don't we?
 
-    Alderman's got his job, Henryk's got his inn and I s'pose Elisabeta's got her project or whatever it is she's doing.
+    Alderman's got his job, Henryk's got his inn and I s'pose Elisabetta's got her project or whatever it is she's doing.
 
     I'm happy with my river.
     """

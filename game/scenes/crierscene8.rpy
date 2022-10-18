@@ -37,7 +37,7 @@ crier "She's my only friend Fyodora, she's good and kind! Please don't kill her,
 
 "Fyodora shakes her head."
 
-doctor "It's a monster Nat, and it attacked a child. We can't-oh, [game.player_name]. You'll help me with this, won't you. It seems-"
+doctor "It's a monster Nat, and it attacked a child. We can't...-oh, [game.player_name]. You'll help me with this, won't you. It seems-"
 
 crier "They're going to kill her [game.player_name]! Don't let them kill [game.creature_name]! Please, please!"
 
@@ -129,21 +129,21 @@ if c==2:
 
     landowner "What's all this?"
 
-    "Fyodora turns towards the interruption to see Elisabeta walking confidently towards you, her head cocked quizzically to one side. She frowns at Nat and lifts her gaze up towards Fyodora, but does not give the doctor time to react before she lets out a little shriek of excitement."
+    "Fyodora turns towards the interruption to see Elisabetta walking confidently towards you, her head cocked quizzically to one side. She frowns at Nat and lifts her gaze up towards Fyodora, but does not give the doctor time to react before she lets out a little shriek of excitement."
 
     landowner "My, what is this wonderful thing!"
 
-    "Without waiting for an answer, Elisabeta skips towards [game.creature_name] and her captors."
+    "Without waiting for an answer, Elisabetta skips towards [game.creature_name] and her captors."
 
     landowner "Why, aren't you a magnificent creature?"
 
     """
 
-    Elisabeta, probably instinctively, waves at [game.creature_name].
+    Elisabetta, probably instinctively, waves at [game.creature_name].
 
     There is a scream of terror and a shriek of delight.
 
-    Fyodora is recoiling in horror while Elisabeta jumps up and down.
+    Fyodora is recoiling in horror while Elisabetta jumps up and down.
 
     [game.creature_name] opened its mouth and waved back.
     """
@@ -154,9 +154,9 @@ if c==2:
 
     landowner "Yes, curious isn't it? Oh it is amazing what biological marvels this night is producing!"
 
-    crier "Don't let them kill her miss Elisabeta! Please, please stop them!"
+    crier "Don't let them kill her miss Elisabetta! Please, please stop them!"
 
-    "Elisabeta turns towards Nat, clearly surprised to see him still grovelling in the dirt. Slowly she lifts her head, taking in the whole scene around her, for the first time consciously noticing more than just [game.creature_name]."
+    "Elisabetta turns towards Nat, clearly surprised to see him still grovelling in the dirt. Slowly she lifts her head, taking in the whole scene around her, for the first time consciously noticing more than just [game.creature_name]."
 
     landowner "You aren't seriously considering killing this specimen, are you?"
 
@@ -195,7 +195,7 @@ if c==5:
 
     Fyodora's frame relaxes slightly, and seeing this, the fisherman holding the cleaver gently pulls his arm back down to his side.
 
-    Elisabeta smiles encouragingly, first at Nat, then at you, then at [game.creature_name].
+    Elisabetta smiles encouragingly, first at Nat, then at you, then at [game.creature_name].
 
     Nat reacts last, his fists slowly unclenching from the balls of panic he had bunched them into. Tears still run down his face, and his eyes still dart from side to side, but his breathing evens out slightly and you can see tension slowly releasing from his shoulders.
     """
@@ -206,7 +206,7 @@ if c==5:
 
     Nat, through sobs and fearful twitches, recounts the story of how he, and you, met [game.creature_name], how she has been living in the belltower and how the two of them now play and generally keep each other company.
 
-    Fyodora listens to the entire tale with her hands on her hips, while Elisabeta unashamedly copies everything Nat says into a small notebook, occasionally interrupting to ask questions.
+    Fyodora listens to the entire tale with her hands on her hips, while Elisabetta unashamedly copies everything Nat says into a small notebook, occasionally interrupting to ask questions.
     """
 
     crier "So she's not dangerous, she's lovely and kind and thoughtful! Just because she's different doesn't mean that she can't be my friend!"
@@ -220,7 +220,7 @@ if c==5:
     Oh there are so many questions, we can't possibly throw away the opportunity to answer them!
     """
 
-    "Nat clearly does not quite know what to make of Elisabeta's words and before he can make up his mind Fyodora speaks."
+    "Nat clearly does not quite know what to make of Elisabetta's words and before he can make up his mind Fyodora speaks."
 
     doctor """
 
@@ -230,7 +230,7 @@ if c==5:
 
     Yes, the boy seems relatively unhurt, and maybe he was teasing you Nat, but fundamentally that thing is some kind of monster.
 
-    Elisabeta, you said \"think of the implications\" of its tongue. Indeed, where did it come from? Because there is no way it occurred naturally. So it must have come from a human. Did this creature copy it from us, or did its creator use a human hand in its creation? If there is a hand, where is the rest of the body?
+    Elisabetta, you said \"think of the implications\" of its tongue. Indeed, where did it come from? Because there is no way it occurred naturally. So it must have come from a human. Did this creature copy it from us, or did its creator use a human hand in its creation? If there is a hand, where is the rest of the body?
 
     This is a being of the night, a night that has done nothing but weaken and kill us.
 
@@ -307,7 +307,7 @@ if c==6:
 
     Both man and beast fall to the dirt, neither willing to be the first to let go. Nat's body vibrates with relief and you are worried that he might pass out, but you know that if he did, [game.creature_name] would be there to care for him.
 
-    By the time that Nat eventually sits up Fyodora has already left, and Elisabeta has, finally, moved a respectful distance away, although she is still furiously taking notes.
+    By the time that Nat eventually sits up Fyodora has already left, and Elisabetta has, finally, moved a respectful distance away, although she is still furiously taking notes.
     """
 
     crier "Oh thank you [game.player_name], thank you thank you thank you!"
@@ -393,7 +393,7 @@ if c==8:
 
     """
 
-    Nat does not say anything, but the look that he gives Elisabeta silences her. She shakes her head, clearly disappointed, but does not press the matter.
+    Nat does not say anything, but the look that he gives Elisabetta silences her. She shakes her head, clearly disappointed, but does not press the matter.
 
     The villagers begin to carry an unresisting [game.creature_name] away.
     """
@@ -452,7 +452,7 @@ if c==9:
 
     Unintelligible sounds, primal sounds, fear and loss beyond language.
 
-    Fyodora nods while Elisabeta attempts to make her polite objections heard over the sound of Nat's world being torn apart.
+    Fyodora nods while Elisabetta attempts to make her polite objections heard over the sound of Nat's world being torn apart.
 
     The doctor mumbles something, an unheard apology to Nat, before turning to the man who holds the cleaver.
 
