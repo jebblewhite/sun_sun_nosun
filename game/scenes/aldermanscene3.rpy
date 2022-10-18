@@ -146,7 +146,7 @@ And then, of course, there is Mik.  I don’t think many people around town agre
 So, [game.player_name], I’ve narrowed it down to just three, but I want you to make the final decision.
 """
 menu:
-    "Choose Elisabeta.  No-one understands the night as well as she does.":
+    "Choose Elisabetta.  No-one understands the night as well as she does.":
         $c= 8
         alderman  """
 
@@ -156,7 +156,7 @@ menu:
         """
 
         $ game.relchange(alderman, landowner, 1)#{Relationship gain between the Alderman and Elisabetta}  
-        $ game.aldermanadvisor = "Elisabeta"#{Set $Advisor = "Elisabetta"}
+        $ game.aldermanadvisor = "Elisabetta"#{Set $Advisor = "Elisabetta"}
 
         $c= 11
 

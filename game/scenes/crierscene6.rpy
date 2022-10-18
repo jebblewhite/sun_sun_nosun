@@ -276,7 +276,7 @@ if c==7:
 
     Yes, she's very unusual, and very different, and yes she has a human hand instead of a tongue. But that doesn't mean she's evil.
 
-    It's like Elisabeta said, things are very weird right now, but that doesn't mean that it's all bad. Just different, and special.
+    It's like Elisabetta said, things are very weird right now, but that doesn't mean that it's all bad. Just different, and special.
 
     That's what [game.creature_name] is, different and special. And nice and kind. I know her much better than you do, so I can tell you that's what she is.
     """
