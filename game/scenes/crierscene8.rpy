@@ -316,7 +316,7 @@ if c==6:
 
     crier """
 
-    I really, I really don't think I have the words for how I would have felt...what I would have done. (maybe some way to make the text box transition last a beat longer?)
+    I really, I really don't think I have the words for how I would have felt...what I would have done.
 
     Oh [game.player_name], thank you!
 
