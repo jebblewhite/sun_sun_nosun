@@ -390,11 +390,11 @@ elif game.aldermanadvisor == "Elena":
 elif game.aldermanadvisor == "Mik":  
     $ game.popCohesion = game.addSubLim(game.popCohesion, 10)
     "{i}Cohesion Increased Slightly{/i}"
-    
+
 #MM 
 #(else if $Advisor = "Elena")[#{Very very slight morale and cohesion debuff}  #{Very slight worker buff}]
 #(if $Advisor = "Elisabetta")[#{Very slight morale buff}]
 #(else if $Advisor = "Mik")[#{Very slight cohesion buff}]
 
-
+#JE Tidy this scene up; it is a mess
 return
