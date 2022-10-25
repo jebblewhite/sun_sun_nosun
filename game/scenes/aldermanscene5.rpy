@@ -94,67 +94,69 @@ if c==4:
 
     "Alina nods once, thanks for your support."
 
-    #JE{Slight like loss with the Alderman}  #{Slight respect gain with the Alderman}  #{Respect gain with Alina}
+    #JE{Slight like loss with the Alderman}  
+    #{Slight respect gain with the Alderman}  
+    #{Respect gain with Alina}
 
     $c=5
 
 
 if c==5:
 
-#check food against population
-if game.food >= 2*game.countAlive():
-    $textinsert = "adequately"
-else:
-    $textinsert = "barely"
+    #check food against population
+    if game.food >= 2*game.countAlive():
+        $textinsert = "adequately"
+    else:
+        $textinsert = "barely"
 
-alina  """
+    alina  """
 
-The fact of the matter is that resources are dwindling.  You may have enough to [textinsert] feed your populace now, but the situation will only get worse.
+    The fact of the matter is that resources are dwindling.  You may have enough to [textinsert] feed your populace now, but the situation will only get worse.
 
-It's a scientific fact.
+    It's a scientific fact.
 
-The same goes for fuel and pelts and medicine.  Your current distribution philosophy will, sooner or later - and if I were a gambler, which I am not, my money would be on sooner - lead to the death of everyone in this town.
+    The same goes for fuel and pelts and medicine.  Your current distribution philosophy will, sooner or later - and if I were a gambler, which I am not, my money would be on sooner - lead to the death of everyone in this town.
 
-You are living through an unprecedented event and it will take strong, gifted, incentivised innovators to lift you out of it.  But even the greatest thinkers need time, especially for implementation, and you are not giving it to them.
+    You are living through an unprecedented event and it will take strong, gifted, incentivised innovators to lift you out of it.  But even the greatest thinkers need time, especially for implementation, and you are not giving it to them.
 
-Most of the food you are gathering is meat.  I have checked your records and found that you have enough salt from when this town was considered as a fall-back point during the war to cure most of the meat that you gather.  Instead you cook it fresh and give it away to the ill, the old and the too young to work.
+    Most of the food you are gathering is meat.  I have checked your records and found that you have enough salt from when this town was considered as a fall-back point during the war to cure most of the meat that you gather.  Instead you cook it fresh and give it away to the ill, the old and the too young to work.
 
-It's dangerous, and if I may Alexi, you know it.  I know you know it because you feel the need to hide your Communism behind a veneer of Republicanism.
+    It's dangerous, and if I may Alexi, you know it.  I know you know it because you feel the need to hide your Communism behind a veneer of Republicanism.
 
-[game.player_name], do you know that your Alderman is using you as a piece of propaganda?  I do not know if he is trying to fool his people or just himself, but as far as I can see it, your main role is to legitimise his socialism by pretending that it is all led by a single, free, hard-working, innovative individual.
+    [game.player_name], do you know that your Alderman is using you as a piece of propaganda?  I do not know if he is trying to fool his people or just himself, but as far as I can see it, your main role is to legitimise his socialism by pretending that it is all led by a single, free, hard-working, innovative individual.
 
-But it isn't.  What power has Alexi ever actually given you, save the power to represent his non-existent Republican loyalties?  You have, in material terms, and it is a Republican truth that those are the only terms that matter, no more power than any other individual.
+    But it isn't.  What power has Alexi ever actually given you, save the power to represent his non-existent Republican loyalties?  You have, in material terms, and it is a Republican truth that those are the only terms that matter, no more power than any other individual.
 
-No, this town has adopted socialism at the very moment when it needed drastic, ruthless innovation.  If no-one in this town thinks of a way that this endless night can be survived, then every last one of you will die.  Do you disagree?
-"""
+    No, this town has adopted socialism at the very moment when it needed drastic, ruthless innovation.  If no-one in this town thinks of a way that this endless night can be survived, then every last one of you will die.  Do you disagree?
+    """
 
-"""
+    """
 
-A quick glance towards the Alderman shows a bent old man, staring at his feet and deeply lost in a mix of thought and sadness.
+    A quick glance towards the Alderman shows a bent old man, staring at his feet and deeply lost in a mix of thought and sadness.
 
-He clearly isn't about to answer.
-"""
-menu:
-    "But surely the more of us who live, the more people there are to innovate?":
-        $c=6
+    He clearly isn't about to answer.
+    """
+    menu:
+        "But surely the more of us who live, the more people there are to innovate?":
+            $c=6
 
-    "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died":
-        $c=7
+        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died":
+            $c=7
 
-    "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself...":
-        $c=8
+        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself...":
+            $c=8
 
-    "How do you know we aren't innovating?":
-        $c=9
+        "How do you know we aren't innovating?":
+            $c=9
 
-    "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, {i}'The Positive Impacts of Social Cohesion on Rural Economic Development'{/i}" if game.playerbackground == "merchant":
-        $c=10
+        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, {i}'The Positive Impacts of Social Cohesion on Rural Economic Development'{/i}" if game.playerbackground == "merchant":
+            $c=10
 
-    "What you're saying is economically sound.  This treatise right here, {i}'Incentive, Necessity and Survival: The Ingredients of Innovation'{/i} would agree with you point for point" if game.playerbackground == "merchant":
-        $c=11
+        "What you're saying is economically sound.  This treatise right here, {i}'Incentive, Necessity and Survival: The Ingredients of Innovation'{/i} would agree with you point for point" if game.playerbackground == "merchant":
+            $c=11
 
-    "The philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
-        $c=12
+        "The philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
+            $c=12
 
 if c==6:
 
@@ -352,7 +354,7 @@ if c==10:
 
     "Alina narrows her eyes at you."
 
-    alina  "No need [game.player_name].  Pass me the book and I will read it in my own time.
+    alina  """No need [game.player_name].  Pass me the book and I will read it in my own time.
 
     But I have studied political philosophy, and some economics, at the Holy University of Friedrich, Fourth of the Pantheon.  I do know what I am talking about.
 
