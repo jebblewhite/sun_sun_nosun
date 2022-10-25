@@ -16,23 +16,69 @@ A grunt from the back room lets you know that Mik is aware they have a customer,
 Mik seems genuinely surprised to see you for a moment, before they pull their face back into its normal sardonic scowl.
 """
 
-butcher """
+if game.butcher.scene1result == 'Mad':
 
-So the student has returned. I'm a little surprised, but it appears you're more stubborn than I had given you credit for.
+    butcher """
 
-Or maybe more argumentative.
+    Come to sneer?  Come to gawp?  Come to stretch your intellectual muscles in my face?
 
-Or maybe you just wanted to see little old me. wink
-"""
+    Or come to admit that you're a bigot?
 
-"Mik holds the back of their hand to their chin as they say this, framing their face."
+    Come to grovel and beg forgiveness for being both wrong and, dare I say it, rude?
 
-butcher """
+    So go on, tell me.  How wrong do you think I am?  And try to use your grown up words this time.
+    """
 
-Don't tell me, I like the mystery. Also knowing you I'll be disappointed by the answer.
+elif game.butcher.scene1result == 'Disagree':
 
-What I am more interested in hearing though, because very few people who aren't already singing in my choir will listen to me long enough to debate me intelligently, is how wrong you think I am?
-"""
+    butcher """
+
+    So the student has returned. I'm a little surprised, but it appears you're more stubborn than I had given you credit for.
+
+    Or maybe more argumentative.
+
+    Or maybe you just wanted to see little old me.
+    """
+
+    "Mik holds the back of their hand to their chin as they say this, framing their face."
+
+    butcher """
+
+    Don't tell me, I like the mystery. Also knowing you I'll be disappointed by the answer.
+
+    What I am more interested in hearing though, because very few people who aren't already singing in my choir will listen to me long enough to debate me intelligently, is how wrong you think I am, now that you've had a little longer to think?
+    """
+
+elif game.butcher.scene1result == 'War':
+
+    butcher """
+
+    Ah, the class traitor is back.
+
+    Come to sneer?  Come to gawp?  Bring your pitchfork?
+
+    Or come to admit that you're an idiot?
+
+    Come to grovel and beg forgiveness for being both wrong and, dare I say it, rude?
+
+    So go on, tell me.  How wrong do you think I am?  Changed your mind?
+    """
+
+else:
+
+    butcher """
+
+    So the student has returned. Come to further the cause?  Or maybe you just wanted to see little old me?
+    """
+
+    "Mik holds the back of their hand to their chin as they say this, framing their face."
+
+    butcher """
+
+    Don't tell me, I like the mystery. Also knowing you I'll be disappointed by the answer.
+
+    What I am more interested in is if you're changed your mind.  Are you still with me?  Totally?  Am I wrong?
+    """
 
 menu:
 
