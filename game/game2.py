@@ -641,7 +641,7 @@ class Game(object):
             tudor.staging_flag = 'newsick'
 
     def countAlive(self):
-        return(len([peasant.status != "Dead" for peasant in self.peasants]))
+        return([peasant.status != "Dead" for peasant in self.peasants].count(True))
 
     def updateFood(self):
         self.foodpp = 2**(self.foodchoice-2)
