@@ -184,7 +184,7 @@ if (c==9 or c==10) and game.alderman.resp < placeholder:
     $c=12
 
 
-if $c==12:
+if c==12:
     if game.alderman.life >= placeholder2:
         $ textinsert = "But thank you.  You’ve helped an old man grieve."
     else:

@@ -1,5 +1,5 @@
 import random
-
+from game2 import Game
 
 
 def foodgathered(foodinworld):
@@ -26,8 +26,8 @@ def choose_random_peasant():
 
 
 def main():
-    thistext = "braces"
-    print(f"{{{{{{{{thistext}}}}}}}}")
+    #thistext = "braces"
+    #print(f"{{{{{{{{thistext}}}}}}}}")
     """
     foodinworld = 10000
     foodstocks = 100
@@ -49,7 +49,11 @@ def main():
     """
     choose_random_peasant()
     """
-
+    game = Game()
+    print(game.food)
+    
+    print([peasant.status!="Dead" for peasant in game.peasants].count(True))
+    print([2**i for i in range(4)])
 
 
 main()
