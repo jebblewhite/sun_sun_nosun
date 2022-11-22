@@ -526,7 +526,7 @@ if c==20:
 
 if c==21:
 
-    "You slowly extend your hand towards the creature. The colours, an orb that makes up the upper portion of its head, change to swirling reds, yellows, pinks and blues.
+    """You slowly extend your hand towards the creature. The colours, an orb that makes up the upper portion of its head, change to swirling reds, yellows, pinks and blues.
 
     Then the bottom of one of its front...legs moves, like the uncoiling of a sleeping snake, and it extends what looks like a muscular, apparently infinitely flexible, tail. The hair here is rough and muddy, but still incredibly smooth as the creature gently runs the tip of its this front limb across each of the fingers of your hand in turn.
 

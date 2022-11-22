@@ -474,7 +474,7 @@ if c==9:
 
     Away and to safety as the cleaver comes down.
 
-    It is an odd thing to note, but even in the starlight you can see that [game.creature_name]s's blood is red.
+    It is an odd thing to note, but even in the starlight you can see that [game.creature_name]'s blood is red.
 
     The same scarlet as your own, sinking into the dirt of Lotosk's town square, splashes staining the fabric of Nat's clothes.
     """

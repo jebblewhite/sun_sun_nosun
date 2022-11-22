@@ -170,6 +170,22 @@ label maptown:
             call butcherhouse
         "Doctor":
             call doctorhouse
+        "Approach Nat, the Town Crier" if game.crier.scene == 1:
+            call crierscene1
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "Is that .. Nat?" if game.crier.scene == 4:
+            call crierscene4
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "Run towards the screams" if game.crier.scene == 8:
+            call crierscene8
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "You find Nat in the street" if game.crier.scene == 9 and game.creaturefate == 'Dead':
+            call crierscene9
+            $game.crier.scene += 1
+            $game.actions -= 1
         "Go back":
             call maploop
     return
@@ -185,7 +201,14 @@ label home:
         "Sleep the entire day away":
             "Oh no"
             $ game.actions = 0
-
+        "Read the note that has been slipped under your door" if game.crier.scene == 6:
+            call crierscene6
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "You hear a knock at your door" if game.crier.scene == 9 and game.creaturefate != 'Dead':
+            call crierscene9
+            $game.crier.scene += 1
+            $game.actions -= 1
         "Go back":
             call maptown
     return
@@ -300,7 +323,10 @@ label river:
                     $ game.rollevent = 0
             else:
                 "get fish"
-                
+        "Join Nat by the river" if game.crier.scene == 2:
+            call crierscene2
+            $game.crier.scene += 1
+            $game.actions -= 1
         "(debug) the threesome event":
             call thethreesome
         "(debug) the leviathan event":
@@ -475,6 +501,18 @@ label tower:
     scene tower_intr
     show screen Mapscreen
     menu:
+        "Look for Nat" if game.crier.scene == 3:
+            call crierscene3
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "Look for Nat" if game.crier.scene == 5:
+            call crierscene5
+            $game.crier.scene += 1
+            $game.actions -= 1
+        "Look for Nat" if game.crier.scene == 7:
+            call crierscene7
+            $game.crier.scene += 1
+            $game.actions -= 1
         "Go back":
             call maploop
     return
