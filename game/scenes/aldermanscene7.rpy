@@ -109,7 +109,7 @@ menu:
         
     "*Say nothing, let this play out*":
         $c=4
-
+label reevaluatealderman7:
 if c ==1:
 
     "Jacob waves his hand towards you as if he is trying to swat a fly that he isn't actually too concerned about."
@@ -297,6 +297,103 @@ if c ==9:
         "The Alderman walks back into the Town Hall.  Alina shakes her head, carefully rolls up her senate writ, and walks determinedly in the direction of Jacob's shop, leaving you alone in the town square."
         $game.coup = "Not Involved"
 
+if c ==10:
+
+    "Alina does not modulate her volume as she says:"
+
+    alina  """
+
+    [game.player_name], I've got some work to do, but soon enough I will be calling on you.  I will need help restoring order to this town and I can't think of anyone more qualified to help me.
+
+    Be ready [game.player_name].  Justice will soon be restored, but until then, do keep working for Alexi.  The stockpiles will be useful for the creation of incentives.
+    """
+
+    "Alina nods and walks away."
+
+    $game.coup = "Alina"#{Set $Coup = "Alina"}
+
+
+
+if c ==11:
+
+    "You follow the Alderman into the Town Hall, the large space cool and calm."
+
+    alderman  """
+
+    I'm not going to ask you if I'm doing the right thing [game.player_name].  I don't know if it's morally right, but I can't worry about that.  I know it is what is best for this town, so I'm going to do it.
+
+    [game.player_name], I'm going to do something.  Something to stop Alina from taking over Lotosk.
+
+    What I'm planning, what I have to do, it's not nice.  And I'm not at all proud that I even thought of it.
+
+    It makes me sick that I'm actually going to do it.
+
+    But I am going to do it.  Because I can't let any more people here die than have to.
+
+    I can't tell you any more than that [game.player_name], not yet.  Only that if everything goes right, no-one should die.  That is the whole goal.  But still, it will be unpleasant.
+
+    I am not expecting that you will help me.  But I am an old man, and I know that it will be difficult on my own, so I'm going to ask you to help me, knowing that you should probably say no.  But for the good of the town, I am asking you."""
+    
+    if game.alderman.attraction_matrix() > 8:
+        alderman """
+        Don't worry about what I feel, just think about the logic.  Because I desperately want you to do it, but I also desperately want you to stay safe.  But maybe you don't care about me as much as…
+
+        Just think of the logic [game.player_name]."""
+
+    alderman "Will you help me stop Alina?  Will you give me your solemn word that you will?"
+    
+    menu:
+        "Yes":
+            $c=12
+
+        "No, I'm not going to get involved with this":
+            $c=13
+
+
+if c ==12:
+
+    "The Alderman nods gravely."
+
+    alderman  """
+
+    Then I will contact you soon.
+
+    For now go.  Put it out of your mind.  Sleep soundly tonight.  There is no need for you to dwell on this unpleasantness more than you have to.
+    """
+
+    $game.coup = "Alderman"
+
+
+if c ==13:
+
+    "The Alderman nods gravely."
+
+    alderman  """
+
+    That is probably for the best.
+
+    Go now, then.  And put this unpleasantness out of your mind.  I think it is right that I should bear this burden alone.
+    """
+    $game.coup = "Not Involved"
+
+
+if c ==14:
+
+    "Man"  "Fuck you, you think you're better than us?  We work just as hard as you do, where do you get off telling us what to do?"
+
+    "Woman"  "[game.player_name] is just trying to help!"
+
+    "Man"  "Oh please, [game.player_name]'s just protecting their 'special relationship' with the Alderman."
+
+    if game.alderman.attraction_matrix() > 8:
+        "The Alderman glances at you, his eyes uncomfortable but his cheeks strangely flushed."
+
+    "Woman"  "Listen, I'm too old to work and my granddaughter is too young.  The Alderman is doing all he can to make sure we get the same opportunities as those lucky enough to be fit and strong."
+
+    #{Slight cohesion decrease}
+
+    $c=7
+    jump reevaluatealderman7
 
 
 return
