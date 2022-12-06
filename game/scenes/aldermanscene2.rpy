@@ -17,7 +17,7 @@ menu:
         $c=2
         alderman  "Ah, of course you are.  You probably get out a lot more than I do, you’re much more used to it."
 
-        $ game.character.statchange("resp", 1) #{Very slight respect increase with the Alderman}
+        $ game.alderman.statchange("resp", 1) #{Very slight respect increase with the Alderman}
 
         $c=3
 
@@ -25,7 +25,7 @@ menu:
         $c=1
         alderman  "Of course.  I wouldn’t want you to be cold."
 
-        $ game.character.statchange("like", 2) #{Slight like increase with the Alderman}
+        $ game.alderman.statchange("like", 2) #{Slight like increase with the Alderman}
 
         $c=3
 alderman  "Before this awful cold I never thought such happiness could be found in a simple blanket."
@@ -54,8 +54,8 @@ menu:
 
         "It feels like he should say more, but he doesn’t, he just returns to staring, motionless, into the trees."
 
-        $ game.character.statchange("resp", 2) #{Slight respect increase with the Alderman}  
-        $ game.character.statchange("like", -1) #{Very slight like decrease with the Alderman}
+        $ game.alderman.statchange("resp", 2) #{Slight respect increase with the Alderman}  
+        $ game.alderman.statchange("like", -1) #{Very slight like decrease with the Alderman}
         menu:
             "*Stay silent*":
                 $c=6
@@ -71,8 +71,8 @@ if c==5:
 
     alderman  "Yes, I suppose there is."
 
-    $ game.character.statchange("like", 2) #{Slight like increase with the Alderman}  
-    $ game.character.statchange("att", 2) #{Slight attraction increase with the Alderman}
+    $ game.alderman.statchange("like", 2) #{Slight like increase with the Alderman}  
+    $ game.alderman.statchange("att", 2) #{Slight attraction increase with the Alderman}
 
     $c=6
 
@@ -117,7 +117,7 @@ if c==6:
             $c=7
             alderman  "Thank you, it’s kind of you to say that.  I suppose you’re right, no-one is perfect, they had their vices like we all do.  But still, if only they had turned that stubbornness to a good cause, to helping this town."
 
-            $ game.character.statchange("like", 2) #{Slight like increase with the Alderman}
+            $ game.alderman.statchange("like", 2) #{Slight like increase with the Alderman}
 
             $c=12
 
@@ -126,9 +126,9 @@ if c==6:
             $c=8
             alderman  "No, no that wouldn’t have been right.  Even if it had worked, I would just have become what Cynthia was wanting me to become, and while she was right about many things, turning Lotosk into a dictatorship was not one of them.  I would prefer to see them go than to have seen them stay under duress."
 
-            $ game.character.statchange("like", -4)#{Like decrease with the Alderman}  
-            $ game.character.statchange("resp", -2)#{Slight respect and attraction decreases with the Alderman}
-            $ game.character.statchange("att", -2)
+            $ game.alderman.statchange("like", -4)#{Like decrease with the Alderman}  
+            $ game.alderman.statchange("resp", -2)#{Slight respect and attraction decreases with the Alderman}
+            $ game.alderman.statchange("att", -2)
             $c=12
 
 
@@ -142,7 +142,7 @@ if c==6:
             $c=11
             alderman  "I suppose you are right.  I spoke to them, asked them to stay, and they still chose to leave.  If I had done more then I would have become what Cynthia wanted me to become.  You are right, I prefer to see them go rather than stay under duress."
 
-            $ game.character.statchange("resp", 4) #{Respect gain with the Alderman}
+            $ game.alderman.statchange("resp", 4) #{Respect gain with the Alderman}
 
             $c=12
 
@@ -155,8 +155,8 @@ if c==9 and game.alderman.resp >= placeholder:
 
     alderman  "I should think of you like this blanket then.  Be thankful for the things I still have, not the things I’ve lost."
 
-    $ game.character.statchange("like", 2) #{Very slight respect increase with the Alderman}  #{Slight like increase with the Alderman}
-    $ game.character.statchange("resp", 1)
+    $ game.alderman.statchange("like", 2) #{Very slight respect increase with the Alderman}  #{Slight like increase with the Alderman}
+    $ game.alderman.statchange("resp", 1)
     $c=12
 
 
@@ -169,8 +169,8 @@ if c==10 and game.alderman.resp >= placeholder:
 
     alderman  "I should think of you like this blanket then.  Be thankful for the things I still have, not the things I’ve lost."
 
-    $ game.character.statchange("like", 4) #{Like increase with the Alderman}  #{Slight attraction increase with the Alderman}
-    $ game.character.statchange("att", 2)
+    $ game.alderman.statchange("like", 4) #{Like increase with the Alderman}  #{Slight attraction increase with the Alderman}
+    $ game.alderman.statchange("att", 2)
     $c=12
 
 
@@ -179,7 +179,7 @@ if (c==9 or c==10) and game.alderman.resp < placeholder:
 
     alderman  "I’m afraid that having you here is not much comfort.  But the sentiment is good, all the same."
 
-    $ game.character.statchange("like", 1) #{Very slight like increase with the Alderman}
+    $ game.alderman.statchange("like", 1) #{Very slight like increase with the Alderman}
 
     $c=12
 

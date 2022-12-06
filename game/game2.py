@@ -37,6 +37,12 @@ class Charac(object):
             if characters[i].ide != self.ide:
                 setattr(self, characters[i].ide, 0)
 
+    def attraction_matrix(self):
+        return (self.resp+self.like*2+self.att*4)/7
+
+    def relationship_matrix(self):
+        return (self.resp+self.like+self.att)/3
+
 
 """
 Peasant, or, Tudor class, for 'expendable' pops
@@ -142,6 +148,8 @@ class Game(object):
         self.doctor = Charac(0,0,0,'Fyodora',"image!!!","doctor",self.characters)
         self.alderman = Charac(0,0,0,'Alexi',"image!!!","alderman",self.characters)
         self.nazi = Charac(0,0,0,'Alina',"image!!!","alina",self.characters)
+        self.noah = Charac(0,0,0,'Noah',"image!!!","noah",self.characters)
+        self.mila = Charac(0,0,0,'Mila',"image!!!","mila",self.characters)
         self.initrels(self.characters)
 
         self.peasants = []

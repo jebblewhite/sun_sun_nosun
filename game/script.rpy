@@ -42,7 +42,10 @@ label start:
     define doctor = Character(game.__dict__['doctor'].name)
     define butcher = Character(game.__dict__['butcher'].name)
     define widow = Character(game.__dict__['widow'].name)
-    define alina = Character(game.__dict__['nazi'].name)   
+    define alina = Character(game.__dict__['nazi'].name)
+    define noah =  Character(game.__dict__['noah'].name)
+    define mila =  Character(game.__dict__['mila'].name)
+      
     #play music "automato.ogg" fadein 1.0
     #$ renpy.block_rollback()
     #call nameask
