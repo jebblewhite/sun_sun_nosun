@@ -257,7 +257,7 @@ if c==16:
 
 if c==17:
 
-    if game.butcher.att > 0:
+    if game.butcher.att > 1:
         $textinsert = "Not that I mind a little bit of dirt."
     elif game.butcher.like > 15:
         $textinsert = "You take care {}, don't let all that oppression wear you down.".format(game.player_name)
