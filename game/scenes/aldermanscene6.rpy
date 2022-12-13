@@ -123,7 +123,7 @@ if c==6:
     Now, now when I feel it's my turn, now I can't imagine that he made a mistake.  He looked at the numbers and he accepted what they told him.  I had not realised how brave that part of it was.  To accept that truth.
     """
 
-    #{Set $AldermanGrieved = "True"}
+    $ game.AldermanGrieved = True
     menu:
         "As far as I see it, it isn't about bravery.  It's about caring.  And I can tell how much you care.  So you'll do the right thing":
             #{Like and attraction increase with the Alderman}

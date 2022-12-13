@@ -14,6 +14,7 @@ class Charac(object):
         self.name = name
         self.ide = ide
         self.scene = 1
+        self.romance = False
         characters.append(self)
         """
         for character in characters:
