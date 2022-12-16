@@ -46,9 +46,9 @@ Not to mention, of course and more importantly, that it is vile and immoral.  Th
 """
 
 #MM
-if game.morale >= 60:
+if game.popMorale>= 60:
     "There is a short round of applause after the Alderman has finished speaking."
-    if game.cohesion <= 40:
+    if game.popCohesion<= 40:
         "However, a shrill voice cuts through clapping."
 
         "Man"  "If everything's so good and equal, why did I come home yesterday to find my window smashed and my new fur gone?"
@@ -59,7 +59,7 @@ else:
     "The Alderman's words are met with silence and an awkward shuffling of feet."
 
     "Woman"  "Those are awful nice words, but if she's bad, what makes you good?"
-    if game.cohesion <= 40:
+    if game.popCohesion<= 40:
         "Man"  "And if everything's so good and equal, why did I come home yesterday to find my window smashed and my new fur gone?"
     "The crowd bubbles slightly, a few more voices rising just above the general hum, cautiously voicing their own dissatisfaction."
 
@@ -151,9 +151,9 @@ if c ==4:
 
     "Man"  "Yeah!  We can't feed ourselves on philosophy, we need action, we need change!"
     #MM
-    if game.morale <= 30:
+    if game.popMorale<= 30:
         "Woman"  "The only thing that's changed with Alexi in charge is that now we have less food on our plates!"
-    if game.cohesion <= 30:
+    if game.popCohesion<= 30:
         """
 
         A section of the crowd roars in agreement.
@@ -171,7 +171,7 @@ if c ==4:
             $c=5
             #{Respect increase with Alina}
 
-        "Tackle the man who threw the rock" if game.cohesion <= 30:
+        "Tackle the man who threw the rock" if game.popCohesion<= 30:
             $c=8
 
         "*Say and do nothing*":

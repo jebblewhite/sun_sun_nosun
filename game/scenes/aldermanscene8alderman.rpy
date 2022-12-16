@@ -70,7 +70,8 @@ menu:
         $c=1
 
 
-
+label reevaluatealderman8alderman:
+    
 if c==1:
 
     "The Alderman shakes his head, sadness, anger and disappointment all mixing on his face."
@@ -289,10 +290,245 @@ if c==6:
 
     If you could step on there for me, I will pass you these tools and tell you what to do, for the stair…
     """
-    $ game.alderman.romance == True
+    $ game.alderman.romance = True
     $ c=8
 
+if c==7:
 
+    "The Alderman nods, as if you had just told him that food supplies were down five percent."
+
+    alderman  """
+
+    Of course, that is what I expected.
+
+    If you do not mind, I would prefer not to dwell on this.  It is … intimidating.
+
+    Besides, we should not delay.  It will not make what we are doing any less wrong.
+
+    If you could step on there for me, I will pass you these tools and tell you what to do…
+    """
+
+    $c=8
+
+
+if c==8:
+
+    #JE fade to black, then fade back in on the town square
+
+    """
+
+    It is not long after you have said goodbye to the Alderman, helping him jump over the two trick steps, that you see Alina approaching the Town Hall.
+
+    You did not need to stay for this final part of the Alderman's plan, but you both thought it best that you should be there at the moment it happened.  It needs to be real, for both of you.  Besides, if you are there, you can help her after she has fallen.
+
+    Jacob is trailing Alina, who holds her senate writ in her steady hand like a sword.
+
+    The rest of the people who happen to be in the square instinctively move behind her, hungry for drama.
+    """
+    menu:
+        "*Go with them*":
+            $c=9
+
+
+
+
+
+if c==9:
+    """
+    The small crowd forms a knot behind the Senate Outlands Officer, the tension of the last confrontation between her and the Alderman bubbling until Alina leans in and whispers in Jacob's ear.
+
+    There is something about that small act, publicly conspiratorial, that immediately grabs the crowd's attention.
+
+    Jacob nods and Alina marches forward, pushing her way into the Town Hall.  You and the rest of the crowd follow behind, jostling through the doors into the surprisingly tight space beyond.
+
+    The Alderman stands at the top, a stooped, small shadow in the darkness of the room.
+    """
+
+    alina  """
+
+    As I have said before, Alderman Alexi, by order of, and by the power of, the Senate, I hereby relieve you of your duty as governor of this town.
+
+    You have had the chance to-
+    """
+
+    alderman  """
+
+    Show me the writ.
+
+    I wish to see the writ, again, if that is possible, Officer?
+    """
+
+    alina  "Of course."
+
+    """
+    Alina places one foot on the old wooden stairs, and then the next.  
+
+    You and the rest of the crowd wait with hushed anticipation, any political allegiances they hold momentarily forgotten in the spectacle of the show.
+    """
+
+    alina  "The senate writ, Alderman Alexi, just as you re-"
+
+    """
+
+    A creak.
+
+    A snap.
+
+    Alina does not scream on the way down.  You do not know if her face even looked shocked.
+
+    Then another snap.
+
+    Bone this time, rather than wood.
+
+    Tiny fragments of splintered wood fall slowly through the moonlight.
+
+    Then someone screams.  Not from ahead of you, from the hole in the stairs beneath which Alina, or her body, must lie, but from beside you.
+    """
+
+    "Man"  "By the gods, what happened!"
+    menu:
+        "*Stand where you are, rooted to the spot by the shock of it actually really happening right in front of you*":
+            $c=10
+
+        "Someone, find where she's fallen and help her!":
+            $c=11
+
+
+
+if c==10:
+
+    "The Alderman has started anxiously pacing back and forth like a dog looking for some way down a steep incline."
+
+    alderman  """
+
+    Someone please do something!
+
+    The stairs, I think the old clerk's rooms are beneath them.  The door on the right, yes yes that one, open that and you should be able to find her.
+
+    Someone else, quickly go and fetch Fyodora.  Tell her how urgent it is!
+    """
+
+    """
+
+    The members of the crowd break from their trance and spring into action.
+
+    A number of them surge forward, almost fighting to be the first to reach Alina.
+
+    A moment later you hear a worried exclamation stab up from the hole in the stairs.
+
+    The other half of the crowd drain quickly out of the front door, running as if they are fleeing.  Off to fetch Fyodora.
+
+    You raise your eyes to see that you are alone in the room with the Alderman.
+
+    You can just make out his face in the dark.  A kind, sad, understanding smile.
+    """
+    #{Slight like and attraction decrease with the Alderman}
+
+    $c=12
+
+
+
+if c==11:
+
+    alderman  "Indeed!  The room beneath the stairs, I think it is the old clerk's room.  The door is just there, to the right of the stairs."
+
+    """
+
+    The members of the crowd, all political grievances forgotten, break from their trance and spring into action.
+
+    You direct half of them to the clerk's door, and then rush back to the others, instructing them on what exactly to tell Fyodora.
+
+    It is only after they have left that you realise that you are alone in the room with the Alderman.
+
+    His nervous pacing, like a dog looking for some way down a steep incline, has stopped.  He's standing still, his hands balled painfully tight in front of him.
+
+    He looks like he is in pain.  But in the darkness, you can make out a small, sad smile.
+
+    'Thank you.'
+    """
+
+    #{Slight respect gain with the Alderman}
+
+    $c=12
+
+
+
+if c==12:
+    """
+
+    The door to the hall bursts open.
+
+    The crowd sweeps you up as they almost pull Fyodora to the little entrance of the clerk's office.
+
+    The small room is quickly full, and most of the people in it seem to be very busy doing nothing.
+
+    The only thing that the advanced party seems to have achieved is the lighting of a candle, which one of them immediately holds up for Fyodora.  All the rest are nervously moving, shifting their feet, rocking, sending their eyes on circuits round the room so they will at least appear as if they are looking for something to do.
+
+    Only one person is completely still.
+
+    Alina is lying face down.  One of her legs has smashed through the flimsy wooden desk.  The flesh below the knee is ripped and mangled, large shards of wood having scraped their way across her skin, some of them embedding themselves in her raw muscles.
+
+    Her other leg lies twisted under her torso, the sole of her foot almost touching the side of her head.  Her arms may be bruised and some ribs may be broken, but from where you stand there is no clear sign of serious injury there.
+
+    Her head rests in a pool of blood.
+    """
+
+    doctor  "I need help moving some of this debris aside."
+    """
+    She gives you a quick look and gestures with two fingers which parts you should be helping to move.  You get to it, hauling bloody pieces of wood away and clearing a space that Fyodora can use to safely examine, and then extract, Alina.
+    """
+
+    doctor  "She's alive, but unstable."
+
+    alderman  "Thank the gods for that.  Can you save her?"
+
+    """
+
+    The Alderman's clearly relieved voice sounds soft through the new hole in the ceiling of the under-stairs room.
+
+    Fyodora lets him and the anxious crowd know that she thinks she can.
+
+    The work seems to go more easily from there, now that someone has taken responsibility.
+
+    It does not take long before Fyodora states that it is safe to move Alina and you and a few others help take the mangled body across the square.
+
+    Her face is coated in blood, and almost unrecognisable.
+
+    By that time some of the other townspeople have helped the Alderman past the hole and down the stairs.  He joins you in the hospital, says a few words at Alina's bedside and then helps Fyodora usher everyone out.
+    """
+
+    alderman  """
+
+    What has happened today is tragic and shocking.  Officer Alina and I disagreed strongly, but I think I speak for all of us when I say that I want desperately for her to pull through.
+
+    But those of us who heard her speak will know that she was passionate about the productivity of this town.  I think I can speak with confidence when I say that she would have hated to think that we would all stand around mourning her accident.
+
+    The best thing we can do for her now is get back to work.  That is what she will want to see when she wakes up.
+
+    So go, now.  I will sit with her and send Nat out with news if anything happens.
+    """
+
+    """
+
+    And so the crowd disperses.  However you cannot help but notice that the feeling in the air is that the story has only just begun.  
+
+    After all, isn't it … odd … that the stairs just happened to collapse at the very moment that Alina was about to depose the Alderman?
+    """
+
+
+
+if c==13:
+
+    """
+
+    It is not long before Alina appears in the town square, tailed by Jacob, holding her senate writ in her steady hand like a sword.
+
+    The rest of the people who happen to be in the square instinctively move behind her, hungry for drama.
+    """
+    menu:
+        "*Go with them*":
+            $c=9
+            jump reevaluatealderman8alderman
 
 
 return

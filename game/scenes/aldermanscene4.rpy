@@ -246,10 +246,10 @@ if c==9:
         "Oh, I'm so sorry.":
             $c=10
 
-        "Wait, why have you really come here?" if !Alderman4WhySent:
+        "Wait, why have you really come here?" if not(Alderman4WhySent):
             $c=11
 
-        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+        "Wait, what were things like in the city when you left?" if not(Alderman4HowCity):
             $c=12
 
         "*Let Alina and the Alderman continue*":
@@ -263,10 +263,10 @@ if c==10:
     #{Very slight attraction increase with the Alderman} 
     #{Very slight respect increase with Alina}
     menu:
-        "Wait, why have you really come here?" if !Alderman4WhySent:
+        "Wait, why have you really come here?" if not(Alderman4WhySent):
             $c=11
 
-        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+        "Wait, what were things like in the city when you left?" if not(Alderman4HowCity):
             $c=12
 
         "*Let Alina and the Alderman continue*":
@@ -284,11 +284,11 @@ if c==11:
     $ Alderman4WhySent = True 
     #{Very slight respect increase with the Alderman}
     menu:
-        "Wait, what do you mean by 'contingent'?" if !Alderman4Contingent:
+        "Wait, what do you mean by 'contingent'?" if not(Alderman4Contingent):
             $c=9
             jump reevaluatealderman4
 
-        "Wait, what were things like in the city when you left?" if !Alderman4HowCity:
+        "Wait, what were things like in the city when you left?" if not(Alderman4HowCity):
             $c=12
 
         "*Let Alina and the Alderman continue*":
@@ -308,11 +308,11 @@ if c==12:
     $Alderman4HowCity = True
     #{Very slight like increase with the Alderman}
     menu:
-        "Wait, what do you mean by 'contingent'?" if !Alderman4Contingent:
+        "Wait, what do you mean by 'contingent'?" if not(Alderman4Contingent):
             $c=9
             jump reevaluatealderman4
 
-        "Wait, why have you really come here?" if !Alderman4WhySent:
+        "Wait, why have you really come here?" if not(Alderman4WhySent):
             $c=11
             jump reevaluatealderman4
             

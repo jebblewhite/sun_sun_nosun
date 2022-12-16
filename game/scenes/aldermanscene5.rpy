@@ -177,19 +177,19 @@ if c==6:
     #{Slight respect loss with Alina}
 
     menu:
-        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if !alderman5emotions:
+        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if not(alderman5emotions):
             $c=7
 
-        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if !alderman5unequal:
+        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if not(alderman5unequal):
             $c=8
 
-        "How do you know we aren't innovating?" if !alderman5innovators:
+        "How do you know we aren't innovating?" if not(alderman5innovators):
             $c=9
 
-        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if !alderman5treaties and game.playerbackground == "merchant": 
+        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if not(alderman5treaties) and game.playerbackground == "merchant": 
             $c=10
 
-        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if !alderman5treaties and game.playerbackground == "merchant":
+        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=11
 
         "All this philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
@@ -234,19 +234,19 @@ if c==7:
     $ alderman5emotions = True 
     #JE{Respect loss with Alina}
     menu:
-        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if !alderman5morepeople:
+        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if not(alderman5morepeople):
             $c=6
 
-        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if !alderman5unequal:
+        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if not(alderman5unequal):
             $c=8
 
-        "How do you know we aren't innovating?" if !alderman5innovators:
+        "How do you know we aren't innovating?" if not(alderman5innovators):
             $c=9
 
-        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if !alderman5treaties and game.playerbackground == "merchant":
+        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=10
 
-        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if !alderman5treaties and game.playerbackground == "merchant":
+        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=11
 
         "All this philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
@@ -281,19 +281,19 @@ if c==8:
     #{Attraction loss with the Alderman}  
     #JE{Slight respect gain with Alina}
     menu:
-        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if !alderman5morepeople:
+        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if not(alderman5morepeople):
             $c=6
 
-        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if !alderman5emotions:
+        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if not(alderman5emotions):
             $c=7
 
-        "How do you know we aren't innovating?" if !alderman5innovators:
+        "How do you know we aren't innovating?" if not(alderman5innovators):
             $c=9
 
-        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treaties there, 'The positive impacts of social cohesion on rural economic development'" if !alderman5treaties and game.playerbackground == "merchant":
+        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treaties there, 'The positive impacts of social cohesion on rural economic development'" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=10
 
-        "What you're saying is econimically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if !alderman5treaties and game.playerbackground == "merchant":
+        "What you're saying is econimically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=11
 
         "All this philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
@@ -322,19 +322,19 @@ if c==9:
     #{Very slight respect increase with the Alderman}  
     #je{Slight respect loss with Alina}
     menu:
-        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if !alderman5morepeople:
+        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if not(alderman5morepeople):
             $c=6
 
-        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if !alderman5emotions:
+        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if not(alderman5emotions):
             $c=7
 
-        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if !alderman5unequal:
+        "Not everyone in town has the same amount of power.  You're forgetting that Alexi has left plenty for himself..." if not(alderman5unequal):
             $c=8
 
-        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if !alderman5treaties and game.playerbackground == "merchant":
+        "I could give you a list of all the reasons your economic assumptions are incorrect if you want.  Alderman, if you could pass me that treatise there, 'The positive impacts of social cohesion on rural economic development'" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=10
 
-        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if !alderman5treaties and game.playerbackground == "merchant":
+        "What you're saying is economically sound.  This treatise right here, 'Incentive, Necessity and Survival: the ingredients of innovation' would agree with you point for point" if not(alderman5treaties) and game.playerbackground == "merchant":
             $c=11
 
         "All this philosophy is irrelevant, what you're suggesting is simply morally abhorrent":
@@ -365,16 +365,16 @@ if c==10:
     #{Respect increase with the Alderman}  
     #je{Slight respect increase with Alina}
     menu:
-        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if !alderman5morepeople:
+        "But surely the more of us who live, the more people there are to innovate?  It's the same number of man hours either way" if not(alderman5morepeople):
             $c=6
 
-        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if !alderman5emotions:
+        "You're ignoring emotions.  People work better when they feel supported.  And when everyone they love hasn't just died" if not(alderman5emotions):
             $c=7
 
-        "Not everyone in town has the same amount of power.  You're forgetting that the Alexi has left plenty for himself..." if !alderman5unequal:
+        "Not everyone in town has the same amount of power.  You're forgetting that the Alexi has left plenty for himself..." if not(alderman5unequal):
             $c=8
 
-        "How do you know we aren't innovating?" if !alderman5innovators:
+        "How do you know we aren't innovating?" if not(alderman5innovators):
             $c=9
 
         "All this philosophy is irrelevant, what you're suggesting is simply morally abhorrent":

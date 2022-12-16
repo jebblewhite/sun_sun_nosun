@@ -41,8 +41,8 @@ class Charac(object):
     def attraction_matrix(self):
         return (self.resp+self.like*2+self.att*4)/7
 
-    def relationship_matrix(self):
-        return (self.resp+self.like+self.att)/3
+    def relationship_matrix(self, a=1, b=1, c=1):
+        return (a*self.resp+b*self.like+c*self.att)/(a+b+c)
 
 
 """
@@ -784,6 +784,9 @@ class Game(object):
         lengthdead = len(deadpeasants)
         randomdead = deadpeasants[random.randint(0,lengthdead-1)]
         return randomdead.name
+    
+    def ceil(self, x):
+        return math.ceil(x)
 
 """
 --------------------------- END OF CLASS -   - -- -  -- - -
