@@ -177,7 +177,7 @@ if c==4:
 
 if c==5:
 
-    if game.playerbackground == "Trader":
+    if game.playerbackground == "trader":
         $textinsert = "Yes I know you know. But what you might not know is that those"
     else:
         $textinsert = "Those"

@@ -7,7 +7,7 @@ $Mik8AnarchoCapitalism = False
 
 #JE: this event will either trigger at Mik's shop or at the player's home, depending on which side the first conditional lands on.
 
-if game.butcher.like > 24 or game.butcher.romance = True:
+if game.butcher.like > 24 or game.butcher.romance == True:
     $textinsert = "I"
 else:
     $textinsert = "I don't like you, but I do"
@@ -24,7 +24,7 @@ if game.butcher.like > 24:
 else:
     $textinsert3 = ""
 
-if game.butcher.resp > 25 or game.butcher.romance = True:
+if game.butcher.resp > 25 or game.butcher.romance == True:
     #Starts at player's home.
     
     "There is a knock at your door, rhythmic and firm. Mik gives you a dry smile when you answer, a challenge and an apology."
