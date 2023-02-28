@@ -286,46 +286,28 @@ label river:
         "Go Fishing":
             menu:
                 "fish 1":
-                    $ game.playerHarvest("fish",1)
-                    "fish 1"
+                    if game.event_check(1) == True:
+                        $ game.event_choose('river')
+                        "event"
+                    else:
+                        $ game.playerHarvest("fish",1)
+                        "fish 1"
                 "fish 2" if game.actions > 1:
-                    $ game.playerHarvest("fish",2)
-                    "fish 2"
+                    if game.event_check(2) == True:
+                        $ game.event_choose('river')
+                        "event"
+                    else:
+                        $ game.playerHarvest("fish",2)
+                        "fish 2"
                 "fish 3" if game.actions > 2:
-                    $ game.playerHarvest("fish",3)
-                    "fish 3"
-            if game.rollevent == 1: # 1 of the 4 actions
-                $ fishfunc = random.randint(1,100)
-                if fishfunc > 95:
-                    "eventvrare"
-                elif fishfunc > 90:
-                    "eventvrare"
-                elif fishfunc > 85:
-                    "eventrare"
-                elif fishfunc > 80:
-                    "eventrare"
-                elif fishfunc > 70:
-                    "eventuncommon"
-                elif fishfunc > 60:
-                    "eventuncommon"
-                elif fishfunc > 50:
-                    "eventuncommon"
-                elif fishfunc > 40:
-                    "eventcommon"
-                elif fishfunc > 30:
-                    "eventcommon"
-                elif fishfunc > 20:
-                    "eventcommon"
-                elif fishfunc > 10:
-                    "eventcommon"
-                else:
-                    "done all events lol"
-                if random.randint(1,2)>1:
-                    $ game.rollevent = random.randint(1,4)
-                else:
-                    $ game.rollevent = 0
-            else:
-                "get fish"
+                    if game.event_check(3) == True:
+                        $ game.event_choose('river')
+                        "event"
+                    else:
+                        $ game.playerHarvest("fish",3)
+                        "fish 3"
+            
+            
         "Join Nat by the river" if game.crier.scene == 2:
             call crierscene2
             $game.crier.scene += 1
@@ -357,133 +339,75 @@ label woods:
         "Gather Wood":
             menu:
                 "gather wood 1":
-                    $ game.playerHarvest("gather",1)
-                    "gather wood 1"
-                "gather wood 2" if game.actions > 1:
-                    $ game.playerHarvest("gather",2)
-                    "gather wood 2"
+                    if game.event_check(1) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("gather",1)
+                        "gather wood 1"
+                "gather wood 2":
+                    if game.event_check(2) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("gather",2)
+                        "gather wood 2"
                 "gather wood 3" if game.actions > 2:
-                    $ game.playerHarvest("gather",3)
-                    "gather wood 3"
-            if game.rollevent == 2: # 1 of the 4 actions
-                $ gatherfunc = random.randint(1,100)
-                if gatherfunc > 95:
-                    "eventvrare"
-                elif gatherfunc > 90:
-                    "eventvrare"
-                elif gatherfunc > 85:
-                    "eventrare"
-                elif gatherfunc > 80:
-                    "eventrare"
-                elif gatherfunc > 70:
-                    "eventuncommon"
-                elif gatherfunc > 60:
-                    "eventuncommon"
-                elif gatherfunc > 50:
-                    "eventuncommon"
-                elif gatherfunc > 40:
-                    "eventcommon"
-                elif gatherfunc > 30:
-                    "eventcommon"
-                elif gatherfunc > 20:
-                    "eventrcommon"
-                elif gatherfunc > 10:
-                    "eventcommon"
-                else:
-                    "done all events lol"
-                if random.randint(1,2)>1:
-                    $ game.rollevent = random.randint(1,4)
-                else:
-                    $ game.rollevent = 0
-            else:
-                "get fuel"
+                    if game.event_check(3) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("gather",3)
+                        "gather wood 3"
+            
 
         "Forage":
             menu:
                 "forage herbs 1":
-                    $ game.playerHarvest("forage",1)
-                    "forage herbs 1"
+                    if game.event_check(1) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("forage",1)
+                        "forage herbs 1"
                 "forage herbs 2" if game.actions > 1:
-                    $ game.playerHarvest("forage",2)
-                    "forage herbs 2"
+                    if game.event_check(2) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("forage",2)
+                        "forage herbs 2"
                 "forage herbs 3" if game.actions > 2:
-                    $ game.playerHarvest("forage",3)
-                    "forage herbs 3"
-            if game.rollevent == 3: # 1 of the 4 actions
-                $ foragefunc = random.randint(1,100)
-                if foragefunc > 95:
-                    "eventvrare"
-                elif foragefunc > 90:
-                    "eventvrare"
-                elif foragefunc > 85:
-                    "eventrare"
-                elif foragefunc > 80:
-                    "eventrare"
-                elif foragefunc > 70:
-                    "eventuncommon"
-                elif foragefunc > 60:
-                    "eventuncommon"
-                elif foragefunc > 50:
-                    "eventuncommon"
-                elif foragefunc > 40:
-                    "eventcommon"
-                elif foragefunc > 30:
-                    "eventcommon"
-                elif foragefunc > 20:
-                    "eventrcommon"
-                elif foragefunc > 10:
-                    "eventcommon"
-                else:
-                    "done all events lol"
-                if random.randint(1,2)>1:
-                    $ game.rollevent = random.randint(1,4)
-                else:
-                    $ game.rollevent = 0
-            else:
-                "get herb"
+                    if game.event_check(3) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("forage",3)
+                        "forage herbs 3"
+            
         "Hunt":
             menu:
                 "hunt 1":
-                    $ game.playerHarvest("hunt",1)
-                    "hunt 1"
+                    if game.event_check(1) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("hunt",1)
+                        "hunt 1"
                 "hunt 2" if game.actions > 1:
-                    $ game.playerHarvest("hunt",2)
-                    "hunt 2"
+                    if game.event_check(2) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("hunt",2)
+                        "hunt 2"
                 "hunt 3" if game.actions > 2:
-                    $ game.playerHarvest("hunt",3)
-                    "hunt 3"
-            if game.rollevent == 4: # 1 of the 4 actions
-                $ huntfunc = random.randint(1,100)
-                if huntfunc > 95:
-                    "eventvrare"
-                elif huntfunc > 90:
-                    "eventvrare"
-                elif huntfunc > 85:
-                    "eventrare"
-                elif huntfunc > 80:
-                    "eventrare"
-                elif huntfunc > 70:
-                    "eventuncommon"
-                elif huntfunc > 60:
-                    "eventuncommon"
-                elif huntfunc > 50:
-                    "eventuncommon"
-                elif huntfunc > 40:
-                    "eventcommon"
-                elif huntfunc > 30:
-                    "eventcommon"
-                elif huntfunc > 20:
-                    "eventrcommon"
-                elif huntfunc > 10:
-                    "eventcommon"
-                else:
-                    "done all events lol"
-                if random.randint(1,2)>1:
-                    $ game.rollevent = random.randint(1,4)
-                else:
-                    $ game.rollevent = 0
-            else:
-                "get meat n pelts"
+                    if game.event_check(3) == True:
+                        $ game.event_choose('forest')
+                        "event"
+                    else:
+                        $ game.playerHarvest("hunt",3)
+                        "hunt 3"
         "(debug) the stag event":
             call thestag
         "(debug) the ghouls event":

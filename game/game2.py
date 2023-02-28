@@ -200,11 +200,10 @@ class Game(object):
         self.peltchoice = 2
 
         self.day = 0
-        self.initeventchance = 0.05
+        self.initeventchance = 15
         self.temp = None
         self.coldness = 0
         self.wetness = 0
-
         self.checkPopStatus()
         self.resetvars()
 
@@ -787,6 +786,21 @@ class Game(object):
     
     def ceil(self, x):
         return math.ceil(x)
+
+    def event_check(self, num_actions):
+        if random.randint(1,100) < (self.eventchance*num_actions+self.eventchance*(num_actions-1)):
+            self.eventchance = 0
+            return True
+        else:
+            return False
+
+    
+    def event_choose(self, player_location):
+        if player_location == 'river':
+            pass #come back to this
+        elif player_location == 'forest':
+            pass #come back to this
+
 
 """
 --------------------------- END OF CLASS -   - -- -  -- - -

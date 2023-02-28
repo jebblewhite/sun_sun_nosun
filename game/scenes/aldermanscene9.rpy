@@ -769,7 +769,7 @@ if c==23:
     Why did the staircase happen to fail at the very moment that the Alderman was to be deposed?
     """
 
-    #{Very slight morale loss}  #{Slight cohesion gain}
+    #je{Very slight morale loss}  #{Slight cohesion gain}
 
     $c=6
     jump reevaluatealderman9
