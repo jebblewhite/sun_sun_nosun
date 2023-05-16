@@ -61,7 +61,7 @@ if c==2:
         "Wait, do you have any actual evidence that it will work, or that every worker really does share the same ideal?"  if Mik4Hobbes == False:
             $c=10
 
-        "Wait, you expect the people to rule themselves intelligently? That won't work." if Mik4Ratinoal == False:
+        "Wait, you expect the people to rule themselves intelligently? That won't work." if Mik4Rational == False:
             $c=11
 
         "I understand perfectly. The only just society is one that the people, free and equal, make themselves." if Mik4First == True:

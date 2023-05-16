@@ -1,6 +1,6 @@
 label butcherscene9:
 
-$NewLeadser = "" #JE: this is a placeholder, this line very, very much needs to be removed later.
+$NewLeader = "" #JE: this is a placeholder, this line very, very much needs to be removed later.
 
 if game.butcher.resp > 30:
     $textinsert = "Not that I think you'll manage, but it will be amusing to see you try, and I could do with a comical distraction."

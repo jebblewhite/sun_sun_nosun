@@ -189,6 +189,26 @@ label maptown:
             call crierscene9
             $game.crier.scene += 1
             $game.actions -= 1
+        "Talk to the Alderman" if game.alderman.scene == 7:
+            call aldermanscene7
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "A crowd is gathering in the square" if game.alderman.scene == 8 and game.coup == 'Not Involved':
+            call aldermanscene8
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Another crowd has gathered in the square" if game.alderman.scene == 9:
+            call aldermanscene9
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Is that a chair in the street?" if game.butcher.scene == 3:
+            call butcherscene3
+            $game.butcher.scene += 1
+            $game.actions -= 1
+        "Approach the crowd in the square" if game.butcher.scene == 7:
+            call butcherscene7
+            $game.butcher.scene += 1
+            $game.actions -= 1
         "Go back":
             call maploop
     return
@@ -212,6 +232,18 @@ label home:
             call crierscene9
             $game.crier.scene += 1
             $game.actions -= 1
+        "You hear a knock at your door" if game.alderman.scene == 8 and game.coup != 'Not Involved':
+            call aldermanscene8
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "You hear a knock at your door" if (game.butcher.resp > 25 or game.butcher.romance == True) and game.butcher.scene == 8:
+            call butcherscene8
+            $ game.butcher.scene += 1
+            $ game.actions -= 1
+        "Get out of bed" if game.butcher.scene == 9:
+            call butcherscene9
+            $ game.butcher.scene += 1
+            $ game.actions -= 1
         "Go back":
             call maptown
     return
@@ -231,6 +263,18 @@ label hall:
     menu:
         "Look for the Alderman" if game.alderman.scene == 1:
             call aldermanscene1
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Speak with the Alderman" if game.alderman.scene == 3:
+            call aldermanscene3
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Speak with the Alderman" if game.alderman.scene == 4:
+            call aldermanscene4
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Seek out the Alderman" if game.alderman.scene == 5:
+            call aldermanscene5
             $ game.alderman.scene += 1
             $ game.actions -= 1
         "Go back":
@@ -255,6 +299,22 @@ label butcherhouse:
     menu:
         "Go back":
             call maptown
+        "Approach the butcher" if game.butcher.scene == 1:
+            call butcherscene1
+            $game.butcher.scene += 1
+            $game.actions -= 1
+        "Approach Mik" if game.butcher.scene == 2:
+            call butcherscene2
+            $game.butcher.scene += 1
+            $game.actions -= 1
+        "Step inside" if game.butcher.scene == 4:
+            call butcherscene4
+            $game.butcher.scene += 1
+            $game.actions -= 1
+        "Approach Mik" if not(game.butcher.resp > 25 or game.butcher.romance == True) and game.butcher.scene == 8:
+            call butcherscene8
+            $ game.butcher.scene += 1
+            $ game.actions -= 1
     return
 
 
@@ -282,6 +342,8 @@ label river:
     scene river_extr
     show screen Mapscreen
     "You come to the river."
+    if game.alderman.scene == 2:
+        "You see a figure, wrapped in blankets, sitting on the riverbank."
     menu:
         "Go Fishing":
             menu:
@@ -306,6 +368,10 @@ label river:
                     else:
                         $ game.playerHarvest("fish",3)
                         "fish 3"
+        "Approach the blanketed figure" if game.alderman.scene == 2:
+            call aldermanscene2
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
             
             
         "Join Nat by the river" if game.crier.scene == 2:
@@ -327,6 +393,14 @@ label inn:
     scene inn_intr
     show screen Mapscreen
     menu:
+        "Sit with the Alderman" if game.alderman.scene == 6:
+            call aldermanscene6
+            $ game.alderman.scene += 1
+            $ game.actions -= 1
+        "Approach Mik" if game.butcher.scene == 5:
+            call butcherscene5
+            $game.butcher.scene += 1
+            $game.actions -= 1
         "Go back":
             call maploop
     return
@@ -408,6 +482,10 @@ label woods:
                     else:
                         $ game.playerHarvest("hunt",3)
                         "hunt 3"
+        "Walk through the forest" if game.butcher.scene == 6:
+            call butcherscene6
+            $game.butcher.scene += 1
+            $game.actions -= 1
         "(debug) the stag event":
             call thestag
         "(debug) the ghouls event":

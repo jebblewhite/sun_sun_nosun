@@ -17,7 +17,7 @@ if game.butcher.like > 17:
 else:
     $textinsert2 = ""
 
-"You find Mik, much to your shock, sitting at a table in the centre of Henryk's inn. Initially [testinsert]they ignore you, involved as they are in a heated discussion with their friend Noah, but after he is called away by the tolling of the hour bells, Mik gestures for you to join them."
+"You find Mik, much to your shock, sitting at a table in the centre of Henryk's inn. Initially [textinsert]they ignore you, involved as they are in a heated discussion with their friend Noah, but after he is called away by the tolling of the hour bells, Mik gestures for you to join them."
 
 butcher "Yes, that's good [game.player_name], make it look like you had arranged to meet me here. I don't want Henryk thinking for a single second that I came here, or would stay here, of my own free will."
 

@@ -185,7 +185,7 @@ if (c==9 or c==10) and game.alderman.resp < placeholder:
 
 
 if c==12:
-    if game.alderman.life >= placeholder2:
+    if game.alderman.like >= placeholder2:
         $ textinsert = "But thank you.  You’ve helped an old man grieve."
     else:
         $ textinsert = ""
@@ -207,7 +207,7 @@ if c==12:
 
     I’m sorry [game.player_name].  I think it would be best, for me, if you left.  I don’t want you seeing me like this.
 
-    (if like is above a certain threshold then)[textinsert]
+    [textinsert]
     """
 
     $c=0

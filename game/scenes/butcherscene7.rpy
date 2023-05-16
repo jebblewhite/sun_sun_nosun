@@ -1,7 +1,7 @@
 label butcherscene7: 
 
 $game.butcher.zeal = 0
-$game.crier.romance = False
+$game.butcher.romance = False
 
 """
 
@@ -614,7 +614,7 @@ if c==17:
     And then, well, we'll see where the night leads, won't we?
     """
 
-    $game.crier.romance = True
+    $game.butcher.romance = True
     
     $game.butcher.like += 4
 
