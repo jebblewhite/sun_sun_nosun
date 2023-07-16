@@ -26,6 +26,31 @@ menu:
         $c=-2
 
 
+if c==-1:
+
+    crier  """
+
+    Ah that's very kind of you [game.player_name], but it's really not the same.  I remember when I was young, they always used to call it learning your numbers and learning your letters, but it wasn't ever really like that.
+
+    Did you get that?  As far as I see, learning your letters isn't really about learning letters at all.  I mean maybe a bit, so early on none of us can remember it, but you learn pretty fast your 'a's from your 'b's and such.
+
+    No, it's about what you do with the letters, see?  Words and sentences and grammar and all that.  And it's the same with numbers.  Only I never really understood it.
+
+    If it had just been learning the numbers, then I could have been the best in the village, and I don't like to speak immodest but it's true and I swear it.
+
+    But I never really learnt what to do with them beyond which one comes after which other one.  And that other stuff's what they really mean when they say learn your numbers, or when I say I can't do the number stuff.
+
+    Anyway, you didn't want to hear me ramble.  What was it you wanted?
+    """
+
+    $game.crier.like += 4
+    menu:
+        "No, I'm interested in you and your counting.":
+            $c=4
+
+        "I just came over to talk, about whatever you want to talk about.":
+            $c=7
+
 
 if c==-2:
 
